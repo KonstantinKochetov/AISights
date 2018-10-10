@@ -1,0 +1,45 @@
+import re
+import pandas as pd
+
+file = open('denkmalliste2.txt','r')
+
+rawDaten = file.read()
+file.close
+#liste = re.split(r'\n{2,}',rawDaten)
+
+
+
+
+#liste = [re.sub(r'\n',' ',list)for list in liste]
+liste = re.split(r'([0-9]{8,8})',rawDaten)
+liste = filter(None,liste)
+liste = [re.split(r'([0-9]{8,8})',list)for list in liste]
+
+#print(list)
+m = re.findall('[0-9]{8}',list)
+print(m)
+
+
+liste = filter(None,liste)
+newData = open('newData.txt','w')
+
+
+n = 0
+n2 = 0
+entschtlen = []
+print(liste)
+for list in liste:
+    newData.write('['+ str(list))
+    list = filter(None,list)
+    #for il in list:
+        #newData.write('['+il+']')
+        #n2=n2+1
+        #print('n2:'+ str(n2))
+
+    newData.write(']'+'\n'+'\n')
+    n=n+1
+
+newData.close()
+print(n)
+
+
