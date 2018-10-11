@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
+		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
+		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
+		81737256216FC1B600000A05 /* DenkmalkarteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737255216FC1B600000A05 /* DenkmalkarteTests.swift */; };
+		81737262216FC29C00000A05 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737261216FC29C00000A05 /* AppRouter.swift */; };
+		81737264216FC87200000A05 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737263216FC87200000A05 /* Router.swift */; };
+		8173726D216FD8D000000A05 /* MapTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173726C216FD8D000000A05 /* MapTabRouter.swift */; };
+		8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173726E216FD8EC00000A05 /* SearchTabRouter.swift */; };
+		81737273216FD9AC00000A05 /* MapScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737272216FD9AC00000A05 /* MapScreenRouter.swift */; };
+		81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737277216FDC5F00000A05 /* MapScreenContract.swift */; };
+		8173727B216FDCDB00000A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727A216FDCDB00000A05 /* View.swift */; };
+		8173727D216FDD3800000A05 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727C216FDD3800000A05 /* Presenter.swift */; };
+		81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737280216FDF5100000A05 /* MapScreenPresenter.swift */; };
+		81737285217000ED00000A05 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737284217000ED00000A05 /* MapScreenView.swift */; };
+		81737287217000FF00000A05 /* MapScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81737286217000FF00000A05 /* MapScreenView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81737252216FC1B600000A05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81737235216FC1B400000A05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8173723C216FC1B400000A05;
+			remoteInfo = Denkmalkarte;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8173724A216FC1B600000A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8173724C216FC1B600000A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DenkmalkarteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81737255216FC1B600000A05 /* DenkmalkarteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalkarteTests.swift; sourceTree = "<group>"; };
+		81737257216FC1B600000A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81737261216FC29C00000A05 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		81737263216FC87200000A05 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8173726C216FD8D000000A05 /* MapTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabRouter.swift; sourceTree = "<group>"; };
+		8173726E216FD8EC00000A05 /* SearchTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabRouter.swift; sourceTree = "<group>"; };
+		81737272216FD9AC00000A05 /* MapScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenRouter.swift; sourceTree = "<group>"; };
+		81737277216FDC5F00000A05 /* MapScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenContract.swift; sourceTree = "<group>"; };
+		8173727A216FDCDB00000A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		8173727C216FDD3800000A05 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		81737280216FDF5100000A05 /* MapScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenPresenter.swift; sourceTree = "<group>"; };
+		81737284217000ED00000A05 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
+		81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8173723A216FC1B400000A05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724E216FC1B600000A05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81737234216FC1B400000A05 = {
+			isa = PBXGroup;
+			children = (
+				8173723F216FC1B400000A05 /* Denkmalkarte */,
+				81737254216FC1B600000A05 /* DenkmalkarteTests */,
+				8173723E216FC1B400000A05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8173723E216FC1B400000A05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8173723D216FC1B400000A05 /* Denkmalkarte.app */,
+				81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8173723F216FC1B400000A05 /* Denkmalkarte */ = {
+			isa = PBXGroup;
+			children = (
+				8173724C216FC1B600000A05 /* Info.plist */,
+				81737240216FC1B400000A05 /* AppDelegate.swift */,
+				81737268216FD3EF00000A05 /* Presentation */,
+				81737269216FD3F800000A05 /* Domain */,
+				8173726B216FD88C00000A05 /* Data */,
+				81737267216FD04F00000A05 /* Supporting Files */,
+			);
+			path = Denkmalkarte;
+			sourceTree = "<group>";
+		};
+		81737254216FC1B600000A05 /* DenkmalkarteTests */ = {
+			isa = PBXGroup;
+			children = (
+				81737255216FC1B600000A05 /* DenkmalkarteTests.swift */,
+				81737257216FC1B600000A05 /* Info.plist */,
+			);
+			path = DenkmalkarteTests;
+			sourceTree = "<group>";
+		};
+		81737267216FD04F00000A05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
+				81737247216FC1B600000A05 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81737268216FD3EF00000A05 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8173726A216FD87B00000A05 /* Navigation */,
+				81737274216FDB4F00000A05 /* UI */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		81737269216FD3F800000A05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8173726A216FD87B00000A05 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				81737261216FC29C00000A05 /* AppRouter.swift */,
+				81737263216FC87200000A05 /* Router.swift */,
+				81737270216FD91000000A05 /* MapTabRouter */,
+				81737271216FD91700000A05 /* SearchTabRouter */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		8173726B216FD88C00000A05 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		81737270216FD91000000A05 /* MapTabRouter */ = {
+			isa = PBXGroup;
+			children = (
+				8173726C216FD8D000000A05 /* MapTabRouter.swift */,
+				81737272216FD9AC00000A05 /* MapScreenRouter.swift */,
+			);
+			path = MapTabRouter;
+			sourceTree = "<group>";
+		};
+		81737271216FD91700000A05 /* SearchTabRouter */ = {
+			isa = PBXGroup;
+			children = (
+				8173726E216FD8EC00000A05 /* SearchTabRouter.swift */,
+			);
+			path = SearchTabRouter;
+			sourceTree = "<group>";
+		};
+		81737274216FDB4F00000A05 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				81737279216FDCAF00000A05 /* Base */,
+				81737275216FDBA900000A05 /* MapTab */,
+				81737276216FDBC700000A05 /* SearchTab */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		81737275216FDBA900000A05 /* MapTab */ = {
+			isa = PBXGroup;
+			children = (
+				81737277216FDC5F00000A05 /* MapScreenContract.swift */,
+				81737280216FDF5100000A05 /* MapScreenPresenter.swift */,
+				81737284217000ED00000A05 /* MapScreenView.swift */,
+				81737286217000FF00000A05 /* MapScreenView.xib */,
+			);
+			path = MapTab;
+			sourceTree = "<group>";
+		};
+		81737276216FDBC700000A05 /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchTab;
+			sourceTree = "<group>";
+		};
+		81737279216FDCAF00000A05 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8173727A216FDCDB00000A05 /* View.swift */,
+				8173727C216FDD3800000A05 /* Presenter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8173723C216FC1B400000A05 /* Denkmalkarte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */;
+			buildPhases = (
+				81737239216FC1B400000A05 /* Sources */,
+				8173723A216FC1B400000A05 /* Frameworks */,
+				8173723B216FC1B400000A05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Denkmalkarte;
+			productName = Denkmalkarte;
+			productReference = 8173723D216FC1B400000A05 /* Denkmalkarte.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81737250216FC1B600000A05 /* DenkmalkarteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */;
+			buildPhases = (
+				8173724D216FC1B600000A05 /* Sources */,
+				8173724E216FC1B600000A05 /* Frameworks */,
+				8173724F216FC1B600000A05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81737253216FC1B600000A05 /* PBXTargetDependency */,
+			);
+			name = DenkmalkarteTests;
+			productName = DenkmalkarteTests;
+			productReference = 81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81737235216FC1B400000A05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = htw.berlin;
+				TargetAttributes = {
+					8173723C216FC1B400000A05 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					81737250216FC1B600000A05 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 8173723C216FC1B400000A05;
+					};
+				};
+			};
+			buildConfigurationList = 81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81737234216FC1B400000A05;
+			productRefGroup = 8173723E216FC1B400000A05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8173723C216FC1B400000A05 /* Denkmalkarte */,
+				81737250216FC1B600000A05 /* DenkmalkarteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8173723B216FC1B400000A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
+				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
+				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724F216FC1B600000A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81737239216FC1B400000A05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
+				8173727B216FDCDB00000A05 /* View.swift in Sources */,
+				8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */,
+				81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
+				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
+				81737264216FC87200000A05 /* Router.swift in Sources */,
+				81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */,
+				8173726D216FD8D000000A05 /* MapTabRouter.swift in Sources */,
+				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
+				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
+				81737273216FD9AC00000A05 /* MapScreenRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724D216FC1B600000A05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81737256216FC1B600000A05 /* DenkmalkarteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81737253216FC1B600000A05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8173723C216FC1B400000A05 /* Denkmalkarte */;
+			targetProxy = 81737252216FC1B600000A05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		81737249216FC1B600000A05 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8173724A216FC1B600000A05 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81737258216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81737259216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8173725B216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = Denkmalkarte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8173725C216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = Denkmalkarte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8173725E216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
+			};
+			name = Debug;
+		};
+		8173725F216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81737258216FC1B600000A05 /* Debug */,
+				81737259216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173725B216FC1B600000A05 /* Debug */,
+				8173725C216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173725E216FC1B600000A05 /* Debug */,
+				8173725F216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81737235216FC1B400000A05 /* Project object */;
+}
