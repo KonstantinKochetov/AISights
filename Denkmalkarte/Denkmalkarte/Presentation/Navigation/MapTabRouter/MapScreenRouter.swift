@@ -24,4 +24,12 @@ public class MapScreenRouter: NavigationRouter {
         navigationController.pushViewController(view, animated: false)
     }
     
+    public func showDetailMapView() {
+        let view = DetailMapScreenView.init(nibName: "DetailMapScreenView", bundle: Bundle(for: MapScreenRouter.self))
+        let presenter = DetailMapScreenPresenter(view: view)
+        presenter.router = self
+        view.presenter = presenter
+        navigationController.pushViewController(view, animated: false)
+    }
+    
 }

@@ -8,6 +8,16 @@
 
 import UIKit
 
-public class MapScreenView: UIViewController, MapScreenViewContract {
-    var presenter: MapScreenPresenterContract? = nil
+public class MapScreenView: UIViewController, MapScreenViewProtocol {
+    
+    var presenter: MapScreenPresenterProtocol? = nil
+    
+    @IBAction func mapTestButton(_ sender: Any) {
+        print("testMapButton, going to DetailMapView")
+        presenter?.showDetailMapView()
+    }
+    @IBAction func dataTestButton(_ sender: Any) {
+        print("testDataButton, getting mocked data to display")
+//        presenter?.getMockedData()
+    }
 }

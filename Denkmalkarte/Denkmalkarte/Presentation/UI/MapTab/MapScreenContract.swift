@@ -8,12 +8,13 @@
 
 import Foundation
 
-protocol MapScreenViewContract: View {
-    var presenter: MapScreenPresenterContract? { get set }
+protocol MapScreenViewProtocol: View {
+    var presenter: MapScreenPresenterProtocol? { get set }
 }
 
-protocol MapScreenPresenterContract: Presenter {
+protocol MapScreenPresenterProtocol: Presenter {
     var router: MapScreenRouter? { set get }
-    var view: MapScreenViewContract? { set get }
+    var view: MapScreenViewProtocol? { set get }
     
+    func showDetailMapView()
 }

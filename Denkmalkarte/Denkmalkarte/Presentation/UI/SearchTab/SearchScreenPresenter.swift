@@ -8,11 +8,11 @@
 
 import Foundation
 
-class SearchScreenPresenter: SearchScreenPresenterContract {
+class SearchScreenPresenter: SearchScreenPresenterProtocol {
     var router: SearchScreenRouter?
-    var view: SearchScreenViewContract?
+    var view: SearchScreenViewProtocol?
     
-    required init(view: SearchScreenViewContract) {
+    required init(view: SearchScreenViewProtocol) {
         self.view = view
     }
     

@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol SearchScreenViewContract: View {
-    var presenter: SearchScreenPresenterContract? { get set }
+protocol SearchScreenViewProtocol: View {
+    var presenter: SearchScreenPresenterProtocol? { get set }
 }
 
-protocol SearchScreenPresenterContract: Presenter {
+protocol SearchScreenPresenterProtocol: Presenter {
     var router: SearchScreenRouter? { set get }
-    var view: SearchScreenViewContract? { set get }
+    var view: SearchScreenViewProtocol? { set get }
     
 }
 

@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class SearchScreenView: UIViewController, SearchScreenViewContract {
-    var presenter: SearchScreenPresenterContract? = nil
+public class SearchScreenView: UIViewController, SearchScreenViewProtocol {
+    var presenter: SearchScreenPresenterProtocol? = nil
 }
 
 

@@ -8,13 +8,19 @@
 
 import Foundation
 
-class MapScreenPresenter: MapScreenPresenterContract {
+class MapScreenPresenter: MapScreenPresenterProtocol {
     var router: MapScreenRouter?
-    var view: MapScreenViewContract?
+    var view: MapScreenViewProtocol?
     
-    required init(view: MapScreenViewContract) {
+    required init(view: MapScreenViewProtocol) {
         self.view = view
     }
+    
+    func showDetailMapView() {
+        router?.showDetailMapView()
+    }
+    
+    
     
     
 }
