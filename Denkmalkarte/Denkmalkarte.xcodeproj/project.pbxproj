@@ -22,6 +22,11 @@
 		81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737280216FDF5100000A05 /* MapScreenPresenter.swift */; };
 		81737285217000ED00000A05 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737284217000ED00000A05 /* MapScreenView.swift */; };
 		81737287217000FF00000A05 /* MapScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81737286217000FF00000A05 /* MapScreenView.xib */; };
+		81A9750A2170C7BA00207D5E /* SearchScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975092170C7BA00207D5E /* SearchScreenRouter.swift */; };
+		81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750B2170C82A00207D5E /* SearchScreenContract.swift */; };
+		81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */; };
+		81A975102170C89900207D5E /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750F2170C89900207D5E /* SearchScreenView.swift */; };
+		81A975122170C8E000207D5E /* SearchScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A975112170C8E000207D5E /* SearchScreenView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,11 @@
 		81737280216FDF5100000A05 /* MapScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenPresenter.swift; sourceTree = "<group>"; };
 		81737284217000ED00000A05 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
+		81A975092170C7BA00207D5E /* SearchScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenRouter.swift; sourceTree = "<group>"; };
+		81A9750B2170C82A00207D5E /* SearchScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenContract.swift; sourceTree = "<group>"; };
+		81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenPresenter.swift; sourceTree = "<group>"; };
+		81A9750F2170C89900207D5E /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
+		81A975112170C8E000207D5E /* SearchScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchScreenView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				8173726E216FD8EC00000A05 /* SearchTabRouter.swift */,
+				81A975092170C7BA00207D5E /* SearchScreenRouter.swift */,
 			);
 			path = SearchTabRouter;
 			sourceTree = "<group>";
@@ -198,6 +209,10 @@
 		81737276216FDBC700000A05 /* SearchTab */ = {
 			isa = PBXGroup;
 			children = (
+				81A9750B2170C82A00207D5E /* SearchScreenContract.swift */,
+				81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */,
+				81A9750F2170C89900207D5E /* SearchScreenView.swift */,
+				81A975112170C8E000207D5E /* SearchScreenView.xib */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
@@ -294,6 +309,7 @@
 			files = (
 				8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
 				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
+				81A975122170C8E000207D5E /* SearchScreenView.xib in Resources */,
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,10 +330,14 @@
 			files = (
 				8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
 				8173727B216FDCDB00000A05 /* View.swift in Sources */,
+				81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */,
 				8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */,
+				81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */,
 				81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
+				81A975102170C89900207D5E /* SearchScreenView.swift in Sources */,
 				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
 				81737264216FC87200000A05 /* Router.swift in Sources */,
+				81A9750A2170C7BA00207D5E /* SearchScreenRouter.swift in Sources */,
 				81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */,
 				8173726D216FD8D000000A05 /* MapTabRouter.swift in Sources */,
 				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,

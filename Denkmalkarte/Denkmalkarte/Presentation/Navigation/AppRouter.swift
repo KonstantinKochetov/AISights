@@ -19,6 +19,8 @@ class AppRouter: TabBarRouter {
     var childRouter: [Router] = []
     var window: UIWindow
     
+    var searchTabRouter: SearchTabRouter? = nil
+    
     init(window: UIWindow) {
         self.window = window
         self.tabBarController = UITabBarController()
@@ -44,7 +46,6 @@ class AppRouter: TabBarRouter {
     
     private func setUpMapTab() -> UIViewController {
         let mapTabNavigationController = UINavigationController()
-        
         mapTabNavigationController.tabBarItem = UITabBarItem(title: "Map", image: UIImage(named: "Map"), tag: TabTag.map.rawValue)
         let mapTabRouter = MapTabRouter(navigationController: mapTabNavigationController)
         childRouter.append(mapTabRouter)
@@ -55,11 +56,8 @@ class AppRouter: TabBarRouter {
     private func setUpSearchTab() -> UIViewController {
         let searchTabNavigationController = UINavigationController()
         searchTabNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: TabTag.search.rawValue)
-        
-        let searchTabRouter = MapTabRouter(navigationController: searchTabNavigationController)
+        let searchTabRouter = SearchTabRouter(navigationController: searchTabNavigationController)
         childRouter.append(searchTabRouter)
-        
-//        self.searchTabRouter = searchTabRouter
         
         return searchTabNavigationController
     }
