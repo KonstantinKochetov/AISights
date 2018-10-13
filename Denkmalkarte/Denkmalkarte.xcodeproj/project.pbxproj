@@ -40,7 +40,7 @@
 		81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */; };
 		81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753D2172032500207D5E /* InfoScreenView.swift */; };
 		81A975402172033000207D5E /* InfoScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A9753F2172033000207D5E /* InfoScreenView.xib */; };
-		81A975432172064300207D5E /* AppAsembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975422172064300207D5E /* AppAsembler.swift */; };
+		81A975432172064300207D5E /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975422172064300207D5E /* Assembler.swift */; };
 		81A97545217207A300207D5E /* MapUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97544217207A300207D5E /* MapUseCases.swift */; };
 		81A97547217207C600207D5E /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97546217207C600207D5E /* MapInteractor.swift */; };
 		81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975492172136E00207D5E /* DBHelperImpl.swift */; };
@@ -97,7 +97,7 @@
 		81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenPresenter.swift; sourceTree = "<group>"; };
 		81A9753D2172032500207D5E /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
 		81A9753F2172033000207D5E /* InfoScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoScreenView.xib; sourceTree = "<group>"; };
-		81A975422172064300207D5E /* AppAsembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAsembler.swift; sourceTree = "<group>"; };
+		81A975422172064300207D5E /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		81A97544217207A300207D5E /* MapUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCases.swift; sourceTree = "<group>"; };
 		81A97546217207C600207D5E /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		81A975492172136E00207D5E /* DBHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelperImpl.swift; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 		81A975412172062400207D5E /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				81A975422172064300207D5E /* AppAsembler.swift */,
+				81A975422172064300207D5E /* Assembler.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -433,7 +433,7 @@
 			files = (
 				81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */,
 				8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
-				81A975432172064300207D5E /* AppAsembler.swift in Sources */,
+				81A975432172064300207D5E /* Assembler.swift in Sources */,
 				8173727B216FDCDB00000A05 /* View.swift in Sources */,
 				81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */,
 				8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */,

@@ -22,6 +22,17 @@ class DenkmalkarteTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let view = MapScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
+        let presenter: MapScreenPresenterProtocol = MapScreenPresenter(view: view, router: MapTabRouter(navigationController: UINavigationController()), mapUseCases: assembler.resolve())
+        view.presenter = presenter
+        var string = "empty"
+        presenter.getMapData(success: { result in
+            string = result
+        }, failure: { _ in
+            
+        })
+        XCTAssertEqual(string, "map data from db")
+        
     }
 
     func testPerformanceExample() {
