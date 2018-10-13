@@ -11,7 +11,7 @@ import Foundation
 class InfoScreenPresenter: InfoScreenPresenterProtocol {
     
     var router: InfoTabRouter
-    var view: InfoScreenViewProtocol?
+    var view: InfoScreenViewProtocol
     
     required init(view: InfoScreenViewProtocol, router: InfoTabRouter) {
         self.view = view

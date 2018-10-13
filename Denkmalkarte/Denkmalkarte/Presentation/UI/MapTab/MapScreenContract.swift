@@ -14,7 +14,7 @@ protocol MapScreenViewProtocol: View {
 
 protocol MapScreenPresenterProtocol: Presenter {
     var router: MapTabRouter { set get }
-    var view: MapScreenViewProtocol? { set get }
+    var view: MapScreenViewProtocol { set get }
     
     func showDetailView()
     func getMapData(success: @escaping (String)->(),

@@ -11,7 +11,7 @@ import Foundation
 class HistoryScreenPresenter: HistoryScreenPresenterProtocol {
     
     var router: HistoryTabRouter
-    var view: HistoryScreenViewProtocol?
+    var view: HistoryScreenViewProtocol
     
     required init(view: HistoryScreenViewProtocol, router: HistoryTabRouter) {
         self.view = view

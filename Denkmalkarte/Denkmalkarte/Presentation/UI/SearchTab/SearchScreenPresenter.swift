@@ -11,7 +11,7 @@ import Foundation
 class SearchScreenPresenter: SearchScreenPresenterProtocol {
     
     var router: SearchTabRouter
-    var view: SearchScreenViewProtocol?
+    var view: SearchScreenViewProtocol
     
     required init(view: SearchScreenViewProtocol, router: SearchTabRouter) {
         self.view = view

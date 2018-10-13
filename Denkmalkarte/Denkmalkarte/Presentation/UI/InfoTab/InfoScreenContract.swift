@@ -15,6 +15,6 @@ protocol InfoScreenViewProtocol: View {
 
 protocol InfoScreenPresenterProtocol: Presenter {
     var router: InfoTabRouter { set get }
-    var view: InfoScreenViewProtocol? { set get }
+    var view: InfoScreenViewProtocol { set get }
     
 }
