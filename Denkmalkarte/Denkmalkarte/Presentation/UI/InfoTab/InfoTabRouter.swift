@@ -19,8 +19,7 @@ public class InfoTabRouter: NavigationRouter {
     
     public func start() {
         let view = InfoScreenView.init(nibName: "InfoScreenView", bundle: Bundle(for: InfoTabRouter.self))
-        let presenter = InfoScreenPresenter(view: view)
-        presenter.router = self
+        let presenter = InfoScreenPresenter(view: view, router: self)
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)
     }

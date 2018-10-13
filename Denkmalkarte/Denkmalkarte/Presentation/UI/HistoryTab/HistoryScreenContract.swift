@@ -13,7 +13,7 @@ protocol HistoryScreenViewProtocol: View {
 }
 
 protocol HistoryScreenPresenterProtocol: Presenter {
-    var router: HistoryTabRouter? { set get }
+    var router: HistoryTabRouter { set get }
     var view: HistoryScreenViewProtocol? { set get }
     
 }

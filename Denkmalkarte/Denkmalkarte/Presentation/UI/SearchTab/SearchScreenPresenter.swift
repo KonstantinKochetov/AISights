@@ -9,15 +9,18 @@
 import Foundation
 
 class SearchScreenPresenter: SearchScreenPresenterProtocol {
-    var router: SearchTabRouter?
+    
+    var router: SearchTabRouter
     var view: SearchScreenViewProtocol?
     
-    required init(view: SearchScreenViewProtocol) {
+    required init(view: SearchScreenViewProtocol, router: SearchTabRouter) {
         self.view = view
+        self.router = router
+        
     }
     
     func showDetailView() {
-        router?.showDetailView()
+        router.showDetailView()
     }
     
     

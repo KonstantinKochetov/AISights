@@ -9,15 +9,21 @@
 import UIKit
 
 public class MapScreenView: UIViewController, MapScreenViewProtocol {
+    @IBOutlet weak var dataLabel: UILabel!
     
     var presenter: MapScreenPresenterProtocol? = nil
     
     @IBAction func mapTestButton(_ sender: Any) {
-        print("testMapButton, going to DetailView")
         presenter?.showDetailView()
     }
     @IBAction func dataTestButton(_ sender: Any) {
-        print("testDataButton, getting mocked data to display")
-//        presenter?.getMockedData()
+        presenter?.getMapData(success: { result in
+            self.dataLabel.text = result
+            
+        }, failure: { error in
+            self.dataLabel.text = error.localizedDescription
+            
+        }
+        )
     }
 }

@@ -12,9 +12,5 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     
     var presenter: DetailScreenPresenterProtocol? = nil
     
-    @IBAction func testGoBackButton(_ sender: Any) {
-//        presenter?.goToMapScreen()
-    }
-    
 
 }

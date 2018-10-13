@@ -40,6 +40,13 @@
 		81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */; };
 		81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753D2172032500207D5E /* InfoScreenView.swift */; };
 		81A975402172033000207D5E /* InfoScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A9753F2172033000207D5E /* InfoScreenView.xib */; };
+		81A975432172064300207D5E /* AppAsembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975422172064300207D5E /* AppAsembler.swift */; };
+		81A97545217207A300207D5E /* MapUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97544217207A300207D5E /* MapUseCases.swift */; };
+		81A97547217207C600207D5E /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97546217207C600207D5E /* MapInteractor.swift */; };
+		81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975492172136E00207D5E /* DBHelperImpl.swift */; };
+		81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754B2172137700207D5E /* ApiHelperImpl.swift */; };
+		81A975502172140400207D5E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754F2172140400207D5E /* ApiHelper.swift */; };
+		81A975522172141000207D5E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975512172141000207D5E /* DBHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +97,13 @@
 		81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenPresenter.swift; sourceTree = "<group>"; };
 		81A9753D2172032500207D5E /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
 		81A9753F2172033000207D5E /* InfoScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoScreenView.xib; sourceTree = "<group>"; };
+		81A975422172064300207D5E /* AppAsembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAsembler.swift; sourceTree = "<group>"; };
+		81A97544217207A300207D5E /* MapUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCases.swift; sourceTree = "<group>"; };
+		81A97546217207C600207D5E /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		81A975492172136E00207D5E /* DBHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelperImpl.swift; sourceTree = "<group>"; };
+		81A9754B2172137700207D5E /* ApiHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelperImpl.swift; sourceTree = "<group>"; };
+		81A9754F2172140400207D5E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		81A975512172141000207D5E /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +147,7 @@
 			children = (
 				8173724C216FC1B600000A05 /* Info.plist */,
 				81737240216FC1B400000A05 /* AppDelegate.swift */,
+				81A975412172062400207D5E /* DI */,
 				81737268216FD3EF00000A05 /* Presentation */,
 				81737269216FD3F800000A05 /* Domain */,
 				8173726B216FD88C00000A05 /* Data */,
@@ -172,6 +187,7 @@
 		81737269216FD3F800000A05 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				81A97548217207CC00207D5E /* MapUseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -179,6 +195,8 @@
 		8173726B216FD88C00000A05 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				81A9754D217213B800207D5E /* DB */,
+				81A9754E217213C500207D5E /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -271,6 +289,41 @@
 				81A9753F2172033000207D5E /* InfoScreenView.xib */,
 			);
 			path = InfoTab;
+			sourceTree = "<group>";
+		};
+		81A975412172062400207D5E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				81A975422172064300207D5E /* AppAsembler.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		81A97548217207CC00207D5E /* MapUseCases */ = {
+			isa = PBXGroup;
+			children = (
+				81A97544217207A300207D5E /* MapUseCases.swift */,
+				81A97546217207C600207D5E /* MapInteractor.swift */,
+			);
+			path = MapUseCases;
+			sourceTree = "<group>";
+		};
+		81A9754D217213B800207D5E /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				81A975512172141000207D5E /* DBHelper.swift */,
+				81A975492172136E00207D5E /* DBHelperImpl.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		81A9754E217213C500207D5E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				81A9754F2172140400207D5E /* ApiHelper.swift */,
+				81A9754B2172137700207D5E /* ApiHelperImpl.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,24 +433,31 @@
 			files = (
 				81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */,
 				8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
+				81A975432172064300207D5E /* AppAsembler.swift in Sources */,
 				8173727B216FDCDB00000A05 /* View.swift in Sources */,
 				81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */,
 				8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */,
 				81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */,
 				81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */,
+				81A975502172140400207D5E /* ApiHelper.swift in Sources */,
 				81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */,
 				81A975362172027200207D5E /* InfoTabRouter.swift in Sources */,
 				81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */,
 				81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
 				81A975102170C89900207D5E /* SearchScreenView.swift in Sources */,
 				81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */,
+				81A975522172141000207D5E /* DBHelper.swift in Sources */,
 				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
+				81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
 				81737264216FC87200000A05 /* Router.swift in Sources */,
 				81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */,
 				81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */,
 				81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */,
+				81A97547217207C600207D5E /* MapInteractor.swift in Sources */,
 				81A9752A2171FF1E00207D5E /* HistoryTabRouter.swift in Sources */,
 				81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */,
+				81A97545217207A300207D5E /* MapUseCases.swift in Sources */,
+				81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */,
 				81A9752C2171FF3D00207D5E /* HistoryScreenContract.swift in Sources */,
 				81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */,
 				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,

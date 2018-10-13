@@ -20,8 +20,7 @@ public class HistoryTabRouter: NavigationRouter {
     
     public func start() {
         let view = HistoryScreenView.init(nibName: "HistoryScreenView", bundle: Bundle(for: HistoryTabRouter.self))
-        let presenter = HistoryScreenPresenter(view: view)
-        presenter.router = self
+        let presenter = HistoryScreenPresenter(view: view, router: self)
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)
 }

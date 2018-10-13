@@ -9,15 +9,24 @@
 import Foundation
 
 class MapScreenPresenter: MapScreenPresenterProtocol {
-    var router: MapTabRouter?
-    var view: MapScreenViewProtocol?
     
-    required init(view: MapScreenViewProtocol) {
+    var router: MapTabRouter
+    var view: MapScreenViewProtocol?
+    let mapUseCases: MapUseCases
+    
+    required init(view: MapScreenViewProtocol, router: MapTabRouter, mapUseCases: MapUseCases) {
         self.view = view
+        self.router = router
+        self.mapUseCases = mapUseCases
     }
     
     func showDetailView() {
-        router?.showDetailView()
+        router.showDetailView()
+    }
+    
+    func getMapData(success: @escaping (String)->(),
+                    failure: @escaping (Error)->()) {
+        mapUseCases.getMapData(success: success, failure: failure)
     }
     
     
