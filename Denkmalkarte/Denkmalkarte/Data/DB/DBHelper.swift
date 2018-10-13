@@ -6,9 +6,8 @@
 //  Copyright © 2018 htw.berlin. All rights reserved.
 //
 
-
 protocol DbHelper {
-    
+
     func getMapData() -> String?
-    
+
 }

@@ -29,10 +29,10 @@ class DenkmalkarteTests: XCTestCase {
         presenter.getMapData(success: { result in
             string = result
         }, failure: { _ in
-            
+
         })
         XCTAssertEqual(string, "map data from db")
-        
+
     }
 
     func testPerformanceExample() {

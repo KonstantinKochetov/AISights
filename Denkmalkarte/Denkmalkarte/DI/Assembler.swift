@@ -13,9 +13,9 @@ protocol Assembler {
 }
 
 class AppAssembler: Assembler {
-    
+
     func resolve() -> MapUseCases {
         return MapInteractor(dbHelper: DbHelperImpl(), apiHelper: ApiHelperImpl())
     }
-    
+
 }

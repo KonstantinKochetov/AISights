@@ -10,7 +10,7 @@ import UIKit
 
 public protocol Router {
     var childRouter: [Router] { get }
-    
+
     func start()
 }
 

@@ -13,7 +13,7 @@ protocol DetailScreenViewProtocol: View {
 }
 
 protocol DetailScreenPresenterProtocol: Presenter {
-    var router: SharedDetailRouter { set get }
-    var view: DetailScreenViewProtocol? { set get }
-    
+    var router: SharedDetailRouter { get set }
+    var view: DetailScreenViewProtocol? { get set }
+
 }
