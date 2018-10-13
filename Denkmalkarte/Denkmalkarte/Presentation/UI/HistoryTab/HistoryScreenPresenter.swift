@@ -10,8 +10,8 @@ import Foundation
 
 class HistoryScreenPresenter: HistoryScreenPresenterProtocol {
     
-    var router: HistoryTabRouter
-    var view: HistoryScreenViewProtocol
+    let router: HistoryTabRouter
+    let view: HistoryScreenViewProtocol
     
     required init(view: HistoryScreenViewProtocol, router: HistoryTabRouter) {
         self.view = view

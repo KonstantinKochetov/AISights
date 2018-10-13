@@ -13,8 +13,8 @@ protocol SearchScreenViewProtocol: View {
 }
 
 protocol SearchScreenPresenterProtocol: Presenter {
-    var router: SearchTabRouter { set get }
-    var view: SearchScreenViewProtocol { set get }
+    var router: SearchTabRouter { get }
+    var view: SearchScreenViewProtocol { get }
     
     func showDetailView()
     

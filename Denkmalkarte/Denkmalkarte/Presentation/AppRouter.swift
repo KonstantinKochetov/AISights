@@ -17,9 +17,9 @@ class AppRouter: TabBarRouter {
         case info = 4
     }
     
-    var tabBarController: UITabBarController
+    let tabBarController: UITabBarController
     var childRouter: [Router] = []
-    var window: UIWindow
+    let window: UIWindow
     
     var searchTabRouter: SearchTabRouter? = nil
     

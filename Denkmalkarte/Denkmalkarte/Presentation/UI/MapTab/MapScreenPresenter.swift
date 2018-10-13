@@ -10,8 +10,8 @@ import Foundation
 
 class MapScreenPresenter: MapScreenPresenterProtocol {
     
-    var router: MapTabRouter
-    var view: MapScreenViewProtocol
+    let router: MapTabRouter
+    let view: MapScreenViewProtocol
     let mapUseCases: MapUseCases
     
     required init(view: MapScreenViewProtocol, router: MapTabRouter, mapUseCases: MapUseCases) {

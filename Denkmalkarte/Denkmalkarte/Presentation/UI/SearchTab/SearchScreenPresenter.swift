@@ -10,8 +10,8 @@ import Foundation
 
 class SearchScreenPresenter: SearchScreenPresenterProtocol {
     
-    var router: SearchTabRouter
-    var view: SearchScreenViewProtocol
+    let router: SearchTabRouter
+    let view: SearchScreenViewProtocol
     
     required init(view: SearchScreenViewProtocol, router: SearchTabRouter) {
         self.view = view

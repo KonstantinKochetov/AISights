@@ -9,15 +9,15 @@
 import UIKit
 
 public protocol Router {
-    var childRouter: [Router] { get set }
+    var childRouter: [Router] { get }
     
     func start()
 }
 
 public protocol NavigationRouter: Router {
-    var navigationController: UINavigationController { get set }
+    var navigationController: UINavigationController { get }
 }
 
 public protocol TabBarRouter: Router {
-    var tabBarController: UITabBarController { get set }
+    var tabBarController: UITabBarController { get }
 }
