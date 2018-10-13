@@ -1,5 +1,5 @@
 //
-//  DetailMapScreenView.swift
+//  DetailScreenView.swift
 //  Denkmalkarte
 //
 //  Created by Konstantin Kochetov on 12.10.18.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class DetailMapScreenView: UIViewController, DetailMapScreenViewProtocol {
+public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     
-    var presenter: DetailMapScreenPresenterProtocol? = nil
+    var presenter: DetailScreenPresenterProtocol? = nil
     
     @IBAction func testGoBackButton(_ sender: Any) {
 //        presenter?.goToMapScreen()

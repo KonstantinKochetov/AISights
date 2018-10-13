@@ -1,14 +1,15 @@
 //
-//  SearchScreenRouter.swift
+//  InfoTabRouter.swift
 //  Denkmalkarte
 //
-//  Created by Konstantin Kochetov on 12.10.18.
+//  Created by Konstantin Kochetov on 13.10.18.
 //  Copyright © 2018 htw.berlin. All rights reserved.
 //
 
 import UIKit
 
-public class SearchScreenRouter: NavigationRouter {
+public class InfoTabRouter: NavigationRouter {
+    
     public var childRouter: [Router] = []
     public var navigationController: UINavigationController
     
@@ -17,8 +18,8 @@ public class SearchScreenRouter: NavigationRouter {
     }
     
     public func start() {
-        let view = SearchScreenView.init(nibName: "SearchScreenView", bundle: Bundle(for: SearchScreenRouter.self))
-        let presenter = SearchScreenPresenter(view: view)
+        let view = InfoScreenView.init(nibName: "InfoScreenView", bundle: Bundle(for: InfoTabRouter.self))
+        let presenter = InfoScreenPresenter(view: view)
         presenter.router = self
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)

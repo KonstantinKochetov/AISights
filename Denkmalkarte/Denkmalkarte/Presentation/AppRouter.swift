@@ -12,9 +12,11 @@ class AppRouter: TabBarRouter {
     
     public enum TabTag: Int {
         case map = 0
-        case search = 2
-}
-
+        case search = 1
+        case history = 2
+        case info = 4
+    }
+    
     var tabBarController: UITabBarController
     var childRouter: [Router] = []
     var window: UIWindow
@@ -39,8 +41,10 @@ class AppRouter: TabBarRouter {
     private func setUpTabBar() {
         let mapTab = setUpMapTab()
         let searchTab = setUpSearchTab()
+        let historyTab = setUpHistoryTab()
+        let infoTab = setUpInfoTab()
         
-        tabBarController.viewControllers = [mapTab, searchTab]
+        tabBarController.viewControllers = [mapTab, searchTab, historyTab, infoTab]
         childRouter.forEach { $0.start() }
     }
     
@@ -64,7 +68,28 @@ class AppRouter: TabBarRouter {
         return searchTabNavigationController
     }
     
+    private func setUpHistoryTab() -> UIViewController {
+        
+        let historyTabNavigationController = UINavigationController()
+        historyTabNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: TabTag.history.rawValue)
+        
+        let historyTabRouter = HistoryTabRouter(navigationController: historyTabNavigationController)
+        childRouter.append(historyTabRouter)
+        
+        return historyTabNavigationController
+        
+    }
     
+    private func setUpInfoTab() -> UIViewController {
+        
+        let infoTabNavigationController = UINavigationController()
+        infoTabNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: TabTag.info.rawValue)
+        
+        let infoTabRouter = InfoTabRouter(navigationController: infoTabNavigationController)
+        childRouter.append(infoTabRouter)
+        
+        return infoTabNavigationController
+        
+    }
     
-
 }

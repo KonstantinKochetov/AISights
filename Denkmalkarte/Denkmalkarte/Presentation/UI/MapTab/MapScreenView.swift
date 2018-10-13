@@ -13,8 +13,8 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol {
     var presenter: MapScreenPresenterProtocol? = nil
     
     @IBAction func mapTestButton(_ sender: Any) {
-        print("testMapButton, going to DetailMapView")
-        presenter?.showDetailMapView()
+        print("testMapButton, going to DetailView")
+        presenter?.showDetailView()
     }
     @IBAction func dataTestButton(_ sender: Any) {
         print("testDataButton, getting mocked data to display")

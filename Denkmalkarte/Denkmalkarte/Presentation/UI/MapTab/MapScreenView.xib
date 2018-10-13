@@ -20,17 +20,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shY-tB-rDj">
-                    <rect key="frame" x="116" y="269" width="144" height="30"/>
+                    <rect key="frame" x="151" y="269" width="74" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="TestDetailMapButton"/>
+                    <state key="normal" title="GoToDetail"/>
                     <connections>
                         <action selector="mapTestButton:" destination="-1" eventType="touchUpInside" id="M1c-EC-7Ud"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvE-bw-bKQ">
-                    <rect key="frame" x="119" y="344" width="137" height="30"/>
+                    <rect key="frame" x="159" y="344" width="57" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="TestMapDataButton"/>
+                    <state key="normal" title="GetData"/>
                     <connections>
                         <action selector="dataTestButton:" destination="-1" eventType="touchUpInside" id="G3m-P2-Suo"/>
                     </connections>

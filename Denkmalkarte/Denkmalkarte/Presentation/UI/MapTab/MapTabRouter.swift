@@ -1,5 +1,5 @@
 //
-//  MapScreenRouter.swift
+//  MapRouter.swift
 //  Denkmalkarte
 //
 //  Created by Konstantin Kochetov on 11.10.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class MapScreenRouter: NavigationRouter {
+public class MapTabRouter: SharedDetailRouter {
     public var childRouter: [Router] = []
     public var navigationController: UINavigationController
     
@@ -17,19 +17,18 @@ public class MapScreenRouter: NavigationRouter {
     }
     
     public func start() {
-        let view = MapScreenView.init(nibName: "MapScreenView", bundle: Bundle(for: MapScreenRouter.self))
+        let view = MapScreenView.init(nibName: "MapScreenView", bundle: Bundle(for: MapTabRouter.self))
         let presenter = MapScreenPresenter(view: view)
         presenter.router = self
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)
     }
     
-    public func showDetailMapView() {
-        let view = DetailMapScreenView.init(nibName: "DetailMapScreenView", bundle: Bundle(for: MapScreenRouter.self))
-        let presenter = DetailMapScreenPresenter(view: view)
+    public func showDetailView() {
+        let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
+        let presenter = DetailScreenPresenter(view: view)
         presenter.router = self
         view.presenter = presenter
-        navigationController.pushViewController(view, animated: false)
+        navigationController.pushViewController(view, animated: true)
     }
-    
 }

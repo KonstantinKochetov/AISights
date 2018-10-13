@@ -13,8 +13,8 @@ protocol MapScreenViewProtocol: View {
 }
 
 protocol MapScreenPresenterProtocol: Presenter {
-    var router: MapScreenRouter? { set get }
+    var router: MapTabRouter? { set get }
     var view: MapScreenViewProtocol? { set get }
     
-    func showDetailMapView()
+    func showDetailView()
 }
