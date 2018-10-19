@@ -15,13 +15,13 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
     func showDetailView() {
         router.showDetailView()
     }
-    
+
     func search(query: String,
                 success: @escaping (([String]) -> Void),
                 progress: @escaping ((Double) -> Void),
                 failure: @escaping ((Error) -> Void)) {
         mapUseCases.getMapArrayData(query: query, success: success, progress: progress, failure: failure)
-        
+
     }
 
 }

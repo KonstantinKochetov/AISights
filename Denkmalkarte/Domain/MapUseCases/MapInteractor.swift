@@ -1,13 +1,13 @@
 public class MapInteractor: MapUseCases {
-    
+
     let dbHelper: DbHelper
     let apiHelper: ApiHelper
-    
+
     init(dbHelper: DbHelper, apiHelper: ApiHelper) {
         self.dbHelper = dbHelper
         self.apiHelper = apiHelper
     }
-    
+
     func getMapData(success: @escaping (String) -> Void,
                     failure: @escaping (Error) -> Void) {
         // mocking
@@ -17,13 +17,12 @@ public class MapInteractor: MapUseCases {
             apiHelper.getMapData(success: success, failure: failure)
         }
     }
-    
-    
+
     func getMapArrayData(query: String,
                          success: @escaping (([String]) -> Void),
                          progress: @escaping ((Double) -> Void),
                          failure: @escaping ((Error) -> Void)) {
         apiHelper.getMapArrayData(query: query, success: success, progress: progress, failure: failure)
     }
-    
+
 }

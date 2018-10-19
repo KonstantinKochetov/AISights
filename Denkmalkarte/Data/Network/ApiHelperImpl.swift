@@ -5,7 +5,7 @@ class ApiHelperImpl: ApiHelper {
         // mocking
         success("map data from api")
     }
-    
+
     func getMapArrayData(query: String,
                          success: @escaping (([String]) -> Void),
                          progress: @escaping ((Double) -> Void),
