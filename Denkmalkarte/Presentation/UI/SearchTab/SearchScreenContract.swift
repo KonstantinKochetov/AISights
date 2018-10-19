@@ -9,5 +9,9 @@ protocol SearchScreenPresenterProtocol: Presenter {
     var view: SearchScreenViewProtocol { get }
 
     func showDetailView()
+    func search(query: String,
+                success: @escaping (([String]) -> Void),
+                progress: @escaping ((Double) -> Void),
+                failure: @escaping ((Swift.Error) -> Void))
 
 }

@@ -20,6 +20,8 @@
 		81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737280216FDF5100000A05 /* MapScreenPresenter.swift */; };
 		81737285217000ED00000A05 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737284217000ED00000A05 /* MapScreenView.swift */; };
 		81737287217000FF00000A05 /* MapScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81737286217000FF00000A05 /* MapScreenView.xib */; };
+		817AC3AF217A2FF500670CCB /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AC3AD217A2FF500670CCB /* SearchResultCell.swift */; };
+		817AC3B0217A2FF500670CCB /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817AC3AE217A2FF500670CCB /* SearchResultCell.xib */; };
 		81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750B2170C82A00207D5E /* SearchScreenContract.swift */; };
 		81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */; };
 		81A975102170C89900207D5E /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750F2170C89900207D5E /* SearchScreenView.swift */; };
@@ -77,6 +79,8 @@
 		81737280216FDF5100000A05 /* MapScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenPresenter.swift; sourceTree = "<group>"; };
 		81737284217000ED00000A05 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
+		817AC3AD217A2FF500670CCB /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		817AC3AE217A2FF500670CCB /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		81A9750B2170C82A00207D5E /* SearchScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenContract.swift; sourceTree = "<group>"; };
 		81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenPresenter.swift; sourceTree = "<group>"; };
 		81A9750F2170C89900207D5E /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 		81737276216FDBC700000A05 /* SearchTab */ = {
 			isa = PBXGroup;
 			children = (
+				817AC3A8217A298000670CCB /* SearchResultCell */,
 				8173726E216FD8EC00000A05 /* SearchTabRouter.swift */,
 				81A9750B2170C82A00207D5E /* SearchScreenContract.swift */,
 				81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */,
@@ -245,6 +250,15 @@
 				8173727C216FDD3800000A05 /* Presenter.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		817AC3A8217A298000670CCB /* SearchResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				817AC3AD217A2FF500670CCB /* SearchResultCell.swift */,
+				817AC3AE217A2FF500670CCB /* SearchResultCell.xib */,
+			);
+			path = SearchResultCell;
 			sourceTree = "<group>";
 		};
 		81A975132171139C00207D5E /* DetailScreenView */ = {
@@ -409,6 +423,7 @@
 			files = (
 				8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
 				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
+				817AC3B0217A2FF500670CCB /* SearchResultCell.xib in Resources */,
 				81A975122170C8E000207D5E /* SearchScreenView.xib in Resources */,
 				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
 				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
@@ -462,6 +477,7 @@
 				81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */,
 				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
 				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
+				817AC3AF217A2FF500670CCB /* SearchResultCell.swift in Sources */,
 				81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
