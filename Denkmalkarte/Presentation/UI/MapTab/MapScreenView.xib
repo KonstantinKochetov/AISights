@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapScreenView" customModule="Denkmalkarte" customModuleProvider="target">
             <connections>
                 <outlet property="dataLabel" destination="OHq-Qv-n0M" id="vb6-0O-B9C"/>
-                <outlet property="mapView" destination="8cs-A4-YMp" id="3SW-Ri-DmS"/>
+                <outlet property="mapView" destination="GnO-IC-uF4" id="cBo-Vp-vOg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1G3-ik-GYm"/>
             </connections>
         </placeholder>
@@ -36,9 +36,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8cs-A4-YMp">
-                    <rect key="frame" x="5" y="59" width="365" height="128"/>
-                </mapView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shY-tB-rDj">
                     <rect key="frame" x="139" y="438" width="74" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,13 +44,12 @@
                         <action selector="mapTestButton:" destination="-1" eventType="touchUpInside" id="M1c-EC-7Ud"/>
                     </connections>
                 </button>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GnO-IC-uF4">
+                    <rect key="frame" x="49" y="115" width="277" height="146"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="8cs-A4-YMp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="bfZ-Ki-dfa"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8cs-A4-YMp" secondAttribute="trailing" constant="5" id="fzy-Kh-pv9"/>
-                <constraint firstItem="8cs-A4-YMp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="hz4-ef-7yv"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>

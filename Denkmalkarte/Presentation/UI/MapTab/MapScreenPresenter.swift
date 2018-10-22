@@ -1,5 +1,5 @@
 import Foundation
-
+import MapKit
 class MapScreenPresenter: MapScreenPresenterProtocol {
 
     let router: MapTabRouter
@@ -19,6 +19,9 @@ class MapScreenPresenter: MapScreenPresenterProtocol {
     func getMapData(success: @escaping (String) -> Void,
                     failure: @escaping (Error) -> Void) {
         mapUseCases.getMapData(success: success, failure: failure)
+    }
+    func getPointAnnotation(success: @escaping (MKPointAnnotation) -> Void, failure: @escaping (Error) -> Void) {
+        mapUseCases.getPointAnnotation(success: success, failure: failure)
     }
 
 }
