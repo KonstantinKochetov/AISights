@@ -1,8 +1,10 @@
 import UIKit
+import MapKit
 
 public class MapScreenView: UIViewController, MapScreenViewProtocol {
     @IBOutlet weak var dataLabel: UILabel!
-
+    @IBOutlet weak var mapView: MKMapView!
+    
     var presenter: MapScreenPresenterProtocol?
 
     @IBAction func mapTestButton(_ sender: Any) {
