@@ -1,23 +1,30 @@
 import Foundation
 import MapKit
 class DbHelperImpl: DbHelper {
-    func getPointAnnotation() -> MKPointAnnotation? {
+    func getPointAnnotation() -> MKAnnotation? {
 
         //
-        let geocoder = CLGeocoder()
-        let mokAnnotation = MKPointAnnotation()
+        //let geocoder = CLGeocoder()
+        let mokAnnotation = Denkmal(title: "Test1", locationName: "NameTest1", descriptions: "BeschreibngTest1", coordinate: CLLocationCoordinate2D(latitude: 52.520008, longitude: 13.404954))
+      
+     
+        
+        
+        
 
-        let address = "- Lichtenberg,Josef-Orlopp-Straße: 44, 46, 48, 50, 52"
+        /*let address = "- Lichtenberg,Josef-Orlopp-Straße: 44, 46, 48, 50, 52"
         geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
             if((error) != nil) {
                 print("Error", error ?? "")
             }
             if let placemark = placemarks?.first {
-                let coordinates: CLLocationCoordinate2D = placemark.location!.coordinate
-                mokAnnotation.coordinate = coordinates
-                mokAnnotation.title = "TestAnnotaion"
+                let coordinate: CLLocationCoordinate2D = placemark.location!.coordinate
+                mokAnnotation.coordinate = coordinate
+                mokAnnotation.title = "Berlin"
+                mokAnnotation.subtitle = "Straße"
+             
             }
-        })
+        })*/
 
         return mokAnnotation
     }

@@ -20,7 +20,7 @@ class MapScreenPresenter: MapScreenPresenterProtocol {
                     failure: @escaping (Error) -> Void) {
         mapUseCases.getMapData(success: success, failure: failure)
     }
-    func getPointAnnotation(success: @escaping (MKPointAnnotation) -> Void, failure: @escaping (Error) -> Void) {
+    func getPointAnnotation(success: @escaping (MKAnnotation) -> Void, failure: @escaping (Error) -> Void) {
         mapUseCases.getPointAnnotation(success: success, failure: failure)
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0254BC36217F4FF700E467EE /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0254BC35217F4FF700E467EE /* Denkmal.swift */; };
 		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
 		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
 		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0254BC35217F4FF700E467EE /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
 		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			children = (
 				81A975512172141000207D5E /* DBHelper.swift */,
 				81A975492172136E00207D5E /* DBHelperImpl.swift */,
+				0254BC35217F4FF700E467EE /* Denkmal.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				81A97547217207C600207D5E /* MapInteractor.swift in Sources */,
 				81A9752A2171FF1E00207D5E /* HistoryTabRouter.swift in Sources */,
 				81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */,
+				0254BC36217F4FF700E467EE /* Denkmal.swift in Sources */,
 				81A97545217207A300207D5E /* MapUseCases.swift in Sources */,
 				81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */,
 				81A9752C2171FF3D00207D5E /* HistoryScreenContract.swift in Sources */,

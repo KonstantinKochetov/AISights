@@ -2,6 +2,6 @@ import MapKit
 protocol DbHelper {
 
     func getMapData() -> String?
-    func getPointAnnotation() -> MKPointAnnotation?
+    func getPointAnnotation() -> MKAnnotation?
 
 }
