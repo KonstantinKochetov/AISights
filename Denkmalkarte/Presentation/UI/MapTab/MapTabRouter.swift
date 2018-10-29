@@ -1,6 +1,7 @@
 import UIKit
 
 public class MapTabRouter: SharedDetailRouter {
+
     public var childRouter: [Router] = []
     public var navigationController: UINavigationController
 
@@ -15,10 +16,11 @@ public class MapTabRouter: SharedDetailRouter {
         navigationController.pushViewController(view, animated: false)
     }
 
-    public func showDetailView() {
+    public func showDetailView(_ withId: [Int]) {
         let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
         let presenter = DetailScreenPresenter(view: view, router: self)
         view.presenter = presenter
+        view.id = withId
         navigationController.pushViewController(view, animated: true)
     }
 }

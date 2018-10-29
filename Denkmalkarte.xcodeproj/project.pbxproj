@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0254BC36217F4FF700E467EE /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0254BC35217F4FF700E467EE /* Denkmal.swift */; };
+		0254BCB62183361500E467EE /* denkmaleTemp.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0254BCB52183361400E467EE /* denkmaleTemp.xml */; };
+		0254BCB8218705AF00E467EE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0254BCB7218705AF00E467EE /* Parser.swift */; };
 		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
 		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
 		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
@@ -62,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		0254BC35217F4FF700E467EE /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
+		0254BCB52183361400E467EE /* denkmaleTemp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = denkmaleTemp.xml; path = ../../../../../../../Downloads/denkmaleTemp.xml; sourceTree = "<group>"; };
+		0254BCB7218705AF00E467EE /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		8173726B216FD88C00000A05 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0254BCB52183361400E467EE /* denkmaleTemp.xml */,
 				81A9754D217213B800207D5E /* DB */,
 				81A9754E217213C500207D5E /* Network */,
 			);
@@ -316,6 +321,7 @@
 				81A975512172141000207D5E /* DBHelper.swift */,
 				81A975492172136E00207D5E /* DBHelperImpl.swift */,
 				0254BC35217F4FF700E467EE /* Denkmal.swift */,
+				0254BCB7218705AF00E467EE /* Parser.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
 				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
+				0254BCB62183361500E467EE /* denkmaleTemp.xml in Resources */,
 				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +473,7 @@
 				81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */,
 				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
 				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
+				0254BCB8218705AF00E467EE /* Parser.swift in Sources */,
 				81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

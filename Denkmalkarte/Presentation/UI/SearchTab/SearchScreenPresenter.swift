@@ -11,8 +11,8 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
 
     }
 
-    func showDetailView() {
-        router.showDetailView()
+    func showDetailView(_ withId: [Int]) {
+        router.showDetailView(withId)
     }
 
 }

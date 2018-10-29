@@ -8,6 +8,6 @@ protocol SearchScreenPresenterProtocol: Presenter {
     var router: SearchTabRouter { get }
     var view: SearchScreenViewProtocol { get }
 
-    func showDetailView()
+    func showDetailView(_ withId: [Int])
 
 }
