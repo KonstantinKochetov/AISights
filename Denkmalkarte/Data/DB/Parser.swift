@@ -38,7 +38,7 @@ class Parser: NSObject, XMLParserDelegate {
         currentElement = elementName
         //print(currentElement)
         if elementName == "denkmal"{
-            tempDenkmal = Denkmal(title: "", location: "", street: "", date: "", execution: "", builderOwner: "", literature: "", design: "", lat: "", long: "", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
+            tempDenkmal = Denkmal()
         }
 
     }

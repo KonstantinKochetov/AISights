@@ -24,18 +24,18 @@ class Denkmal: NSObject, MKAnnotation {
     var long: String
     var coordinate: CLLocationCoordinate2D
 
-    init(title: String, location: String, street: String, date: String, execution: String, builderOwner: String, literature: String, design: String, lat: String, long: String, coordinate: CLLocationCoordinate2D) {
-        self.title = title
-        self.location = location
-        self.street = street
-        self.date = date
-        self.execution = execution
-        self.builderOwner = builderOwner
-        self.literature = literature
-        self.design = design
-        self.lat = lat
-        self.long = long
-        self.coordinate = coordinate
+    override init() {
+        self.title = ""
+        self.location = ""
+        self.street = ""
+        self.date = ""
+        self.execution = ""
+        self.builderOwner = ""
+        self.literature = ""
+        self.design = ""
+        self.lat = ""
+        self.long = ""
+        self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
         super.init()
     }
 
