@@ -77,38 +77,40 @@ class Parser: NSObject, XMLParserDelegate {
                 print(foundCahr)
                 // print("id",foundCahr)
             } else if (currentElement=="description") {
-                //append() make it posible slowly
-                tempDenkmal?.title?.append(foundCahr)
+                
+                tempDenkmal?.title?  += foundCahr
             } else if(currentElement=="location") {
-                tempDenkmal?.location.append(foundCahr)
+                tempDenkmal?.location += foundCahr
             } else if(currentElement=="street") {
-                tempDenkmal?.street.append(foundCahr)
+                tempDenkmal?.street += foundCahr
 
             } else if(currentElement=="date") {
-                tempDenkmal?.date.append(foundCahr)
+                tempDenkmal?.date += foundCahr
 
             } else if(currentElement=="execution") {
-                tempDenkmal?.execution.append(foundCahr)
+                tempDenkmal?.execution += foundCahr
 
             } else if(currentElement=="builder-owner") {
-                tempDenkmal?.builderOwner.append(foundCahr)
+                tempDenkmal?.builderOwner += foundCahr
 
             } else if(currentElement=="literature") {
-                tempDenkmal?.literature.append(foundCahr)
+                tempDenkmal?.literature += foundCahr
 
             } else if(currentElement=="design") {
-                tempDenkmal?.design.append(foundCahr)
+                tempDenkmal?.design += foundCahr
 
             } else if(currentElement=="latitude") {
-                tempDenkmal?.lat.append(foundCahr)
+                tempDenkmal?.lat += foundCahr
 
             } else if(currentElement=="longitude") {
-                tempDenkmal?.long.append(foundCahr)
+                tempDenkmal?.long += foundCahr
 
             }
 
         }
     }
+    
+   
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         print("failure error: ", parseError)
     }
