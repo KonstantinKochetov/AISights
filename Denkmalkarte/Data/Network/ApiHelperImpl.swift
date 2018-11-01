@@ -6,4 +6,12 @@ class ApiHelperImpl: ApiHelper {
         success("map data from api")
     }
 
+    func getMapArrayData(query: String,
+                         success: @escaping (([String]) -> Void),
+                         progress: @escaping ((Double) -> Void),
+                         failure: @escaping ((Error) -> Void)) {
+        let data = ["1", "2", "3"]
+        success(data)
+    }
+
 }
