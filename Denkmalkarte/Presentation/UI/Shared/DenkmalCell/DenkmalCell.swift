@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchResultCell: UITableViewCell {
+class DenkmalCell: UITableViewCell {
 
     @IBOutlet weak var denkmalImageView: UIImageView!
 
@@ -10,7 +10,7 @@ class SearchResultCell: UITableViewCell {
 
     @IBOutlet weak var denkmalDistanceLabel: UILabel!
 
-    public static let identifier = "SearchResultCell"
+    public static let identifier = "DenkmalCell"
 
     public func set(result: String) {
         denkmalImageView.image = UIImage(named: "testimage")
