@@ -23,6 +23,10 @@ class Denkmal: NSObject, MKAnnotation {
     var lat: String
     var long: String
     var coordinate: CLLocationCoordinate2D
+    var image: String
+    var text: String
+    var baubeginn: String
+    var reconstruction: String
 
     override init() {
         self.title = ""
@@ -35,6 +39,10 @@ class Denkmal: NSObject, MKAnnotation {
         self.design = ""
         self.lat = ""
         self.long = ""
+        self.image = ""
+        self.text = ""
+        self.baubeginn = ""
+        self.reconstruction = ""
         self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
         super.init()
     }

@@ -72,39 +72,41 @@ class Parser: NSObject, XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         let foundCahr = string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         if(!foundCahr.isEmpty) {
-            if(currentElement=="id") {
+            switch currentElement{
+            case "id":
                 //tempDenkmal?.id = Int(foundCahr)
                 print(foundCahr)
-                // print("id",foundCahr)
-            } else if (currentElement=="description") {
-                
+            // print("id",foundCahr)
+            case "description":
                 tempDenkmal?.title?  += foundCahr
-            } else if(currentElement=="location") {
+            case "location":
                 tempDenkmal?.location += foundCahr
-            } else if(currentElement=="street") {
+            case "street":
                 tempDenkmal?.street += foundCahr
-
-            } else if(currentElement=="date") {
+            case "date":
                 tempDenkmal?.date += foundCahr
-
-            } else if(currentElement=="execution") {
+            case "execution":
                 tempDenkmal?.execution += foundCahr
-
-            } else if(currentElement=="builder-owner") {
+            case "builder-owner":
                 tempDenkmal?.builderOwner += foundCahr
-
-            } else if(currentElement=="literature") {
+            case "literature":
                 tempDenkmal?.literature += foundCahr
-
-            } else if(currentElement=="design") {
+            case "design":
                 tempDenkmal?.design += foundCahr
-
-            } else if(currentElement=="latitude") {
+            case "latitude":
                 tempDenkmal?.lat += foundCahr
-
-            } else if(currentElement=="longitude") {
+            case "longitude":
                 tempDenkmal?.long += foundCahr
-
+            case "image":
+                tempDenkmal?.image += foundCahr
+            case "reconstruction":
+                tempDenkmal?.reconstruction += foundCahr
+            case "text":
+                tempDenkmal?.text += foundCahr
+            case "Baubeginn":
+                tempDenkmal?.baubeginn += foundCahr
+            default:
+                print("No Value fond for:\(currentElement) value: \(foundCahr)")
             }
 
         }
