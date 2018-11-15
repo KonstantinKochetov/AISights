@@ -8,7 +8,6 @@ protocol MapUseCases {
                          success: @escaping (([String]) -> Void),
                          progress: @escaping ((Double) -> Void),
                          failure: @escaping ((Error) -> Void))
-    
-    
+
      func getPointAnnotation(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void)
 }

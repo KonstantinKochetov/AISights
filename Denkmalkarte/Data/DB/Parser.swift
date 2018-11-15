@@ -72,7 +72,7 @@ class Parser: NSObject, XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         let foundCahr = string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         if(!foundCahr.isEmpty) {
-            switch currentElement{
+            switch currentElement {
             case "id":
                 //tempDenkmal?.id = Int(foundCahr)
                 print(foundCahr)
@@ -111,8 +111,7 @@ class Parser: NSObject, XMLParserDelegate {
 
         }
     }
-    
-   
+
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         print("failure error: ", parseError)
     }
