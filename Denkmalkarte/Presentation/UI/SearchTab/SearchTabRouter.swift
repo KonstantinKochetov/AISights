@@ -11,7 +11,7 @@ public class SearchTabRouter: SharedDetailRouter {
 
     public func start() {
         let view = SearchScreenView.init(nibName: "SearchScreenView", bundle: Bundle(for: SearchTabRouter.self))
-        let presenter = SearchScreenPresenter(view: view, router: self)
+        let presenter = SearchScreenPresenter(view: view, router: self, mapUseCases: assembler.resolve())
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)
     }
