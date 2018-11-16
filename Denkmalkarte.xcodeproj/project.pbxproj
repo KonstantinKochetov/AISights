@@ -22,6 +22,8 @@
 		81737287217000FF00000A05 /* MapScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81737286217000FF00000A05 /* MapScreenView.xib */; };
 		817AC3AF217A2FF500670CCB /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AC3AD217A2FF500670CCB /* SearchResultCell.swift */; };
 		817AC3B0217A2FF500670CCB /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817AC3AE217A2FF500670CCB /* SearchResultCell.xib */; };
+		817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E438F219E87A7007F125B /* InfoPinCell.swift */; };
+		817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817E4390219E87A7007F125B /* InfoPinCell.xib */; };
 		81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750B2170C82A00207D5E /* SearchScreenContract.swift */; };
 		81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */; };
 		81A975102170C89900207D5E /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750F2170C89900207D5E /* SearchScreenView.swift */; };
@@ -81,6 +83,8 @@
 		81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
 		817AC3AD217A2FF500670CCB /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		817AC3AE217A2FF500670CCB /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		817E438F219E87A7007F125B /* InfoPinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPinCell.swift; sourceTree = "<group>"; };
+		817E4390219E87A7007F125B /* InfoPinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPinCell.xib; sourceTree = "<group>"; };
 		81A9750B2170C82A00207D5E /* SearchScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenContract.swift; sourceTree = "<group>"; };
 		81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenPresenter.swift; sourceTree = "<group>"; };
 		81A9750F2170C89900207D5E /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -261,6 +265,15 @@
 			path = SearchResultCell;
 			sourceTree = "<group>";
 		};
+		817E438C219E8743007F125B /* InfoPinCell */ = {
+			isa = PBXGroup;
+			children = (
+				817E438F219E87A7007F125B /* InfoPinCell.swift */,
+				817E4390219E87A7007F125B /* InfoPinCell.xib */,
+			);
+			path = InfoPinCell;
+			sourceTree = "<group>";
+		};
 		81A975132171139C00207D5E /* DetailScreenView */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +309,7 @@
 		81A97534217201E100207D5E /* InfoTab */ = {
 			isa = PBXGroup;
 			children = (
+				817E438C219E8743007F125B /* InfoPinCell */,
 				81A975352172027200207D5E /* InfoTabRouter.swift */,
 				81A975392172031200207D5E /* InfoScreenContract.swift */,
 				81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */,
@@ -429,6 +443,7 @@
 				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
 				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
+				817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +478,7 @@
 				81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */,
 				81A975522172141000207D5E /* DBHelper.swift in Sources */,
 				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
+				817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */,
 				81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
 				81737264216FC87200000A05 /* Router.swift in Sources */,
 				81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */,
