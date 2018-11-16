@@ -7,8 +7,8 @@ protocol MapScreenViewProtocol: View {
 protocol MapScreenPresenterProtocol: Presenter {
     var router: MapTabRouter { get }
     var view: MapScreenViewProtocol { get }
-    
+
     func showDetailView(_ withId: [Int])
-    
+
     func getPointAnnotation(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void)
 }
