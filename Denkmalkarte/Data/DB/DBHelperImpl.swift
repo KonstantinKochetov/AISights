@@ -7,14 +7,10 @@ class DbHelperImpl: DbHelper {
 
         let parser = Parser()
 
-        if let mockAnno =   parser.readXML() {
+        if let mockAnno = parser.readXML() {
             return mockAnno
         }
         return nil
-    }
-
-    func getMapData() -> String? {
-        return "map data from db"
     }
 
 }

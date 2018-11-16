@@ -9,16 +9,6 @@ public class MapInteractor: MapUseCases {
         self.apiHelper = apiHelper
     }
 
-    func getMapData(success: @escaping (String) -> Void,
-                    failure: @escaping (Error) -> Void) {
-        // mocking
-        if let mapData = dbHelper.getMapData() {
-            success(mapData)
-        } else {
-            apiHelper.getMapData(success: success, failure: failure)
-        }
-    }
-
     func getMapArrayData(query: String,
                          success: @escaping (([String]) -> Void),
                          progress: @escaping ((Double) -> Void),
@@ -30,7 +20,7 @@ public class MapInteractor: MapUseCases {
         if let ponitAnno = dbHelper.getPointAnnotation() {
             success(ponitAnno)
         } else {
-            print("failure")
+            failure(NSError(domain: "", code: 406, userInfo: nil))
         }
     }
 

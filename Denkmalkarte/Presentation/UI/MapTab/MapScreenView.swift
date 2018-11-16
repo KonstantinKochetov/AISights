@@ -23,7 +23,7 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
         presenter?.getPointAnnotation(success: { result in
             self.mapView.addAnnotations(result)
         }, failure: {error in
-            print(error)
+            print(error.localizedDescription)
         })
         
         super.viewDidLoad()
@@ -34,7 +34,6 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-    
 }
 extension MapScreenView: MKMapViewDelegate {
     public func  mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -49,7 +48,6 @@ extension MapScreenView: MKMapViewDelegate {
             dequeuedView.annotation = annotation
             view = dequeuedView
         } else {
-            
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
@@ -59,11 +57,10 @@ extension MapScreenView: MKMapViewDelegate {
         }
         return view
     }
+    
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let location = view.annotation as! Denkmal
         print(location.title!)
         presenter?.showDetailView([1])
-        
     }
-    
 }
