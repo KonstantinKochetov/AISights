@@ -28,9 +28,14 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+## Xcode
+xcuserdata/
+*.xcuserdatad
 
 # Swift Package Manager
 #
@@ -39,6 +44,15 @@ playground.xcworkspace
 # Package.pins
 # Package.resolved
 .build/
+
+## OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # CocoaPods
 #
