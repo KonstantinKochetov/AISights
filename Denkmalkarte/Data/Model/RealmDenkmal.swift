@@ -1,18 +1,10 @@
-//
-//  Denkmal.swift
-//  Denkmalkarte
-//
-//  Created by Konstantin Kochetov on 17.11.18.
-//  Copyright © 2018 htw.berlin. All rights reserved.
-//
-
 import Foundation
 import MapKit
 import RealmSwift
 
 class RealmDenkmal: Object {
     
-    @objc dynamic var id: Int = 0
+    @objc dynamic var id: String?
     @objc dynamic var title: String?
     @objc dynamic var location: String?
     @objc dynamic var street: String?
@@ -32,7 +24,7 @@ class RealmDenkmal: Object {
         return "id"
     }
     
-    public convenience init(id: Int,
+    public convenience init(id: String? = UUID().uuidString,
                             title: String? = "",
                             location: String? = "",
                             street: String? = "",

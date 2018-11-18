@@ -12,6 +12,7 @@
 		1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */; };
 		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
 		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
+		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
 		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
 		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
 		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.release.xcconfig"; sourceTree = "<group>"; };
 		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
 		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
+		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			children = (
 				81A975512172141000207D5E /* DBHelper.swift */,
 				81A975492172136E00207D5E /* DBHelperImpl.swift */,
+				810821ED21A1294D00BF2F07 /* RealmHelper.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
 				0254BCB8218705AF00E467EE /* Parser.swift in Sources */,
 				817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */,
+				810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */,
 				81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

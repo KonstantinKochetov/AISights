@@ -1,16 +1,8 @@
-//
-//  Denkmal.swift
-//  Denkmalkarte
-//
-//  Created by Konstantin Kochetov on 17.11.18.
-//  Copyright © 2018 htw.berlin. All rights reserved.
-//
-
 import Foundation
 import MapKit
 class Denkmal: NSObject, MKAnnotation {
     
-    var id: Int = 0
+    var id: String?
     var title: String?
     var location: String
     var street: String
@@ -51,7 +43,7 @@ class Denkmal: NSObject, MKAnnotation {
     }
     
     // MARK: to deal with RealmDenkmal object
-    convenience init (id: Int,
+    convenience init (id: String? = UUID().uuidString,
                       title: String? = "",
                       location: String? = "",
                       street: String? = "",
