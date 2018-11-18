@@ -1,9 +1,16 @@
 import Foundation
+import MapKit
 
 class DbHelperImpl: DbHelper {
 
-    func getMapData() -> String? {
-        return "map data from db"
+    func getPointAnnotation() -> [MKAnnotation]? {
+
+        let parser = Parser()
+
+        if let mockAnno = parser.readXML() {
+            return mockAnno
+        }
+        return nil
     }
     
     func save(_ event: RealmDenkmal) throws {

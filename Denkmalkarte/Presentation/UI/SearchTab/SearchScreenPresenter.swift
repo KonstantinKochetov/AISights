@@ -12,8 +12,8 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
         self.mapUseCases = mapUseCases
     }
 
-    func showDetailView() {
-        router.showDetailView()
+    func showDetailView(_ withId: [Int]) {
+        router.showDetailView(withId)
     }
 
     func search(query: String,

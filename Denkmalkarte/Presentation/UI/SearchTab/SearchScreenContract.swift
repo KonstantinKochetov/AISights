@@ -8,7 +8,7 @@ protocol SearchScreenPresenterProtocol: Presenter {
     var router: SearchTabRouter { get }
     var view: SearchScreenViewProtocol { get }
 
-    func showDetailView()
+    func showDetailView(_ withId: [Int])
     func search(query: String,
                 success: @escaping (([String]) -> Void),
                 progress: @escaping ((Double) -> Void),
