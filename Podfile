@@ -7,6 +7,7 @@ target 'Denkmalkarte' do
 
   # Pods for Denkmalkarte
   pod 'RealmSwift'
+  pod 'AlamofireImage'
 
   target 'DenkmalkarteTests' do
     inherit! :search_paths

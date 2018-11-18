@@ -56,6 +56,8 @@ class DbHelperImpl: DbHelper {
     }
 }
 
-// TODO we need someone to fix parsing (they should be optionals, images and other split in arrays and so on so by the end it will be arrays and not long string) and all attributes including desription and big file not temp file + we need tester/swiftliner,
+// TODO we need someone to fix parsing (they should be optionals, images and other split in arrays and so on so by the end it will be arrays and not long string) and all attributes including desription and big file and syncronously not temp file AND https + we need tester/swiftliner,
+// cocoapods white file
 // Beware the multiload of realm
 // use simsim
+// for me doing scaling
