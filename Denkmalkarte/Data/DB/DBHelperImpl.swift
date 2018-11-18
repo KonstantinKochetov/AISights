@@ -3,13 +3,13 @@ import MapKit
 import RealmSwift
 
 class DbHelperImpl: DbHelper {
-    
+
     private var realmConfig: Realm.Configuration
-    
+
     public init(realmConfig: Realm.Configuration? = nil) {
         self.realmConfig = realmConfig ?? RealmHelper.config()
     }
-    
+
     func save(_ denkmal: Denkmal) throws {
         let realm = try self.realm()
         if realm.object(ofType: RealmDenkmal.self, forPrimaryKey: denkmal.id) == nil {
@@ -18,7 +18,7 @@ class DbHelperImpl: DbHelper {
             }
         }
     }
-    
+
     func saveAll(_ denkmale: [Denkmal]) throws {
         let realm = try self.realm()
         for denkmal in denkmale {
@@ -29,22 +29,22 @@ class DbHelperImpl: DbHelper {
             }
         }
     }
-    
+
     func getAll() throws -> [Denkmal] {
         return Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
     }
-    
+
     func clean() throws {
         let realm = try self.realm()
         try realm.write {
             realm.delete(realm.objects(RealmDenkmal.self))
         }
     }
-    
+
     private func realm() throws -> Realm {
         return try Realm(configuration: realmConfig)
     }
-    
+
     func getDenkmale(success: @escaping ([Denkmal]) -> Void,
                      failure: @escaping (Error) -> Void) {
         do {
@@ -56,5 +56,6 @@ class DbHelperImpl: DbHelper {
     }
 }
 
-
-// TODO we need tester, we need someone to fix parsing (optionals, images split in arrays and so on so by the end it will be arrays and not long string)
+// TODO we need someone to fix parsing (they should be optionals, images and other split in arrays and so on so by the end it will be arrays and not long string) and all attributes including desription and big file not temp file + we need tester/swiftliner,
+// Beware the multiload of realm
+// use simsim

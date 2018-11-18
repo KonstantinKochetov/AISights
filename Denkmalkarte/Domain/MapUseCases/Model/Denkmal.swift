@@ -1,7 +1,7 @@
 import Foundation
 import MapKit
 class Denkmal: NSObject, MKAnnotation {
-    
+
     var id: String?
     var title: String?
     var location: String
@@ -18,7 +18,7 @@ class Denkmal: NSObject, MKAnnotation {
     var text: String
     var baubeginn: String
     var reconstruction: String
-    
+
     override init() {
         self.id = UUID().uuidString
         self.title = ""
@@ -38,11 +38,11 @@ class Denkmal: NSObject, MKAnnotation {
         self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
         super.init()
     }
-    
+
     var subtitle: String? {
         return location
     }
-    
+
     // MARK: to deal with RealmDenkmal object
     convenience init (id: String? = UUID().uuidString,
                       title: String? = "",
@@ -59,6 +59,7 @@ class Denkmal: NSObject, MKAnnotation {
                       text: String? = "",
                       baubeginn: String? = "",
                       reconstruction: String? = "") {
+        // TODO temporary solution with (!) -> parsing needed to be fixed
         self.init()
         self.id = id
         self.title = title!
@@ -77,7 +78,7 @@ class Denkmal: NSObject, MKAnnotation {
         self.reconstruction = reconstruction!
         self.coordinate = CLLocationCoordinate2D(latitude: Double(self.lat)!, longitude: Double(self.long)!)
     }
-    
+
     func toRealmDenkmal() -> RealmDenkmal {
         return RealmDenkmal(id: id,
                             location: location,
@@ -94,5 +95,5 @@ class Denkmal: NSObject, MKAnnotation {
                             baubeginn: baubeginn,
                             reconstruction: reconstruction)
     }
-    
+
 }

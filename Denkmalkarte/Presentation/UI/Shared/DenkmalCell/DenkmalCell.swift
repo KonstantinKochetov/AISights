@@ -8,12 +8,16 @@ class DenkmalCell: UITableViewCell {
 
     @IBOutlet weak var denkmalDescriptionLabel: UILabel!
 
-    @IBOutlet weak var denkmalDistanceLabel: UILabel!
+    @IBOutlet weak var streetLabel: UILabel!
 
     public static let identifier = "DenkmalCell"
 
-    public func set(result: String) {
+    public func set(denkmal: Denkmal) {
         denkmalImageView.image = UIImage(named: "testimage")
+        
+        streetLabel.text = denkmal.location + " " + denkmal.street
+        denkmalDescriptionLabel.text = denkmal.text
+        
     }
 
 }

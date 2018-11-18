@@ -3,7 +3,7 @@ import MapKit
 import RealmSwift
 
 class RealmDenkmal: Object {
-    
+
     @objc dynamic var id: String?
     @objc dynamic var title: String?
     @objc dynamic var location: String?
@@ -19,11 +19,11 @@ class RealmDenkmal: Object {
     @objc dynamic var text: String?
     @objc dynamic var baubeginn: String?
     @objc dynamic var reconstruction: String?
-    
+
     override public static func primaryKey() -> String? {
         return "id"
     }
-    
+
     public convenience init(id: String? = UUID().uuidString,
                             title: String? = "",
                             location: String? = "",
@@ -56,7 +56,7 @@ class RealmDenkmal: Object {
         self.baubeginn = baubeginn
         self.reconstruction = reconstruction
     }
-    
+
     func toDenkmal() -> Denkmal {
         return Denkmal(id: id,
                        location: location,

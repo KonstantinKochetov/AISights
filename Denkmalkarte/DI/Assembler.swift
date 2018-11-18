@@ -36,7 +36,7 @@ class AppAssembler: Assembler {
             return ApiHelperImpl()
         }
     }
-    
+
     func resolve() -> Parser {
         return Parser()
     }
