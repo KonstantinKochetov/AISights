@@ -7,6 +7,10 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var distanceLabel: UILabel!
     @IBOutlet private var titleLabel: UILabel!
     
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var presenter: DetailScreenPresenterProtocol?
     
     // MARK: Actions
