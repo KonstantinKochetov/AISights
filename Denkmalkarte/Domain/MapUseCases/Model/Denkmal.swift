@@ -20,6 +20,7 @@ class Denkmal: NSObject, MKAnnotation {
     var reconstruction: String
     
     override init() {
+        self.id = UUID().uuidString
         self.title = ""
         self.location = ""
         self.street = ""

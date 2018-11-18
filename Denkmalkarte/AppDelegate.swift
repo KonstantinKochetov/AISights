@@ -53,8 +53,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mapUseCases.loadMapsToRealm()
     }
     
-    private func cleanMapsRealm(mapUseCases: MapUseCases) {
-        mapUseCases.cleanMapsRealm()
-    }
-
 }

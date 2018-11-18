@@ -47,12 +47,13 @@ class DbHelperImpl: DbHelper {
     }
     
     
-    func getPointAnnotation() -> [MKAnnotation]? {
-        let parser = Parser()
-        if let mockAnno = parser.readXML() {
-            return mockAnno
+    func getPointAnnotation() -> [Denkmal]? {
+        do {
+            let denkmale = try getAll()
+            return denkmale
+        } catch {
+            return nil
         }
-        return nil
     }
     
 }

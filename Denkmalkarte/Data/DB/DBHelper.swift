@@ -9,6 +9,6 @@ protocol DbHelper {
     
     func clean() throws
     
-    func getPointAnnotation() -> [MKAnnotation]?
+    func getPointAnnotation() -> [Denkmal]?
     
 }
