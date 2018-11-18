@@ -15,7 +15,7 @@ public class MapInteractor: MapUseCases {
         let parser = Parser()
         if let denkmale = parser.readXML() {
             do {
-              try dbHelper.saveAll(denkmale)
+                try dbHelper.saveAll(denkmale)
             } catch {
                 print("fail to load xml to realm")
             }
@@ -39,12 +39,8 @@ public class MapInteractor: MapUseCases {
         apiHelper.getMapArrayData(query: query, success: success, progress: progress, failure: failure)
     }
     
-    func getPointAnnotation(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void) {
-        if let ponitAnno = dbHelper.getPointAnnotation() {
-            success(ponitAnno)
-        } else {
-            failure(NSError(domain: "", code: 406, userInfo: nil))
-        }
+    func getDenkmale(success: @escaping ([Denkmal]) -> Void,
+                     failure: @escaping (Error) -> Void) {
+        dbHelper.getDenkmale(success: success, failure: failure)
     }
-    
 }

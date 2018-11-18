@@ -10,5 +10,5 @@ protocol MapScreenPresenterProtocol: Presenter {
 
     func showDetailView(_ withId: [Int])
 
-    func getPointAnnotation(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void)
+    func getDenkmale(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void)
 }

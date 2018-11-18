@@ -9,6 +9,7 @@ protocol DbHelper {
     
     func clean() throws
     
-    func getPointAnnotation() -> [Denkmal]?
+    func getDenkmale(success: @escaping ([Denkmal]) -> Void,
+                     failure: @escaping (Error) -> Void)
     
 }

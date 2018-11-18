@@ -10,5 +10,5 @@ protocol MapUseCases {
     
     func cleanMapsRealm()
     
-    func getPointAnnotation(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void)
+    func getDenkmale(success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void)
 }

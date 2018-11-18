@@ -20,7 +20,7 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
         let initCenterMap = CLLocation(latitude: 52.520008, longitude: 13.404954)
         mapView.showsUserLocation = true
         centerMapOnLocation(location: initCenterMap)
-        presenter?.getPointAnnotation(success: { result in
+        presenter?.getDenkmale(success: { result in
             self.mapView.addAnnotations(result)
         }, failure: {error in
             print(error.localizedDescription)

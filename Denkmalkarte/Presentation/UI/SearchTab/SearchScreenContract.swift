@@ -9,6 +9,7 @@ protocol SearchScreenPresenterProtocol: Presenter {
     var view: SearchScreenViewProtocol { get }
 
     func showDetailView(_ withId: [Int])
+    
     func search(query: String,
                 success: @escaping (([String]) -> Void),
                 progress: @escaping ((Double) -> Void),

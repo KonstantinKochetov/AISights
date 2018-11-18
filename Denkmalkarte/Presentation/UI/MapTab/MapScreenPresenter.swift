@@ -16,8 +16,8 @@ class MapScreenPresenter: MapScreenPresenterProtocol {
         router.showDetailView(withId)
     }
 
-    func getPointAnnotation(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void) {
-        mapUseCases.getPointAnnotation(success: success, failure: failure)
+    func getDenkmale(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void) {
+        mapUseCases.getDenkmale(success: success, failure: failure)
     }
 
 }

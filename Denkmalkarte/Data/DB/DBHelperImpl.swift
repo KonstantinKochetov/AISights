@@ -30,7 +30,6 @@ class DbHelperImpl: DbHelper {
         }
     }
     
-    
     func getAll() throws -> [Denkmal] {
         return Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
     }
@@ -46,14 +45,16 @@ class DbHelperImpl: DbHelper {
         return try Realm(configuration: realmConfig)
     }
     
-    
-    func getPointAnnotation() -> [Denkmal]? {
+    func getDenkmale(success: @escaping ([Denkmal]) -> Void,
+                     failure: @escaping (Error) -> Void) {
         do {
             let denkmale = try getAll()
-            return denkmale
+            success(denkmale)
         } catch {
-            return nil
+            failure(NSError(domain: "no domain", code: 406, userInfo: nil))
         }
     }
-    
 }
+
+
+// TODO we need tester, we need someone to fix parsing (optionals, images split in arrays and so on so by the end it will be arrays and not long string)
