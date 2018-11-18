@@ -358,9 +358,9 @@
 		81A97548217207CC00207D5E /* MapUseCases */ = {
 			isa = PBXGroup;
 			children = (
-				810821E9219FD7FB00BF2F07 /* Model */,
 				81A97544217207A300207D5E /* MapUseCases.swift */,
 				81A97546217207C600207D5E /* MapInteractor.swift */,
+				810821E9219FD7FB00BF2F07 /* Model */,
 			);
 			path = MapUseCases;
 			sourceTree = "<group>";
