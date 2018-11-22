@@ -61,3 +61,4 @@ class DbHelperImpl: DbHelper {
 // Beware the multiload of realm
 // use simsim
 // for me doing scaling
+// swiftlint als cocoapod

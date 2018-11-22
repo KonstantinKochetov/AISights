@@ -6,6 +6,7 @@ target 'Denkmalkarte' do
   use_frameworks!
 
   # Pods for Denkmalkarte
+  pod 'SwiftLint'
   pod 'RealmSwift'
   pod 'AlamofireImage'
 
