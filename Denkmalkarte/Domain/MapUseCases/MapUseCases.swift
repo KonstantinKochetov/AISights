@@ -1,10 +1,9 @@
+import MapKit
 protocol MapUseCases {
 
-    func getMapData(success: @escaping (String) -> Void,
-                    failure: @escaping (Error) -> Void)
+    func loadMapsToRealm()
 
-    func getMapArrayData(query: String,
-                         success: @escaping (([String]) -> Void),
-                         progress: @escaping ((Double) -> Void),
-                         failure: @escaping ((Error) -> Void))
+    func cleanMapsRealm()
+
+    func getDenkmale(success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void)
 }
