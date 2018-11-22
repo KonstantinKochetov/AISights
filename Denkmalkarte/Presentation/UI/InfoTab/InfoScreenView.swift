@@ -7,10 +7,17 @@ public class InfoScreenView: UIViewController, InfoScreenViewProtocol {
     var presenter: InfoScreenPresenterProtocol?
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var infoScreenLabel: UILabel!
     
     private var results: [String] = ["1", "2", "3"]
+    private var pinImages:  [UIImage] = [UIImage(named: "blue-pin")! , UIImage(named: "red-pin")! ,UIImage(named: "blue-pin")!]
+    private var textForPins: [String] = ["Dieser Pin beschreibt ...", "Roter Pin", "Blauer Pin"]
+
+    
     
     public override func viewDidLoad() {
+        
+      
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
@@ -25,9 +32,11 @@ public class InfoScreenView: UIViewController, InfoScreenViewProtocol {
 extension InfoScreenView: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InfoPinCell.identifier, for: indexPath) as? InfoPinCell
-        let result = results[indexPath.row]
+        //let result = results[indexPath.row]
+        let pinImage = pinImages[indexPath.row]
+        let textForPin = textForPins[indexPath.row]
         
-        cell?.set(result: result)
+        cell?.set(pinImages: pinImage, textForPin: textForPin)
         return cell!
     }
     
