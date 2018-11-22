@@ -24,10 +24,10 @@ class RealmDenkmal: Object {
         return "id"
     }
 
-    public convenience init(id: String? = UUID().uuidString,
-                            title: String? = "",
-                            location: String? = "",
-                            street: String? = "",
+    public convenience init(id: String = UUID().uuidString,
+                            title: String? = nil,
+                            location: String? = nil,
+                            street: String? = nil,
                             date: String? = "",
                             execution: String? = "",
                             builderOwner: String? = "",
