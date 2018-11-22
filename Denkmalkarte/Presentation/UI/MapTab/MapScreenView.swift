@@ -59,8 +59,6 @@ extension MapScreenView: MKMapViewDelegate {
     }
 
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let location = view.annotation as! Denkmal
-        print(location.title!)
         presenter?.showDetailView([1])
     }
 }

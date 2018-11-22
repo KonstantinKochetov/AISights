@@ -2,15 +2,10 @@ import UIKit
 import AlamofireImage
 
 class DenkmalCell: UITableViewCell {
-    
     @IBOutlet weak var denkmalImageView: UIImageView!
-    
     @IBOutlet weak var denkmalNameLabel: UILabel!
-    
     @IBOutlet weak var denkmalDescriptionLabel: UILabel!
-    
     @IBOutlet weak var streetLabel: UILabel!
-    
     public static let identifier = "DenkmalCell"
     
     public func set(denkmal: Denkmal) {
@@ -31,5 +26,5 @@ class DenkmalCell: UITableViewCell {
         denkmalNameLabel.text = denkmal.builderOwner
         
     }
-    
+
 }

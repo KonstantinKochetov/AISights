@@ -423,6 +423,7 @@
 				8173723A216FC1B400000A05 /* Frameworks */,
 				8173723B216FC1B400000A05 /* Resources */,
 				6ACD7334A6D6FE5056C1B3E2 /* [CP] Embed Pods Frameworks */,
+				81CAF06621A6FABA00A84E3E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -576,6 +577,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		81CAF06621A6FABA00A84E3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
