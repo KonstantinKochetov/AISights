@@ -14,7 +14,7 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
         locationManager.delegate = self
 
         // Check for Location Services
-        if (CLLocationManager.locationServicesEnabled()) {
+        if CLLocationManager.locationServicesEnabled() {
             locationManager.requestWhenInUseAuthorization()
         }
         let initCenterMap = CLLocation(latitude: 52.520008, longitude: 13.404954)
@@ -38,7 +38,9 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
 extension MapScreenView: MKMapViewDelegate {
     public func  mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 
-        guard let annotation = annotation as? Denkmal else { return nil }
+        guard let annotation = annotation as? Denkmal else {
+            return nil
+        }
 
         let identifier = "marker"
         var view: MKMarkerAnnotationView

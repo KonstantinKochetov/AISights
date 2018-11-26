@@ -46,9 +46,9 @@ class Parser: NSObject, XMLParserDelegate {
         if elementName == "denkmal"{
             if denkmäler != nil {
                 if let denkmal = tempDenkmal {
-                    let lon =  NumberFormatter().number(from: denkmal.long ?? "0.0")?.doubleValue
-                    let lat =  NumberFormatter().number(from: denkmal.lat ?? "0.0")?.doubleValue
-                    if (lon != nil && lat != nil) {
+                    let lon =  NumberFormatter().number(from: denkmal.long )?.doubleValue
+                    let lat =  NumberFormatter().number(from: denkmal.lat )?.doubleValue
+                    if lon != nil && lat != nil {
                         denkmal.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!)
 
                     }
@@ -56,9 +56,9 @@ class Parser: NSObject, XMLParserDelegate {
                 }
             } else {
                 if let denkmal = tempDenkmal {
-                    let lon =  NumberFormatter().number(from: denkmal.long ?? "0.0")?.doubleValue
-                    let lat =  NumberFormatter().number(from: denkmal.lat ?? "0.0")?.doubleValue
-                    if (lon != nil && lat != nil) {
+                    let lon =  NumberFormatter().number(from: denkmal.long )?.doubleValue
+                    let lat =  NumberFormatter().number(from: denkmal.lat )?.doubleValue
+                    if lon != nil && lat != nil {
                         denkmal.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!)
                     }
                     denkmäler = [denkmal]
@@ -66,11 +66,10 @@ class Parser: NSObject, XMLParserDelegate {
                 }
             }
         }
-
     }
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         let foundCahr = string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-        if(!foundCahr.isEmpty) {
+        if !foundCahr.isEmpty {
             switch currentElement {
             case "description":
                 tempDenkmal?.title?  += foundCahr
@@ -103,7 +102,6 @@ class Parser: NSObject, XMLParserDelegate {
             default:
                 print("No Value fond for:\(currentElement) value: \(foundCahr)")
             }
-
         }
     }
 
