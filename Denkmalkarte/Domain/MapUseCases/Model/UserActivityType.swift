@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct UserActivityType {
+    static let ShowLocalDenkmal = "de.htw.berlin.Denkmalkarte.ShowLocalDenkmal"
+}

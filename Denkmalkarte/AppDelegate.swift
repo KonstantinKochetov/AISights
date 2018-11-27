@@ -7,6 +7,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var router: AppRouter?
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        switch userActivity.activityType {
+        case UserActivityType.ShowLocalDenkmal:
+            if let viewController = window?.rootViewController as? MapScreenView{
+                viewController.showLocalDenkmal()
+            }
+        default:
+            print("No user Activity")
+        }
+        return false
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
