@@ -20,8 +20,6 @@ public class MapTabRouter: SharedDetailRouter {
         let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
         let presenter = DetailScreenPresenter(view: view, router: self)
         view.presenter = presenter
-        //view.id = withId
-        print(withId)
-        navigationController.pushViewController(view, animated: true)
+        navigationController.present(view, animated: true, completion: nil)
     }
 }
