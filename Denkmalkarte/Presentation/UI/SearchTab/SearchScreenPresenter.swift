@@ -12,15 +12,14 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
         self.mapUseCases = mapUseCases
     }
 
-    func showDetailView() {
-        router.showDetailView()
+    func showDetailView(_ withId: [Int]) {
+        router.showDetailView(withId)
     }
 
     func search(query: String,
-                success: @escaping (([String]) -> Void),
-                progress: @escaping ((Double) -> Void),
+                success: @escaping (([Denkmal]) -> Void),
                 failure: @escaping ((Error) -> Void)) {
-        mapUseCases.getMapArrayData(query: query, success: success, progress: progress, failure: failure)
+        mapUseCases.getDenkmale(success: success, failure: failure)
 
     }
 

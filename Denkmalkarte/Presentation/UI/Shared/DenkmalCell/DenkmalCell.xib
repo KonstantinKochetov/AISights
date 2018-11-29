@@ -73,9 +73,9 @@ sed do eiusmod tempor incididunt ut labore </string>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="denkmalDescriptionLabel" destination="sUj-zE-TWi" id="eWK-qd-L4L"/>
-                <outlet property="denkmalDistanceLabel" destination="Cyv-Bc-Yzo" id="DT9-Fh-YBq"/>
                 <outlet property="denkmalImageView" destination="mP1-zc-ObJ" id="1Dl-2D-Ro8"/>
                 <outlet property="denkmalNameLabel" destination="9rA-LV-yih" id="WOg-x1-fMT"/>
+                <outlet property="streetLabel" destination="Cyv-Bc-Yzo" id="DT9-Fh-YBq"/>
             </connections>
             <point key="canvasLocation" x="201.59999999999999" y="166.8665667166417"/>
         </tableViewCell>

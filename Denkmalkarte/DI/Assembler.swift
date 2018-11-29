@@ -4,6 +4,7 @@ protocol Assembler {
     func resolve() -> MapUseCases
     func resolve() -> DbHelper
     func resolve() -> ApiHelper
+     func resolve() -> Parser
 }
 
 class AppAssembler: Assembler {
@@ -16,7 +17,7 @@ class AppAssembler: Assembler {
         if let mapUseCases = mapUseCases {
             return mapUseCases
         } else {
-            return MapInteractor(dbHelper: self.resolve(), apiHelper: self.resolve())
+            return MapInteractor(dbHelper: self.resolve(), apiHelper: self.resolve(), parser: resolve())
         }
     }
 
@@ -24,7 +25,7 @@ class AppAssembler: Assembler {
         if let dbHelper = dbHelper {
             return dbHelper
         } else {
-            return DbHelperImpl()
+            return DbHelperImpl(realmConfig: RealmHelper.config())
         }
     }
 
@@ -34,6 +35,10 @@ class AppAssembler: Assembler {
         } else {
             return ApiHelperImpl()
         }
+    }
+
+    func resolve() -> Parser {
+        return Parser()
     }
 
 }

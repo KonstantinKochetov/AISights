@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02180C232195B0E100BCA785 /* denkmaleTemp.xml in Resources */ = {isa = PBXBuildFile; fileRef = 02180C222195B0E100BCA785 /* denkmaleTemp.xml */; };
+		0254BCB8218705AF00E467EE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0254BCB7218705AF00E467EE /* Parser.swift */; };
+		1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */; };
+		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
+		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
+		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
 		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
 		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
 		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
@@ -49,6 +55,7 @@
 		81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754B2172137700207D5E /* ApiHelperImpl.swift */; };
 		81A975502172140400207D5E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754F2172140400207D5E /* ApiHelper.swift */; };
 		81A975522172141000207D5E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975512172141000207D5E /* DBHelper.swift */; };
+		9C3A2E81BA3C596736B53427 /* Pods_Denkmalkarte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02180C222195B0E100BCA785 /* denkmaleTemp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = denkmaleTemp.xml; sourceTree = "<group>"; };
+		0254BCB7218705AF00E467EE /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.release.xcconfig"; sourceTree = "<group>"; };
+		64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.debug.xcconfig"; sourceTree = "<group>"; };
+		71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.release.xcconfig"; sourceTree = "<group>"; };
+		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
+		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
+		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +96,7 @@
 		81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
 		817AC3AD217A2FF500670CCB /* DenkmalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalCell.swift; sourceTree = "<group>"; };
 		817AC3AE217A2FF500670CCB /* DenkmalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DenkmalCell.xib; sourceTree = "<group>"; };
+		819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenkmalkarteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A9750B2170C82A00207D5E /* SearchScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenContract.swift; sourceTree = "<group>"; };
 		81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenPresenter.swift; sourceTree = "<group>"; };
 		81A9750F2170C89900207D5E /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
@@ -108,6 +124,8 @@
 		81A9754B2172137700207D5E /* ApiHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelperImpl.swift; sourceTree = "<group>"; };
 		81A9754F2172140400207D5E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		81A975512172141000207D5E /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Denkmalkarte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3A2E81BA3C596736B53427 /* Pods_Denkmalkarte.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,18 +141,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FD48662E8AEF17A73759F72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */,
+				819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56512C7B13EA0251DDCFAFA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */,
+				71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */,
+				D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */,
+				45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		810821E4219FC38E00BF2F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				810821E5219FC42600BF2F07 /* RealmDenkmal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		810821E9219FD7FB00BF2F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				810821E7219FD7F200BF2F07 /* Denkmal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		81737234216FC1B400000A05 = {
 			isa = PBXGroup;
 			children = (
 				8173723F216FC1B400000A05 /* Denkmalkarte */,
 				81737254216FC1B600000A05 /* DenkmalkarteTests */,
 				8173723E216FC1B400000A05 /* Products */,
+				56512C7B13EA0251DDCFAFA7 /* Pods */,
+				4FD48662E8AEF17A73759F72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +230,7 @@
 		81737267216FD04F00000A05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				02180C222195B0E100BCA785 /* denkmaleTemp.xml */,
 				81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
 				81737247216FC1B600000A05 /* Assets.xcassets */,
 			);
@@ -201,6 +260,7 @@
 			children = (
 				81A9754D217213B800207D5E /* DB */,
 				81A9754E217213C500207D5E /* Network */,
+				810821E4219FC38E00BF2F07 /* Model */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -258,6 +318,14 @@
 				817AC3AE217A2FF500670CCB /* DenkmalCell.xib */,
 			);
 			path = DenkmalCell;
+			sourceTree = "<group>";
+		};
+		817E438B219E7C23007F125B /* MapUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0254BCB7218705AF00E467EE /* Parser.swift */,
+			);
+			path = MapUtils;
 			sourceTree = "<group>";
 		};
 		81A975132171139C00207D5E /* DetailScreenView */ = {
@@ -318,6 +386,8 @@
 			children = (
 				81A97544217207A300207D5E /* MapUseCases.swift */,
 				81A97546217207C600207D5E /* MapInteractor.swift */,
+				810821E9219FD7FB00BF2F07 /* Model */,
+				817E438B219E7C23007F125B /* MapUtils */,
 			);
 			path = MapUseCases;
 			sourceTree = "<group>";
@@ -327,6 +397,7 @@
 			children = (
 				81A975512172141000207D5E /* DBHelper.swift */,
 				81A975492172136E00207D5E /* DBHelperImpl.swift */,
+				810821ED21A1294D00BF2F07 /* RealmHelper.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -347,9 +418,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */;
 			buildPhases = (
+				02E6F3171A6B839A7A42EC80 /* [CP] Check Pods Manifest.lock */,
 				81737239216FC1B400000A05 /* Sources */,
 				8173723A216FC1B400000A05 /* Frameworks */,
 				8173723B216FC1B400000A05 /* Resources */,
+				6ACD7334A6D6FE5056C1B3E2 /* [CP] Embed Pods Frameworks */,
+				81CAF06621A6FABA00A84E3E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -364,6 +438,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */;
 			buildPhases = (
+				0E78C8CA8A2FD57C39FB1222 /* [CP] Check Pods Manifest.lock */,
 				8173724D216FC1B600000A05 /* Sources */,
 				8173724E216FC1B600000A05 /* Frameworks */,
 				8173724F216FC1B600000A05 /* Resources */,
@@ -428,6 +503,7 @@
 				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
 				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
+				02180C232195B0E100BCA785 /* denkmaleTemp.xml in Resources */,
 				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +517,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02E6F3171A6B839A7A42EC80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Denkmalkarte-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E78C8CA8A2FD57C39FB1222 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DenkmalkarteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ACD7334A6D6FE5056C1B3E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81CAF06621A6FABA00A84E3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81737239216FC1B400000A05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -449,6 +605,7 @@
 				81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */,
 				8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
 				81A975432172064300207D5E /* Assembler.swift in Sources */,
+				810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */,
 				8173727B216FDCDB00000A05 /* View.swift in Sources */,
 				81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */,
 				8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */,
@@ -466,6 +623,7 @@
 				81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
 				81737264216FC87200000A05 /* Router.swift in Sources */,
 				81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */,
+				810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */,
 				81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */,
 				81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */,
 				81A97547217207C600207D5E /* MapInteractor.swift in Sources */,
@@ -477,7 +635,9 @@
 				81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */,
 				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
 				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
+				0254BCB8218705AF00E467EE /* Parser.swift in Sources */,
 				817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */,
+				810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */,
 				81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +790,7 @@
 		};
 		8173725B216FC1B600000A05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -648,6 +809,7 @@
 		};
 		8173725C216FC1B600000A05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -666,6 +828,7 @@
 		};
 		8173725E216FC1B600000A05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -687,6 +850,7 @@
 		};
 		8173725F216FC1B600000A05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

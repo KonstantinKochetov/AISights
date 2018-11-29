@@ -9,7 +9,7 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 
     var presenter: SearchScreenPresenterProtocol?
 
-    private var results: [String] = []
+    private var results: [Denkmal] = []
 
     public override func viewDidLoad() {
         searchBar.delegate = self
@@ -30,8 +30,6 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
                 self.resultsCountView.text = "\(result.count) results"
                 self.tableView.reloadData()
 
-            }, progress: { _ in
-
             }, failure: { _ in
 
             })
@@ -44,9 +42,9 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DenkmalCell.identifier, for: indexPath) as? DenkmalCell
-        let result = results[indexPath.row]
+        let denkmal = results[indexPath.row]
 
-        cell?.set(result: result)
+        cell?.set(denkmal: denkmal)
         return cell!
     }
 

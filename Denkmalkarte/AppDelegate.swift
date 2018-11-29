@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if assembler == nil {
             assembler = AppAssembler()
         }
+        // DB
+        loadMapsToRealm(mapUseCases: assembler.resolve())
         // UI
         window = UIWindow(frame: UIScreen.main.bounds)
         // navigation
@@ -44,6 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    private func loadMapsToRealm(mapUseCases: MapUseCases) {
+        mapUseCases.loadMapsToRealm()
     }
 
 }
