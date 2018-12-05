@@ -7,11 +7,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var router: AppRouter?
-    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        if let router = router {
+            self.router = router
+        } else {
+            self.router = AppRouter(window: window!)
+        }
+
+        // Hier router.showMapScreenFromShortcut() -> childRouter[0] -> presenter.showMapScreenFromShortcut -> view...
+
         switch userActivity.activityType {
         case UserActivityType.ShowLocalDenkmal:
-            if let viewController = window?.rootViewController as? MapScreenView{
+            if let viewController = router?.childRouter[0] as? MapScreenView {
+                print("new ViewController")
                 viewController.showLocalDenkmal()
             }
         default:

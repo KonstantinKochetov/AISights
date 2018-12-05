@@ -33,7 +33,7 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
     func showLocalDenkmal() {
         print("in showLocationDenkmal")
         let testLocatin = locationManager.location
-        print("TestLocation \(testLocatin)")
+        print("TestLocation \(String(describing: testLocatin))")
         if let tst = testLocatin {
             centerMapOnLocation(location: tst)
             print("get userLocation: ")
