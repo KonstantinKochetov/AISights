@@ -10,9 +10,10 @@ public class InfoScreenView: UIViewController, InfoScreenViewProtocol {
     @IBOutlet weak var infoScreenLabel: UILabel!
     
     private var results: [String] = ["1", "2", "3"]
-    private var pinImages:  [UIImage] = [UIImage(named: "blue-pin")! , UIImage(named: "red-pin")! ,UIImage(named: "blue-pin")!]
-    private var textForPins: [String] = ["Dieser Pin beschreibt ...", "Roter Pin", "Blauer Pin"]
-
+    private var pinImages:  [UIImage] = [UIImage(named: "blue-pin")! , UIImage(named: "red-pin")! ,UIImage(named: "shovel")!]
+    private var textForPins: [String] = ["Mehrere Denkmäler in einer Straße", "", "Bewerten sie Denkmäler"]
+    
+    private var HeaderForPins: [String] = ["Ensemble", "Einzelnes Denkmal", "Bewertung"]
     
     
     public override func viewDidLoad() {
@@ -35,8 +36,10 @@ extension InfoScreenView: UITableViewDelegate, UITableViewDataSource {
         //let result = results[indexPath.row]
         let pinImage = pinImages[indexPath.row]
         let textForPin = textForPins[indexPath.row]
+        let textForPinHeader = HeaderForPins[indexPath.row]
         
-        cell?.set(pinImages: pinImage, textForPin: textForPin)
+        cell?.set(pinImages: pinImage, textForPin: textForPin , textForPinHeader: textForPinHeader)
+    
         return cell!
     }
     
