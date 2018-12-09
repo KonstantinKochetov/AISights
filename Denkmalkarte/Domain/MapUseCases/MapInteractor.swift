@@ -24,6 +24,19 @@ public class MapInteractor: MapUseCases {
         }
     }
 
+    func syncFirebaseToRealm() {
+        apiHelper.getFirebaseData(success: { result in
+            do {
+                let denkmale = self.convertFirebaseDataToDenkmal(result)
+                try self.dbHelper.saveAll(denkmale)
+            } catch {
+                print("fail save firebase objects to Realm")
+            }
+        }, failure: { error in
+            print("fail to sync Realm with Firebase")
+        })
+    }
+
     func cleanMapsRealm() {
         do {
             try dbHelper.clean()
@@ -34,6 +47,14 @@ public class MapInteractor: MapUseCases {
 
     func getDenkmale(success: @escaping ([Denkmal]) -> Void,
                      failure: @escaping (Error) -> Void) {
-        dbHelper.getDenkmale(success: success, failure: failure)
+        //dbHelper.getDenkmale(success: success, failure: failure)
+    }
+
+    private func convertFirebaseDataToDenkmal(_ firebaseData: NSArray) -> [Denkmal] {
+        var denkmale: [Denkmal] = []
+        for element in firebaseData {
+            
+        }
+        return []
     }
 }
