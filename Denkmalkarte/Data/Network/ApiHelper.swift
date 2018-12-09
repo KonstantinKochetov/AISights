@@ -2,7 +2,7 @@ import Foundation
 
 protocol ApiHelper {
 
-    func getFirebaseData(success: @escaping (NSArray) -> Void,
+    func getFirebaseData(success: @escaping ([[String: AnyObject]]) -> Void,
                      failure: @escaping (Error) -> Void)
 
 }
