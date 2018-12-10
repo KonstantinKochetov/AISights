@@ -11,6 +11,7 @@
 		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
 		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
 		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
+		8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */ = {isa = PBXBuildFile; fileRef = 8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */; };
 		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
 		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
 		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
 		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
 		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = long_denkmaeler.json; sourceTree = "<group>"; };
 		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		81737267216FD04F00000A05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */,
 				8175D56E21BDAC60003A553F /* short_denkmaeler2.json */,
 				81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
 				81737247216FC1B600000A05 /* Assets.xcassets */,
@@ -497,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
+				8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */,
 				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
 				817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */,
 				81A975122170C8E000207D5E /* SearchScreenView.xib in Resources */,

@@ -51,7 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func loadMapsToRealmAndSyncFirebase(mapUseCases: MapUseCases) {
-        mapUseCases.loadMapsToRealm() // TODO do it only once!!!
+        if (!mapUseCases.alreadyLoaded()) {
+            mapUseCases.loadMapsToRealm()
+        }
         mapUseCases.syncFirebaseToRealm()
     }
 

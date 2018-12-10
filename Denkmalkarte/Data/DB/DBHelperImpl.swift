@@ -54,4 +54,12 @@ class DbHelperImpl: DbHelper {
             failure(NSError(domain: "no domain", code: 406, userInfo: nil))
         }
     }
+
+    func alreadyLoaded() -> Bool {
+        return UserDefaults.standard.bool(forKey: "alreadyLoaded") 
+    }
+
+    func setAlreadyLoaded() {
+        UserDefaults.standard.set(true, forKey: "alreadyLoaded")
+    }
 }

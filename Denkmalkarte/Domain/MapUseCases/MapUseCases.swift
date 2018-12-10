@@ -3,6 +3,8 @@ protocol MapUseCases {
 
     func loadMapsToRealm()
 
+    func alreadyLoaded() -> Bool
+
     func syncFirebaseToRealm()
 
     func cleanMapsRealm()

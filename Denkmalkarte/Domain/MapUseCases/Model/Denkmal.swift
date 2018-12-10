@@ -5,6 +5,7 @@ import RealmSwift
 class Denkmal: NSObject, MKAnnotation {
 
     var id: String
+    var markiert: Bool
     var beschreibung: String
     var ort: String
     var latitude: String
@@ -39,6 +40,7 @@ class Denkmal: NSObject, MKAnnotation {
     // TODO temporary delete after deleting xml parser
     override init() {
         self.id = ""
+        self.markiert = false
         self.beschreibung = ""
         self.ort = ""
         self.latitude = ""
@@ -73,6 +75,7 @@ class Denkmal: NSObject, MKAnnotation {
 
     // MARK official main constructor
     convenience init(id: String,
+                     markiert: Bool,
                      beschreibung: String,
                      ort: String,
                      latitude: String,
@@ -103,6 +106,7 @@ class Denkmal: NSObject, MKAnnotation {
                      datierung: [String]) {
         self.init()
         self.id = id
+        self.markiert = markiert
         self.beschreibung = beschreibung
         self.ort = ort
         self.latitude = latitude
@@ -171,33 +175,34 @@ class Denkmal: NSObject, MKAnnotation {
         }
 
         return RealmDenkmal(id: id,
-                                beschreibung: beschreibung,
-                                ort: ort,
-                                latitude: latitude,
-                                longitude: longitude,
-                                entwurfUndAusfuehrung: realmEntwurfUndAusfuehrung,
-                                ausfuehrung: realmAusfuehrung,
-                                baubeginn: baubeginn,
-                                fertigstellung: fertigstellung,
-                                ausfuehrungUndBauherrUndEntwurf: ausfuehrungUndBauherrUndEntwurf,
-                                entwurfUndFertigstellung: entwurfUndFertigstellung,
-                                literatur: literatur,
-                                ausfuehrungUndBauherr: ausfuehrungUndBauherr,
-                                planungsbeginn: planungsbeginn,
-                                entwurfUndDatierung: entwurfUndDatierung,
-                                planungUndAusfuehrung: planungUndAusfuehrung,
-                                entwurfUndBaubeginnUndFertigstellung: entwurfUndBaubeginnUndFertigstellung,
-                                entwurf: realmEntwurf,
-                                bauherr: realmBauherr,
-                                text: text,
-                                wiederaufbau: wiederaufbau,
-                                umbau: umbau,
-                                entwurfUndBaubeginn: entwurfUndBaubeginn,
-                                image: image,
-                                strasse: realmStrasse,
-                                planung: planung,
-                                entwurfUndBauherr: entwurfUndBauherr,
-                                eigentuemer: eigentuemer,
-                                datierung: realmDatierung)
+                            markiert: markiert,
+                            beschreibung: beschreibung,
+                            ort: ort,
+                            latitude: latitude,
+                            longitude: longitude,
+                            entwurfUndAusfuehrung: realmEntwurfUndAusfuehrung,
+                            ausfuehrung: realmAusfuehrung,
+                            baubeginn: baubeginn,
+                            fertigstellung: fertigstellung,
+                            ausfuehrungUndBauherrUndEntwurf: ausfuehrungUndBauherrUndEntwurf,
+                            entwurfUndFertigstellung: entwurfUndFertigstellung,
+                            literatur: literatur,
+                            ausfuehrungUndBauherr: ausfuehrungUndBauherr,
+                            planungsbeginn: planungsbeginn,
+                            entwurfUndDatierung: entwurfUndDatierung,
+                            planungUndAusfuehrung: planungUndAusfuehrung,
+                            entwurfUndBaubeginnUndFertigstellung: entwurfUndBaubeginnUndFertigstellung,
+                            entwurf: realmEntwurf,
+                            bauherr: realmBauherr,
+                            text: text,
+                            wiederaufbau: wiederaufbau,
+                            umbau: umbau,
+                            entwurfUndBaubeginn: entwurfUndBaubeginn,
+                            image: image,
+                            strasse: realmStrasse,
+                            planung: planung,
+                            entwurfUndBauherr: entwurfUndBauherr,
+                            eigentuemer: eigentuemer,
+                            datierung: realmDatierung)
     }
 }

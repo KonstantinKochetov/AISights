@@ -18,9 +18,14 @@ public class MapInteractor: MapUseCases {
         let denkmale = readJSON()
         do {
             try dbHelper.saveAll(denkmale)
+            dbHelper.setAlreadyLoaded()
         } catch {
             print("fail to load local file to realm")
         }
+    }
+
+    func alreadyLoaded() -> Bool {
+        return dbHelper.alreadyLoaded()
     }
 
     func syncFirebaseToRealm() {
@@ -77,6 +82,7 @@ public class MapInteractor: MapUseCases {
         var denkmale: [Denkmal] = []
         for element in firebaseData {
             denkmale.append(Denkmal(id: element["id"] as? String ?? "", // TODO make K constants
+                markiert: false,
                 beschreibung: element["beschreibung"] as? String ?? "",
                 ort: element["ort"] as? String ?? "",
                 latitude: element["latitude"] as? String ?? "",

@@ -12,4 +12,8 @@ protocol DbHelper {
     func getDenkmale(success: @escaping ([Denkmal]) -> Void,
                      failure: @escaping (Error) -> Void)
 
+    func alreadyLoaded() -> Bool
+
+    func setAlreadyLoaded()
+
 }

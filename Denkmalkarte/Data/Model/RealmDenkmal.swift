@@ -5,6 +5,7 @@ import RealmSwift
 class RealmDenkmal: Object {
 
     @objc dynamic var id: String = ""
+    @objc dynamic var markiert: Bool = false
     @objc dynamic var beschreibung: String = ""
     @objc dynamic var ort: String = ""
     @objc dynamic var latitude: String = ""
@@ -39,6 +40,7 @@ class RealmDenkmal: Object {
     }
 
     public convenience init(id: String = "",
+                            markiert: Bool = false,
                             beschreibung: String = "",
                             ort: String = "",
                             latitude: String = "",
@@ -69,6 +71,7 @@ class RealmDenkmal: Object {
                             datierung: List<String> = List<String>()) {
         self.init()
         self.id = id
+        self.markiert = markiert
         self.beschreibung = beschreibung
         self.ort = ort
         self.latitude = latitude
@@ -101,6 +104,7 @@ class RealmDenkmal: Object {
 
     func toDenkmal() -> Denkmal {
         return Denkmal(id: id,
+                       markiert: markiert,
                        beschreibung: beschreibung,
                        ort: ort,
                        latitude: latitude,
