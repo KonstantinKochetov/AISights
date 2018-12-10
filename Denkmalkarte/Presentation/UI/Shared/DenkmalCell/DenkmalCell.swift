@@ -12,7 +12,7 @@ class DenkmalCell: UITableViewCell {
         let filter = AspectScaledToFillSizeFilter(size: denkmalImageView.frame.size)
         do {
             if !denkmal.image.isEmpty {
-                let imageUrl = URL(string: denkmal.image)! // TODO fix it with placeholder
+                let imageUrl = URL(string: denkmal.image)!
                 denkmalImageView.af_setImage(withURL: imageUrl, filter: filter)
             }
         }

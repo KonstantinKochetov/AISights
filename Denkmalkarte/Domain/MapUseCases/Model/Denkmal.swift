@@ -36,74 +36,36 @@ class Denkmal: NSObject, MKAnnotation {
     var datierung: [String]
     var coordinate: CLLocationCoordinate2D
 
-    // TODO temporary delete after deleting xml parser
-    override init() {
-        self.id = ""
-        self.markiert = false
-        self.title = ""
-        self.ort = ""
-        self.latitude = ""
-        self.longitude = ""
-        self.entwurfUndAusfuehrung = []
-        self.ausfuehrung = []
-        self.baubeginn = ""
-        self.fertigstellung = ""
-        self.ausfuehrungUndBauherrUndEntwurf = ""
-        self.entwurfUndFertigstellung = ""
-        self.literatur = ""
-        self.ausfuehrungUndBauherr = ""
-        self.planungsbeginn = ""
-        self.entwurfUndDatierung = ""
-        self.planungUndAusfuehrung = ""
-        self.entwurfUndBaubeginnUndFertigstellung = ""
-        self.entwurf = []
-        self.bauherr = []
-        self.text = ""
-        self.wiederaufbau = ""
-        self.umbau = ""
-        self.entwurfUndBaubeginn = ""
-        self.image = ""
-        self.strasse = []
-        self.planung = ""
-        self.entwurfUndBauherr = ""
-        self.eigentuemer = ""
-        self.datierung = []
-        self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        super.init()
-    }
-
-    // MARK: official main constructor
-    convenience init(id: String,
-                     markiert: Bool,
-                     title: String,
-                     ort: String,
-                     latitude: String,
-                     longitude: String,
-                     entwurfUndAusfuehrung: [String],
-                     ausfuehrung: [String],
-                     baubeginn: String,
-                     fertigstellung: String,
-                     ausfuehrungUndBauherrUndEntwurf: String,
-                     entwurfUndFertigstellung: String,
-                     literatur: String,
-                     ausfuehrungUndBauherr: String,
-                     planungsbeginn: String,
-                     entwurfUndDatierung: String,
-                     planungUndAusfuehrung: String,
-                     entwurfUndBaubeginnUndFertigstellung: String,
-                     entwurf: [String],
-                     bauherr: [String],
-                     text: String,
-                     wiederaufbau: String,
-                     umbau: String,
-                     entwurfUndBaubeginn: String,
-                     image: String,
-                     strasse: [String],
-                     planung: String,
-                     entwurfUndBauherr: String,
-                     eigentuemer: String,
-                     datierung: [String]) {
-        self.init()
+    public init(id: String,
+                markiert: Bool,
+                title: String,
+                ort: String,
+                latitude: String,
+                longitude: String,
+                entwurfUndAusfuehrung: [String],
+                ausfuehrung: [String],
+                baubeginn: String,
+                fertigstellung: String,
+                ausfuehrungUndBauherrUndEntwurf: String,
+                entwurfUndFertigstellung: String,
+                literatur: String,
+                ausfuehrungUndBauherr: String,
+                planungsbeginn: String,
+                entwurfUndDatierung: String,
+                planungUndAusfuehrung: String,
+                entwurfUndBaubeginnUndFertigstellung: String,
+                entwurf: [String],
+                bauherr: [String],
+                text: String,
+                wiederaufbau: String,
+                umbau: String,
+                entwurfUndBaubeginn: String,
+                image: String,
+                strasse: [String],
+                planung: String,
+                entwurfUndBauherr: String,
+                eigentuemer: String,
+                datierung: [String]) {
         self.id = id
         self.markiert = markiert
         self.title = title
@@ -134,21 +96,18 @@ class Denkmal: NSObject, MKAnnotation {
         self.entwurfUndBauherr = entwurfUndBauherr
         self.eigentuemer = eigentuemer
         self.datierung = datierung
-        self.coordinate = getCoordinates(lat: latitude, long: longitude)
+        if !longitude.isEmpty && !latitude.isEmpty {
+            let lon =  NumberFormatter().number(from: longitude)?.doubleValue
+            let lat =  NumberFormatter().number(from: latitude)?.doubleValue
+            self.coordinate = CLLocationCoordinate2D(latitude: Double(lat ?? 0), longitude: Double(lon ?? 0))
+        } else {
+            self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        }
+        super.init()
     }
 
     var subtitle: String? {
         return ort
-    }
-
-    private func getCoordinates(lat: String, long: String) -> CLLocationCoordinate2D {
-        if !long.isEmpty && !lat.isEmpty {
-            let lon =  NumberFormatter().number(from: long )?.doubleValue
-            let lat =  NumberFormatter().number(from: lat)?.doubleValue
-            return CLLocationCoordinate2D(latitude: Double(lat ?? 0), longitude: Double(lon ?? 0))
-        }
-        return CLLocationCoordinate2D(latitude: 0, longitude: 0)
-
     }
 
     func toRealmDenkmal() -> RealmDenkmal {
