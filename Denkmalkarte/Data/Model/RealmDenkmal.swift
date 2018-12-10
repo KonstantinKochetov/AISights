@@ -6,7 +6,7 @@ class RealmDenkmal: Object {
 
     @objc dynamic var id: String = ""
     @objc dynamic var markiert: Bool = false
-    @objc dynamic var beschreibung: String = ""
+    @objc dynamic var title: String = ""
     @objc dynamic var ort: String = ""
     @objc dynamic var latitude: String = ""
     @objc dynamic var longitude: String = ""
@@ -41,7 +41,7 @@ class RealmDenkmal: Object {
 
     public convenience init(id: String = "",
                             markiert: Bool = false,
-                            beschreibung: String = "",
+                            title: String = "",
                             ort: String = "",
                             latitude: String = "",
                             longitude: String = "",
@@ -72,7 +72,7 @@ class RealmDenkmal: Object {
         self.init()
         self.id = id
         self.markiert = markiert
-        self.beschreibung = beschreibung
+        self.title = title
         self.ort = ort
         self.latitude = latitude
         self.longitude = longitude
@@ -105,7 +105,7 @@ class RealmDenkmal: Object {
     func toDenkmal() -> Denkmal {
         return Denkmal(id: id,
                        markiert: markiert,
-                       beschreibung: beschreibung,
+                       title: title,
                        ort: ort,
                        latitude: latitude,
                        longitude: longitude,

@@ -6,7 +6,7 @@ class Denkmal: NSObject, MKAnnotation {
 
     var id: String
     var markiert: Bool
-    var beschreibung: String
+    var title: String?
     var ort: String
     var latitude: String
     var longitude: String
@@ -41,7 +41,7 @@ class Denkmal: NSObject, MKAnnotation {
     override init() {
         self.id = ""
         self.markiert = false
-        self.beschreibung = ""
+        self.title = ""
         self.ort = ""
         self.latitude = ""
         self.longitude = ""
@@ -76,7 +76,7 @@ class Denkmal: NSObject, MKAnnotation {
     // MARK official main constructor
     convenience init(id: String,
                      markiert: Bool,
-                     beschreibung: String,
+                     title: String,
                      ort: String,
                      latitude: String,
                      longitude: String,
@@ -107,7 +107,7 @@ class Denkmal: NSObject, MKAnnotation {
         self.init()
         self.id = id
         self.markiert = markiert
-        self.beschreibung = beschreibung
+        self.title = title
         self.ort = ort
         self.latitude = latitude
         self.longitude = longitude
@@ -182,7 +182,7 @@ class Denkmal: NSObject, MKAnnotation {
 
         return RealmDenkmal(id: id,
                             markiert: markiert,
-                            beschreibung: beschreibung,
+                            title: title ?? "",
                             ort: ort,
                             latitude: latitude,
                             longitude: longitude,

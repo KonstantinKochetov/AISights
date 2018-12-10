@@ -51,7 +51,7 @@ public class MapInteractor: MapUseCases {
 
     func getDenkmale(success: @escaping ([Denkmal]) -> Void,
                      failure: @escaping (Error) -> Void) {
-        // dbHelper.getDenkmale(success: success, failure: failure)
+        dbHelper.getDenkmale(success: success, failure: failure)
     }
 
     private func readJSON() -> [Denkmal] {
@@ -83,7 +83,7 @@ public class MapInteractor: MapUseCases {
         for element in firebaseData {
             denkmale.append(Denkmal(id: element["id"] as? String ?? "", // TODO make K constants
                 markiert: false,
-                beschreibung: element["beschreibung"] as? String ?? "",
+                title: element["beschreibung"] as? String ?? "",
                 ort: element["ort"] as? String ?? "",
                 latitude: element["latitude"] as? String ?? "",
                 longitude: element["longitude"] as? String ?? "",
