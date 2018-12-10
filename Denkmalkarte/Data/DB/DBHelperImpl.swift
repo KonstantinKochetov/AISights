@@ -56,7 +56,7 @@ class DbHelperImpl: DbHelper {
     }
 
     func alreadyLoaded() -> Bool {
-        return UserDefaults.standard.bool(forKey: "alreadyLoaded") 
+        return UserDefaults.standard.bool(forKey: "alreadyLoaded")
     }
 
     func setAlreadyLoaded() {

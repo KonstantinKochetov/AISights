@@ -15,7 +15,6 @@ class DenkmalCell: UITableViewCell {
                 let imageUrl = URL(string: denkmal.image)! // TODO fix it with placeholder
                 denkmalImageView.af_setImage(withURL: imageUrl, filter: filter)
             }
-  
         }
 
     }

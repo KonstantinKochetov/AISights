@@ -36,7 +36,6 @@ class Denkmal: NSObject, MKAnnotation {
     var datierung: [String]
     var coordinate: CLLocationCoordinate2D
 
-
     // TODO temporary delete after deleting xml parser
     override init() {
         self.id = ""
@@ -73,7 +72,7 @@ class Denkmal: NSObject, MKAnnotation {
         super.init()
     }
 
-    // MARK official main constructor
+    // MARK: official main constructor
     convenience init(id: String,
                      markiert: Bool,
                      title: String,
@@ -142,56 +141,25 @@ class Denkmal: NSObject, MKAnnotation {
         return ort
     }
 
-    private func getCoordinates(lat: String, long: String) -> CLLocationCoordinate2D { // TODO in utils
-        if (long != nil && !long.isEmpty && lat != nil && !lat.isEmpty) {
+    private func getCoordinates(lat: String, long: String) -> CLLocationCoordinate2D {
+        if !long.isEmpty && !lat.isEmpty {
             let lon =  NumberFormatter().number(from: long )?.doubleValue
             let lat =  NumberFormatter().number(from: lat)?.doubleValue
-            return CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!) // TODO fix this
+            return CLLocationCoordinate2D(latitude: Double(lat ?? 0), longitude: Double(lon ?? 0))
         }
         return CLLocationCoordinate2D(latitude: 0, longitude: 0)
 
     }
 
     func toRealmDenkmal() -> RealmDenkmal {
-
-        let realmEntwurfUndAusfuehrung = List<String>()
-        for el in entwurfUndAusfuehrung {
-            realmEntwurfUndAusfuehrung.append(el)
-        }
-
-        let realmAusfuehrung = List<String>()
-        for el in ausfuehrung {
-            realmAusfuehrung.append(el)
-        }
-
-        let realmEntwurf = List<String>()
-        for el in entwurf {
-            realmEntwurf.append(el)
-        }
-
-        let realmBauherr = List<String>()
-        for el in bauherr {
-            realmBauherr.append(el)
-        }
-
-        let realmStrasse = List<String>()
-        for el in strasse {
-            realmStrasse.append(el)
-        }
-
-        let realmDatierung = List<String>()
-        for el in datierung {
-            realmDatierung.append(el)
-        }
-
         return RealmDenkmal(id: id,
                             markiert: markiert,
                             title: title ?? "",
                             ort: ort,
                             latitude: latitude,
                             longitude: longitude,
-                            entwurfUndAusfuehrung: realmEntwurfUndAusfuehrung,
-                            ausfuehrung: realmAusfuehrung,
+                            entwurfUndAusfuehrung: convertArrayToRealmList(array: entwurfUndAusfuehrung),
+                            ausfuehrung: convertArrayToRealmList(array: ausfuehrung),
                             baubeginn: baubeginn,
                             fertigstellung: fertigstellung,
                             ausfuehrungUndBauherrUndEntwurf: ausfuehrungUndBauherrUndEntwurf,
@@ -202,17 +170,25 @@ class Denkmal: NSObject, MKAnnotation {
                             entwurfUndDatierung: entwurfUndDatierung,
                             planungUndAusfuehrung: planungUndAusfuehrung,
                             entwurfUndBaubeginnUndFertigstellung: entwurfUndBaubeginnUndFertigstellung,
-                            entwurf: realmEntwurf,
-                            bauherr: realmBauherr,
+                            entwurf: convertArrayToRealmList(array: entwurf),
+                            bauherr: convertArrayToRealmList(array: bauherr),
                             text: text,
                             wiederaufbau: wiederaufbau,
                             umbau: umbau,
                             entwurfUndBaubeginn: entwurfUndBaubeginn,
                             image: image,
-                            strasse: realmStrasse,
+                            strasse: convertArrayToRealmList(array: strasse),
                             planung: planung,
                             entwurfUndBauherr: entwurfUndBauherr,
                             eigentuemer: eigentuemer,
-                            datierung: realmDatierung)
+                            datierung: convertArrayToRealmList(array: datierung))
+    }
+
+    private func convertArrayToRealmList(array: [String]) -> List<String> {
+        let list = List<String>()
+        for el in array {
+            list.append(el)
+        }
+        return list
     }
 }
