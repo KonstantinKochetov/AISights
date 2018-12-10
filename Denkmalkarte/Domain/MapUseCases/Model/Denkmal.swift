@@ -135,11 +135,17 @@ class Denkmal: NSObject, MKAnnotation {
         self.entwurfUndBauherr = entwurfUndBauherr
         self.eigentuemer = eigentuemer
         self.datierung = datierung
-        self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0) // TODO fix this
+        self.coordinate = getCoordinates(lat: latitude, long: longitude)
     }
 
     var subtitle: String? {
         return ort
+    }
+
+    private func getCoordinates(lat: String, long: String) -> CLLocationCoordinate2D { // TODO in utils
+        let lon =  NumberFormatter().number(from: long )?.doubleValue
+        let lat =  NumberFormatter().number(from: lat)?.doubleValue
+        return CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!) // TODO fix this
     }
 
     func toRealmDenkmal() -> RealmDenkmal {
