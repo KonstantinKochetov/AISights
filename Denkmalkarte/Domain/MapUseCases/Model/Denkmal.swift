@@ -143,9 +143,13 @@ class Denkmal: NSObject, MKAnnotation {
     }
 
     private func getCoordinates(lat: String, long: String) -> CLLocationCoordinate2D { // TODO in utils
-        let lon =  NumberFormatter().number(from: long )?.doubleValue
-        let lat =  NumberFormatter().number(from: lat)?.doubleValue
-        return CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!) // TODO fix this
+        if (long != nil && !long.isEmpty && lat != nil && !lat.isEmpty) {
+            let lon =  NumberFormatter().number(from: long )?.doubleValue
+            let lat =  NumberFormatter().number(from: lat)?.doubleValue
+            return CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!) // TODO fix this
+        }
+        return CLLocationCoordinate2D(latitude: 0, longitude: 0)
+
     }
 
     func toRealmDenkmal() -> RealmDenkmal {
