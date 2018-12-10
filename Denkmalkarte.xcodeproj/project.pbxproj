@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02180C232195B0E100BCA785 /* denkmaleTemp.xml in Resources */ = {isa = PBXBuildFile; fileRef = 02180C222195B0E100BCA785 /* denkmaleTemp.xml */; };
-		0254BCB8218705AF00E467EE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0254BCB7218705AF00E467EE /* Parser.swift */; };
 		1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */; };
 		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
 		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
 		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
+		8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */ = {isa = PBXBuildFile; fileRef = 8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */; };
+		8173038021BE7FB40007A4A1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173037F21BE7FB40007A4A1 /* Parser.swift */; };
+		8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173038121BE81D50007A4A1 /* DenkmalConstants.swift */; };
 		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
 		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
 		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737280216FDF5100000A05 /* MapScreenPresenter.swift */; };
 		81737285217000ED00000A05 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737284217000ED00000A05 /* MapScreenView.swift */; };
 		81737287217000FF00000A05 /* MapScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81737286217000FF00000A05 /* MapScreenView.xib */; };
+		8175D56F21BDAC60003A553F /* short_denkmaeler2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8175D56E21BDAC60003A553F /* short_denkmaeler2.json */; };
 		817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AC3AD217A2FF500670CCB /* DenkmalCell.swift */; };
 		817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817AC3AE217A2FF500670CCB /* DenkmalCell.xib */; };
 		81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750B2170C82A00207D5E /* SearchScreenContract.swift */; };
@@ -55,6 +57,7 @@
 		81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754B2172137700207D5E /* ApiHelperImpl.swift */; };
 		81A975502172140400207D5E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754F2172140400207D5E /* ApiHelper.swift */; };
 		81A975522172141000207D5E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975512172141000207D5E /* DBHelper.swift */; };
+		81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81F6DFE721BD482900BA957A /* GoogleService-Info.plist */; };
 		9C3A2E81BA3C596736B53427 /* Pods_Denkmalkarte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,14 +72,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02180C222195B0E100BCA785 /* denkmaleTemp.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = denkmaleTemp.xml; sourceTree = "<group>"; };
-		0254BCB7218705AF00E467EE /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.release.xcconfig"; sourceTree = "<group>"; };
 		64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.debug.xcconfig"; sourceTree = "<group>"; };
 		71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.release.xcconfig"; sourceTree = "<group>"; };
 		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
 		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
 		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = long_denkmaeler.json; sourceTree = "<group>"; };
+		8173037F21BE7FB40007A4A1 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		8173038121BE81D50007A4A1 /* DenkmalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalConstants.swift; sourceTree = "<group>"; };
 		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		81737280216FDF5100000A05 /* MapScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenPresenter.swift; sourceTree = "<group>"; };
 		81737284217000ED00000A05 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
+		8175D56E21BDAC60003A553F /* short_denkmaeler2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = short_denkmaeler2.json; sourceTree = "<group>"; };
 		817AC3AD217A2FF500670CCB /* DenkmalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalCell.swift; sourceTree = "<group>"; };
 		817AC3AE217A2FF500670CCB /* DenkmalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DenkmalCell.xib; sourceTree = "<group>"; };
 		819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenkmalkarteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +129,7 @@
 		81A9754B2172137700207D5E /* ApiHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelperImpl.swift; sourceTree = "<group>"; };
 		81A9754F2172140400207D5E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		81A975512172141000207D5E /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		81F6DFE721BD482900BA957A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Denkmalkarte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -207,6 +213,7 @@
 		8173723F216FC1B400000A05 /* Denkmalkarte */ = {
 			isa = PBXGroup;
 			children = (
+				81F6DFE721BD482900BA957A /* GoogleService-Info.plist */,
 				8173724C216FC1B600000A05 /* Info.plist */,
 				81737240216FC1B400000A05 /* AppDelegate.swift */,
 				81A975412172062400207D5E /* DI */,
@@ -230,7 +237,8 @@
 		81737267216FD04F00000A05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				02180C222195B0E100BCA785 /* denkmaleTemp.xml */,
+				8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */,
+				8175D56E21BDAC60003A553F /* short_denkmaeler2.json */,
 				81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
 				81737247216FC1B600000A05 /* Assets.xcassets */,
 			);
@@ -323,7 +331,8 @@
 		817E438B219E7C23007F125B /* MapUtils */ = {
 			isa = PBXGroup;
 			children = (
-				0254BCB7218705AF00E467EE /* Parser.swift */,
+				8173037F21BE7FB40007A4A1 /* Parser.swift */,
+				8173038121BE81D50007A4A1 /* DenkmalConstants.swift */,
 			);
 			path = MapUtils;
 			sourceTree = "<group>";
@@ -497,13 +506,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
+				8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */,
 				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
 				817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */,
 				81A975122170C8E000207D5E /* SearchScreenView.xib in Resources */,
 				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
+				8175D56F21BDAC60003A553F /* short_denkmaeler2.json in Resources */,
 				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
-				02180C232195B0E100BCA785 /* denkmaleTemp.xml in Resources */,
+				81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
 				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,15 +574,21 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -583,11 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-			);
-			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
@@ -610,6 +623,7 @@
 				81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */,
 				8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */,
 				81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */,
+				8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */,
 				81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */,
 				81A975502172140400207D5E /* ApiHelper.swift in Sources */,
 				81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */,
@@ -634,8 +648,8 @@
 				81A9752C2171FF3D00207D5E /* HistoryScreenContract.swift in Sources */,
 				81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */,
 				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
+				8173038021BE7FB40007A4A1 /* Parser.swift in Sources */,
 				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
-				0254BCB8218705AF00E467EE /* Parser.swift in Sources */,
 				817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */,
 				810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */,
 				81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
