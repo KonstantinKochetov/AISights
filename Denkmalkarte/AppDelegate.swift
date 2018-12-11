@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.router = AppRouter(window: window!)
         }
 
-        // Hier router.showMapScreenFromShortcut() -> childRouter[0] -> presenter.showMapScreenFromShortcut -> view...
-
         switch userActivity.activityType {
         case UserActivityType.ShowLocalDenkmal:
             if let viewController = router?.childRouter[0] as? MapScreenView {
