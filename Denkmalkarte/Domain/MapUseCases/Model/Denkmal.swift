@@ -28,7 +28,7 @@ class Denkmal: NSObject, MKAnnotation {
     var wiederaufbau: String
     var umbau: String
     var entwurfUndBaubeginn: String
-    var image: String
+    var image: [String]
     var strasse: [String]
     var planung: String
     var entwurfUndBauherr: String
@@ -60,7 +60,7 @@ class Denkmal: NSObject, MKAnnotation {
                 wiederaufbau: String,
                 umbau: String,
                 entwurfUndBaubeginn: String,
-                image: String,
+                image: [String],
                 strasse: [String],
                 planung: String,
                 entwurfUndBauherr: String,
@@ -135,7 +135,7 @@ class Denkmal: NSObject, MKAnnotation {
                             wiederaufbau: wiederaufbau,
                             umbau: umbau,
                             entwurfUndBaubeginn: entwurfUndBaubeginn,
-                            image: image,
+                            image: convertArrayToRealmList(array: image),
                             strasse: convertArrayToRealmList(array: strasse),
                             planung: planung,
                             entwurfUndBauherr: entwurfUndBauherr,

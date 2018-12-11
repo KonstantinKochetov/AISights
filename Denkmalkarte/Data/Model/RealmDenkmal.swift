@@ -28,7 +28,7 @@ class RealmDenkmal: Object {
     @objc dynamic var wiederaufbau: String = ""
     @objc dynamic var umbau: String = ""
     @objc dynamic var entwurfUndBaubeginn: String = ""
-    @objc dynamic var image: String = ""
+    var image: List<String> = List<String>()
     var strasse: List<String> = List<String>()
     @objc dynamic var planung: String = ""
     @objc dynamic var entwurfUndBauherr: String = ""
@@ -63,7 +63,7 @@ class RealmDenkmal: Object {
                             wiederaufbau: String = "",
                             umbau: String = "",
                             entwurfUndBaubeginn: String = "",
-                            image: String = "",
+                            image: List<String> = List<String>(),
                             strasse: List<String> = List<String>(),
                             planung: String = "",
                             entwurfUndBauherr: String = "",
@@ -127,7 +127,7 @@ class RealmDenkmal: Object {
                        wiederaufbau: wiederaufbau,
                        umbau: umbau,
                        entwurfUndBaubeginn: entwurfUndBaubeginn,
-                       image: image,
+                       image: Array(image),
                        strasse: Array(strasse),
                        planung: planung,
                        entwurfUndBauherr: entwurfUndBauherr,

@@ -50,7 +50,7 @@ class Parser {
                                     wiederaufbau: element[DenkmalConstants.wiederaufbau] as? String ?? "",
                                     umbau: element[DenkmalConstants.umbau] as? String ?? "",
                                     entwurfUndBaubeginn: element[DenkmalConstants.entwurfUndBaubeginn] as? String ?? "",
-                                    image: element[DenkmalConstants.image] as? String ?? "",
+                                    image: element[DenkmalConstants.image] as? [String] ?? [],
                                     strasse: element[DenkmalConstants.strasse] as? [String] ?? [],
                                     planung: element[DenkmalConstants.planung] as? String ?? "",
                                     entwurfUndBauherr: element[DenkmalConstants.entwurfUndBauherr] as? String ?? "",

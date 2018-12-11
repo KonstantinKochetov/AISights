@@ -12,7 +12,8 @@ class DenkmalCell: UITableViewCell {
         let filter = AspectScaledToFillSizeFilter(size: denkmalImageView.frame.size)
         do {
             if !denkmal.image.isEmpty {
-                let imageUrl = URL(string: denkmal.image)!
+                debugPrint(denkmal.image)
+                let imageUrl = URL(string: denkmal.image[0])!
                 denkmalImageView.af_setImage(withURL: imageUrl, filter: filter)
             }
         }
