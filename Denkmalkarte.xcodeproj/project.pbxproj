@@ -189,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				810821E7219FD7F200BF2F07 /* Denkmal.swift */,
-				02BF6DF421AD6E870055E0BB /* UserActivityType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +335,7 @@
 		817E438B219E7C23007F125B /* MapUtils */ = {
 			isa = PBXGroup;
 			children = (
+				02BF6DF421AD6E870055E0BB /* UserActivityType.swift */,
 				8173037F21BE7FB40007A4A1 /* Parser.swift */,
 				8173038121BE81D50007A4A1 /* DenkmalConstants.swift */,
 			);

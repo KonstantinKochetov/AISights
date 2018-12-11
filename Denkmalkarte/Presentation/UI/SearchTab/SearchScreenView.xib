@@ -97,7 +97,7 @@
                 <constraint firstItem="lFd-Xe-HX8" firstAttribute="bottom" secondItem="pDE-P4-PK4" secondAttribute="bottom" constant="10" id="lwQ-DL-rQD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="lFd-Xe-HX8"/>
-            <point key="canvasLocation" x="282" y="33"/>
+            <point key="canvasLocation" x="280.80000000000001" y="32.833583208395808"/>
         </view>
     </objects>
 </document>
