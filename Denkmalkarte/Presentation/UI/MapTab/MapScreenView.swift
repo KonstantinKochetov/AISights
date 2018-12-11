@@ -20,6 +20,7 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
         let initCenterMap = CLLocation(latitude: 52.520008, longitude: 13.404954)
         mapView.showsUserLocation = true
         centerMapOnLocation(location: initCenterMap)
+        showLocalDenkmal()
         presenter?.getDenkmale(success: { result in
             self.mapView.addAnnotations(result)
         }, failure: {error in
@@ -28,6 +29,25 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
 
         super.viewDidLoad()
 
+    }
+    func showLocalDenkmal() {
+        print("in showLocationDenkmal")
+        let testLocatin = locationManager.location
+        print("TestLocation \(String(describing: testLocatin))")
+        if let tst = testLocatin {
+            centerMapOnLocation(location: tst)
+            print("get userLocation: ")
+        }
+        creatUserActivity()
+    }
+    func creatUserActivity() {
+        print("crateUserActivity")
+        let activity = NSUserActivity(activityType: UserActivityType.ShowLocalDenkmal)
+        activity.title = "Zeige Denkmäler"
+        activity.isEligibleForPrediction = true
+        activity.isEligibleForSearch = true
+        self.userActivity = activity
+        self.userActivity?.becomeCurrent()
     }
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,

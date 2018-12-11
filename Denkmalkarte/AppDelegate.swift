@@ -8,6 +8,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var router: AppRouter?
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        if let router = router {
+            self.router = router
+        } else {
+            self.router = AppRouter(window: window!)
+        }
+
+        switch userActivity.activityType {
+        case UserActivityType.ShowLocalDenkmal:
+            if let viewController = router?.childRouter[0] as? MapScreenView {
+                print("new ViewController")
+                viewController.showLocalDenkmal()
+            }
+        default:
+            print("No user Activity")
+        }
+        return false
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF6DF421AD6E870055E0BB /* UserActivityType.swift */; };
 		1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */; };
 		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
 		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
@@ -72,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Denkmalkarte.entitlements; sourceTree = "<group>"; };
+		02BF6DF421AD6E870055E0BB /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
 		45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.release.xcconfig"; sourceTree = "<group>"; };
 		64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.debug.xcconfig"; sourceTree = "<group>"; };
 		71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				810821E7219FD7F200BF2F07 /* Denkmal.swift */,
+				02BF6DF421AD6E870055E0BB /* UserActivityType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +217,7 @@
 		8173723F216FC1B400000A05 /* Denkmalkarte */ = {
 			isa = PBXGroup;
 			children = (
+				02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */,
 				81F6DFE721BD482900BA957A /* GoogleService-Info.plist */,
 				8173724C216FC1B600000A05 /* Info.plist */,
 				81737240216FC1B400000A05 /* AppDelegate.swift */,
@@ -474,6 +479,11 @@
 				TargetAttributes = {
 					8173723C216FC1B400000A05 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 					81737250216FC1B600000A05 = {
 						CreatedOnToolsVersion = 10.0;
@@ -627,6 +637,7 @@
 				81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */,
 				81A975502172140400207D5E /* ApiHelper.swift in Sources */,
 				81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */,
+				02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */,
 				81A975362172027200207D5E /* InfoTabRouter.swift in Sources */,
 				81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */,
 				81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
@@ -807,8 +818,9 @@
 			baseConfigurationReference = 64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3BDXWM97N;
+				DEVELOPMENT_TEAM = 393K5YD4YY;
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -817,7 +829,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -826,8 +838,9 @@
 			baseConfigurationReference = 71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3BDXWM97N;
+				DEVELOPMENT_TEAM = 393K5YD4YY;
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -836,7 +849,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
