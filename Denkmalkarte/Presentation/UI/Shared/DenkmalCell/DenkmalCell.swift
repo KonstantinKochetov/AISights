@@ -15,9 +15,6 @@ class DenkmalCell: UITableViewCell {
                 let imageUrl = URL(string: denkmal.image)!
                 denkmalImageView.af_setImage(withURL: imageUrl, filter: filter)
             }
-            streetLabel.text = denkmal.location + " " + denkmal.street
-            denkmalDescriptionLabel.text = denkmal.literature
-            denkmalNameLabel.text = denkmal.builderOwner
         }
 
     }

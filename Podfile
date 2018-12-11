@@ -9,6 +9,8 @@ target 'Denkmalkarte' do
   pod 'SwiftLint'
   pod 'RealmSwift'
   pod 'AlamofireImage'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
   target 'DenkmalkarteTests' do
     inherit! :search_paths

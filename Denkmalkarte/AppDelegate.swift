@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 var assembler: Assembler! = nil
 
@@ -33,13 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
         // dependency injection
         if assembler == nil {
             assembler = AppAssembler()
         }
         // DB
-        loadMapsToRealm(mapUseCases: assembler.resolve())
+        loadMapsToRealmAndSyncFirebase(mapUseCases: assembler.resolve())
         // UI
         window = UIWindow(frame: UIScreen.main.bounds)
         // navigation
@@ -71,8 +73,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    private func loadMapsToRealm(mapUseCases: MapUseCases) {
-        mapUseCases.loadMapsToRealm()
+    private func loadMapsToRealmAndSyncFirebase(mapUseCases: MapUseCases) {
+        if !mapUseCases.alreadyLoaded() {
+            mapUseCases.loadMapsToRealm()
+        }
+        mapUseCases.syncFirebaseToRealm()
     }
 
 }
