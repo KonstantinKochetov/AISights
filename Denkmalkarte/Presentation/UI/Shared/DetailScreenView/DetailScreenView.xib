@@ -15,7 +15,9 @@
                 <outlet property="distanceLabel" destination="Jai-8T-P1f" id="eA7-al-1FE"/>
                 <outlet property="imageView" destination="qEf-c8-yho" id="dVU-0D-Zwa"/>
                 <outlet property="scrollView" destination="WrX-rY-7cd" id="o4M-Ks-M2a"/>
-                <outlet property="titleLabel" destination="RoZ-J2-Mtx" id="hDj-3x-2aB"/>
+                <outlet property="streetLabel" destination="o3n-M9-Bue" id="GOi-m4-lFK"/>
+                <outlet property="textLabel" destination="Z3Z-mf-AIr" id="Phs-Rx-BC0"/>
+                <outlet property="titleLabel" destination="RoZ-J2-Mtx" id="5Xt-ua-QwR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nXl-nD-gFK"/>
             </connections>
         </placeholder>
@@ -28,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DUq-Zd-aAL">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="770.33333333333337"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="906.33333333333337"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AME-3m-BhV">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -131,6 +133,24 @@ sed do eiusmod tempor incididunt ut labore </string>
                                         <constraint firstItem="H0y-tY-VP4" firstAttribute="leading" secondItem="AV7-hh-JcO" secondAttribute="leading" constant="24" id="GqA-LY-nhb"/>
                                         <constraint firstAttribute="trailing" secondItem="H0y-tY-VP4" secondAttribute="trailing" constant="24" id="Lt2-o4-IbR"/>
                                         <constraint firstAttribute="bottom" secondItem="H0y-tY-VP4" secondAttribute="bottom" constant="24" id="y3N-G2-iyO"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlr-NE-gbQ">
+                                    <rect key="frame" x="0.0" y="778.33333333333337" width="375" height="128"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaR-xb-gx3">
+                                            <rect key="frame" x="138.66666666666666" y="49" width="98" height="30"/>
+                                            <state key="normal" title="Get Directions"/>
+                                            <connections>
+                                                <action selector="directionsButtonTapped:" destination="-1" eventType="touchUpInside" id="SwJ-ET-35X"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="FaR-xb-gx3" firstAttribute="centerX" secondItem="Mlr-NE-gbQ" secondAttribute="centerX" id="LYN-1v-C1e"/>
+                                        <constraint firstItem="FaR-xb-gx3" firstAttribute="centerY" secondItem="Mlr-NE-gbQ" secondAttribute="centerY" id="PIa-f6-vaO"/>
+                                        <constraint firstAttribute="height" constant="128" id="wQY-Cb-W6M"/>
                                     </constraints>
                                 </view>
                             </subviews>
