@@ -2,6 +2,6 @@ import Foundation
 
 protocol SharedDetailRouter: NavigationRouter {
 
-    func showDetailView()
+    func showDetailView(_ withId: [Int])
 
 }

@@ -1,2 +1,16 @@
-disabled_rules: # rule identifiers to exclude from running
- - line_length
+disabled_rules:
+  - function_parameter_count
+  - void_return
+  - line_length
+  - nesting
+opt_in_rules:
+  - empty_count
+  - empty_string
+  - conditional_returns_on_newline
+included: 
+  - Denkmalkarte
+excluded: 
+  - Pods
+identifier_name:
+  min_length: 2
+

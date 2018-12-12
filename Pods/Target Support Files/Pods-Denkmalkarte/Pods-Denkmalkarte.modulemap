@@ -1,0 +1,6 @@
+framework module Pods_Denkmalkarte {
+  umbrella header "Pods-Denkmalkarte-umbrella.h"
+
+  export *
+  module * { export * }
+}
