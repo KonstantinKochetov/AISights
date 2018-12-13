@@ -2,7 +2,13 @@ import Foundation
 
 import UIKit
 
-public class InfoScreenView: UIViewController, InfoScreenViewProtocol {
+
+enum CellType {
+    case standardCell
+    case imageCell
+}
+
+class InfoScreenView: UIViewController, InfoScreenViewProtocol {
 
     var presenter: InfoScreenPresenterProtocol?
 
@@ -11,7 +17,10 @@ public class InfoScreenView: UIViewController, InfoScreenViewProtocol {
     
     private var results: [String] = ["1", "2", "3"]
     private var pinImages:  [UIImage] = [UIImage(named: "blue-pin")! , UIImage(named: "red-pin")! ,UIImage(named: "shovel")!]
+    public var shovelImages:  [UIImage] = [UIImage(named: "shovel")! , UIImage(named: "shovel")! , UIImage(named: "shovel")!]
+  
     private var textForPins: [String] = ["Mehrere Denkmäler in einer Straße", "", "Bewerten sie Denkmäler"]
+     private var textForShovels: [String] = ["x1 Unzufrieden", "x3 Befriedigend", "x5 Gefällt mir"]
     
     private var HeaderForPins: [String] = ["Ensemble", "Einzelnes Denkmal", "Bewertung"]
     
@@ -34,12 +43,23 @@ extension InfoScreenView: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InfoPinCell.identifier, for: indexPath) as? InfoPinCell
         //let result = results[indexPath.row]
-        let pinImage = pinImages[indexPath.row]
+       
+        //if indexPath.row == 2 {
+        //   cell?.cellType = .imageCell
+        // }
+        
         let textForPin = textForPins[indexPath.row]
         let textForPinHeader = HeaderForPins[indexPath.row]
+        let pinImage = pinImages[indexPath.row]
+        let shovelImage = shovelImages[indexPath.row]
         
-        cell?.set(pinImages: pinImage, textForPin: textForPin , textForPinHeader: textForPinHeader)
-    
+       
+        
+        cell?.set(pinImages: pinImage, textForPin: textForPin , textForPinHeader: textForPinHeader, shovelImages: shovelImage,textForShovels: textForShovels, indexRow: indexPath.row )
+     
+      
+      
+       
         return cell!
     }
     
