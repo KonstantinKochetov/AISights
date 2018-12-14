@@ -74,6 +74,10 @@ extension MapScreenView: MKMapViewDelegate {
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            /*let btnNavi = UIButton(frame: CGRect(origin: CGPoint.zero,
+                                                    size: CGSize(width: 30, height: 30)))
+            btnNavi.setBackgroundImage(UIImage(named: "Maps-icon"), for: UIControl.State())*/
+            view.leftCalloutAccessoryView = UIButton(type: .infoDark)
             view.clusteringIdentifier = "denkmal"
 
         }
@@ -81,9 +85,20 @@ extension MapScreenView: MKMapViewDelegate {
     }
 
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let tempDenkmal: Denkmal = view.annotation as? Denkmal {
-            let denkmal = [tempDenkmal]
-            presenter?.showDetailView(denkmal)
+
+        if view.rightCalloutAccessoryView == control {
+            if let tempDenkmal: Denkmal = view.annotation as? Denkmal {
+                let denkmal = [tempDenkmal]
+                presenter?.showDetailView(denkmal)
+            }
         }
+        if view.leftCalloutAccessoryView == control {
+            let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+            if let tempDenkmal: Denkmal = view.annotation as? Denkmal {
+                tempDenkmal.mapItem().openInMaps(launchOptions: launchOptions)
+            }
+
+        }
+
     }
 }
