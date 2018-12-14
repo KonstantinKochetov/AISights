@@ -15,13 +15,14 @@ public class MapTabRouter: SharedDetailRouter {
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)
     }
-
-    public func showDetailView(_ withId: [Int]) {
+    func showDetailView(_ denkmal: [Denkmal]?) {
         let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
         let presenter = DetailScreenPresenter(view: view, router: self)
         view.presenter = presenter
-        //view.id = withId
-        print(withId)
+        if let tempDenkmale = denkmal{
+            //view.denkmale = tempDenkmale
+            print(tempDenkmale)
+        }
         navigationController.pushViewController(view, animated: true)
     }
 }

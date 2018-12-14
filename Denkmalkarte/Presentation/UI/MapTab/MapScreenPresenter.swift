@@ -12,8 +12,8 @@ class MapScreenPresenter: MapScreenPresenterProtocol {
         self.mapUseCases = mapUseCases
     }
 
-    func showDetailView(_ withId: [Int]) {
-        router.showDetailView(withId)
+    func showDetailView(_ denkmal: [Denkmal]?) {
+        router.showDetailView(denkmal)
     }
 
     func getDenkmale(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void) {
