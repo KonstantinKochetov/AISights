@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // init
         initialize()
 
+        print(userActivity.activityType)
         switch userActivity.activityType {
         case UserActivityType.ShowLocalDenkmal:
             if let viewController = router?.childRouter[0] as? MapScreenView {

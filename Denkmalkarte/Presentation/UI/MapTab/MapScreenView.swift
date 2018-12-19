@@ -16,11 +16,15 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
         // Check for Location Services
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestWhenInUseAuthorization()
+
         }
-        let initCenterMap = CLLocation(latitude: 52.520008, longitude: 13.404954)
-        mapView.showsUserLocation = true
-        centerMapOnLocation(location: initCenterMap)
+        /*let initCenterMap = CLLocation(latitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!)
+        centerMapOnLocation(location: initCenterMap)*/
+
         showLocalDenkmal()
+
+         mapView.showsUserLocation = true
+
         presenter?.getDenkmale(success: { result in
             self.mapView.addAnnotations(result)
         }, failure: {error in
