@@ -1,4 +1,6 @@
 import MapKit
+import RealmSwift
+
 public class MapInteractor: MapUseCases {
 
     let dbHelper: DbHelper
@@ -12,23 +14,37 @@ public class MapInteractor: MapUseCases {
     }
 
     func loadMapsToRealm() {
-        let parser = Parser()
-        if let denkmale = parser.readXML() {
-            do {
-                try dbHelper.saveAll(denkmale)
-            } catch {
-                print("fail to load xml to realm")
-            }
-        } else {
-            print("fail to parse xml")
+        let denkmale = parser.readJSON()
+        do {
+            try dbHelper.saveAll(denkmale)
+            dbHelper.setAlreadyLoaded()
+        } catch {
+            debugPrint("fail to load local file to realm")
         }
+    }
+
+    func alreadyLoaded() -> Bool {
+        return dbHelper.alreadyLoaded()
+    }
+
+    func syncFirebaseToRealm() {
+        apiHelper.getFirebaseData(success: { result in
+            do {
+                let denkmale = self.parser.convertDataToDenkmal(result)
+                try self.dbHelper.saveAll(denkmale)
+            } catch {
+                debugPrint("fail save firebase objects to Realm")
+            }
+        }, failure: { error in
+            debugPrint("fail to sync Realm with Firebase: \(error)")
+        })
     }
 
     func cleanMapsRealm() {
         do {
             try dbHelper.clean()
         } catch {
-            print(error)
+            debugPrint(error)
         }
     }
 

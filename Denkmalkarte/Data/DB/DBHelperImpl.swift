@@ -54,12 +54,12 @@ class DbHelperImpl: DbHelper {
             failure(NSError(domain: "no domain", code: 406, userInfo: nil))
         }
     }
-}
 
-// TODO we need someone to fix parsing (they should be optionals, images and other split in arrays and so on so by the end it will be arrays and not long string) and all attributes including desription and big file and syncronously not temp file AND https + we need tester/swiftliner,
-// No default wert for optionals?!!! When optional default value is nil
-// cocoapods white file
-// Beware the multiload of realm
-// use simsim
-// for me doing scaling
-// swiftlint als cocoapod
+    func alreadyLoaded() -> Bool {
+        return UserDefaults.standard.bool(forKey: "alreadyLoaded")
+    }
+
+    func setAlreadyLoaded() {
+        UserDefaults.standard.set(true, forKey: "alreadyLoaded")
+    }
+}

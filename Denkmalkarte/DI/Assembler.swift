@@ -1,10 +1,12 @@
 import Foundation
+import FirebaseDatabase
 
 protocol Assembler {
     func resolve() -> MapUseCases
     func resolve() -> DbHelper
     func resolve() -> ApiHelper
-     func resolve() -> Parser
+    func resolve() -> DatabaseReference
+    func resolve() -> Parser
 }
 
 class AppAssembler: Assembler {
@@ -12,6 +14,7 @@ class AppAssembler: Assembler {
     let dbHelper: DbHelper? = nil
     let apiHelper: ApiHelper? = nil
     let mapUseCases: MapUseCases? = nil
+    let ref: DatabaseReference? = nil
 
     func resolve() -> MapUseCases {
         if let mapUseCases = mapUseCases {
@@ -29,16 +32,23 @@ class AppAssembler: Assembler {
         }
     }
 
+    func resolve() -> DatabaseReference {
+        if let ref = ref {
+            return ref
+        } else {
+            return Database.database().reference()
+        }
+    }
+
     func resolve() -> ApiHelper {
         if let apiHelper = apiHelper {
             return apiHelper
         } else {
-            return ApiHelperImpl()
+            return ApiHelperImpl(ref: self.resolve())
         }
     }
 
     func resolve() -> Parser {
         return Parser()
     }
-
 }
