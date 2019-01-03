@@ -92,7 +92,7 @@ extension MapScreenView: MKMapViewDelegate {
 
         if view.rightCalloutAccessoryView == control {
             if let tempDenkmal: Denkmal = view.annotation as? Denkmal {
-                let denkmal = [tempDenkmal]
+                let denkmal = tempDenkmal
                 presenter?.showDetailView(denkmal)
             }
         }

@@ -1,7 +1,7 @@
 import UIKit
 
 public class SearchTabRouter: SharedDetailRouter {
-    func showDetailView(_ denkmal: [Denkmal]?) {
+    func showDetailView(_ denkmal: Denkmal?) {
         let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
         let presenter = DetailScreenPresenter(view: view, router: self)
         view.presenter = presenter

@@ -12,7 +12,7 @@ class MapScreenPresenter: MapScreenPresenterProtocol {
         self.mapUseCases = mapUseCases
     }
 
-    func showDetailView(_ denkmal: [Denkmal]?) {
+    func showDetailView(_ denkmal: Denkmal?) {
         router.showDetailView(denkmal)
     }
 

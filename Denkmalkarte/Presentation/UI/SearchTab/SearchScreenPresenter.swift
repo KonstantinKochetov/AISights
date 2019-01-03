@@ -1,7 +1,7 @@
 import Foundation
 
 class SearchScreenPresenter: SearchScreenPresenterProtocol {
-    func showDetailView(_ denkmal: [Denkmal]?) {
+    func showDetailView(_ denkmal: Denkmal?) {
         router.showDetailView(denkmal)
     }
     let router: SearchTabRouter
