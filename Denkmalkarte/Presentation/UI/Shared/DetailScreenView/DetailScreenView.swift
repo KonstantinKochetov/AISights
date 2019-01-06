@@ -31,7 +31,6 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
     // MARK: - Helpers
     private func setup() {
-        // TODO: Set Image
         if let monument = monument {
             titleLabel.text = monument.title
             streetLabel.text = monument.strasse[0]
