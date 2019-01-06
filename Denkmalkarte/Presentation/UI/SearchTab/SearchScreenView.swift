@@ -9,14 +9,14 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 
     var presenter: SearchScreenPresenterProtocol?
 
-    private var results: [String] = []
+    private var results: [Denkmal] = []
 
     public override func viewDidLoad() {
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-        tableView.register(UINib(nibName: SearchResultCell.identifier, bundle: Bundle(for: SearchResultCell.self)), forCellReuseIdentifier: SearchResultCell.identifier)
+        tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
 
     }
 
@@ -30,8 +30,6 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
                 self.resultsCountView.text = "\(result.count) results"
                 self.tableView.reloadData()
 
-            }, progress: { _ in
-
             }, failure: { _ in
 
             })
@@ -43,10 +41,10 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 // MARK: UITableViewDelegate
 extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchResultCell.identifier, for: indexPath) as? SearchResultCell
-        let result = results[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: DenkmalCell.identifier, for: indexPath) as? DenkmalCell
+        let denkmal = results[indexPath.row]
 
-        cell?.set(result: result)
+        cell?.set(denkmal: denkmal)
         return cell!
     }
 

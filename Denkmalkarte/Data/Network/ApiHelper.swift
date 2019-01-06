@@ -1,11 +1,7 @@
+import Foundation
+
 protocol ApiHelper {
 
-    func getMapData(success: @escaping (String) -> Void,
-                    failure: @escaping (Error) -> Void)
-
-    func getMapArrayData(query: String,
-                         success: @escaping (([String]) -> Void),
-                         progress: @escaping ((Double) -> Void),
-                         failure: @escaping ((Error) -> Void))
-
+    func getFirebaseData(success: @escaping ([[String: AnyObject]]) -> Void,
+                         failure: @escaping (Error) -> Void)
 }
