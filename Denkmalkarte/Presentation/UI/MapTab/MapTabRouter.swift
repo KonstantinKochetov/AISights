@@ -20,8 +20,8 @@ public class MapTabRouter: SharedDetailRouter {
         let presenter = DetailScreenPresenter(view: view, router: self)
         view.presenter = presenter
         if let tempDenkmale = denkmal {
-            view.denkmale = tempDenkmale
-            print(tempDenkmale)
+//            view.denkmale = tempDenkmale
+//            print(tempDenkmale)
         }
         navigationController.pushViewController(view, animated: true)
     }
