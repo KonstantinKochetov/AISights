@@ -1,7 +1,12 @@
 import UIKit
 
 public class SearchTabRouter: SharedDetailRouter {
-
+    func showDetailView(_ denkmal: Denkmal?) {
+        let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
+        let presenter = DetailScreenPresenter(view: view, router: self)
+        view.presenter = presenter
+        navigationController.pushViewController(view, animated: true)
+    }
     public var childRouter: [Router] = []
     public var navigationController: UINavigationController
 
@@ -14,12 +19,5 @@ public class SearchTabRouter: SharedDetailRouter {
         let presenter = SearchScreenPresenter(view: view, router: self, mapUseCases: assembler.resolve())
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)
-    }
-
-    func showDetailView(_ withId: [Int]) {
-        let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
-        let presenter = DetailScreenPresenter(view: view, router: self)
-        view.presenter = presenter
-        navigationController.pushViewController(view, animated: true)
     }
 }
