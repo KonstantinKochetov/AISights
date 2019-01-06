@@ -2,7 +2,6 @@ import UIKit
 import MapKit
 
 public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
-    
     @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var distanceLabel: UILabel!
