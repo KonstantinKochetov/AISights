@@ -1,111 +1,62 @@
-//
-//  Parser.swift
-//  Denkmalkarte
-//
-//  Created by Florian Häusler on 29.10.18.
-//  Copyright © 2018 htw.berlin. All rights reserved.
-//
-
 import Foundation
-import MapKit
 
-class Parser: NSObject, XMLParserDelegate {
+class Parser {
 
-    var parser = XMLParser()
-    var denkmäler: [Denkmal]?
-    var tempDenkmal: Denkmal?
-    var currentElement = ""
-
-    func readXML() -> [Denkmal]? {
-
-        let fileURL = Bundle.main.url(forResource: "denkmaleTemp", withExtension: "xml")
-        self.parser = XMLParser(contentsOf: fileURL!)!
-        self.parser.delegate = self
-        let success: Bool = self.parser.parse()
-        if success {
-            if let mockAnno = denkmäler {
-                return mockAnno
-            }
-            print("success")
-
-        } else {
-            print("failure")
-
-        }
-        return nil
-    }
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
-        currentElement = elementName
-        //print(currentElement)
-        if elementName == "denkmal"{
-            tempDenkmal = Denkmal()
-        }
-
-    }
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "denkmal"{
-            if denkmäler != nil {
-                if let denkmal = tempDenkmal {
-                    let lon =  NumberFormatter().number(from: denkmal.long )?.doubleValue
-                    let lat =  NumberFormatter().number(from: denkmal.lat )?.doubleValue
-                    if lon != nil && lat != nil {
-                        denkmal.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!)
-
-                    }
-                    denkmäler!.append(denkmal)
+    func readJSON() -> [Denkmal] {
+        do {
+            if let file = Bundle.main.url(forResource: "short_denkmaeler2", withExtension: "json") {
+                let data = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let object = json as? [[String: AnyObject]] {
+                    // json is an array
+                    let data = self.convertDataToDenkmal(object)
+                    return data
+                } else {
+                    debugPrint("JSON is invalid")
                 }
             } else {
-                if let denkmal = tempDenkmal {
-                    let lon =  NumberFormatter().number(from: denkmal.long )?.doubleValue
-                    let lat =  NumberFormatter().number(from: denkmal.lat )?.doubleValue
-                    if lon != nil && lat != nil {
-                        denkmal.coordinate = CLLocationCoordinate2D(latitude: Double(lat!), longitude: lon!)
-                    }
-                    denkmäler = [denkmal]
-
-                }
+                debugPrint("no file")
             }
+        } catch {
+            debugPrint(error.localizedDescription)
         }
-    }
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        let foundCahr = string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-        if !foundCahr.isEmpty {
-            switch currentElement {
-            case "description":
-                tempDenkmal?.title?  += foundCahr
-            case "location":
-                tempDenkmal?.location += foundCahr
-            case "street":
-                tempDenkmal?.street += foundCahr
-            case "date":
-                tempDenkmal?.date += foundCahr
-            case "execution":
-                tempDenkmal?.execution += foundCahr
-            case "builder-owner":
-                tempDenkmal?.builderOwner += foundCahr
-            case "literature":
-                tempDenkmal?.literature += foundCahr
-            case "design":
-                tempDenkmal?.design += foundCahr
-            case "latitude":
-                tempDenkmal?.lat += foundCahr
-            case "longitude":
-                tempDenkmal?.long += foundCahr
-            case "image":
-                tempDenkmal?.image += foundCahr
-            case "reconstruction":
-                tempDenkmal?.reconstruction += foundCahr
-            case "text":
-                tempDenkmal?.text += foundCahr
-            case "Baubeginn":
-                tempDenkmal?.baubeginn += foundCahr
-            default:
-                print("No Value fond for:\(currentElement) value: \(foundCahr)")
-            }
-        }
+        return []
     }
 
-    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        print("failure error: ", parseError)
+    func convertDataToDenkmal(_ data: [[String: AnyObject]]) -> [Denkmal] {
+        var denkmale: [Denkmal] = []
+        for element in data {
+            denkmale.append(Denkmal(id: element[DenkmalConstants.id] as? String ?? "",
+                                    markiert: false,
+                                    title: element[DenkmalConstants.title] as? String ?? "",
+                                    ort: element[DenkmalConstants.ort] as? String ?? "",
+                                    latitude: element[DenkmalConstants.latitude] as? String ?? "",
+                                    longitude: element[DenkmalConstants.longitude] as? String ?? "",
+                                    entwurfUndAusfuehrung: element[DenkmalConstants.entwurfUndAusfuehrung] as? [String] ?? [],
+                                    ausfuehrung: element[DenkmalConstants.ausfuehrung] as? [String] ?? [],
+                                    baubeginn: element[DenkmalConstants.baubeginn] as? String ?? "",
+                                    fertigstellung: element[DenkmalConstants.fertigstellung] as? String ?? "",
+                                    ausfuehrungUndBauherrUndEntwurf: element[DenkmalConstants.ausfuehrungUndBauherrUndEntwurf] as? String ?? "",
+                                    entwurfUndFertigstellung: element[DenkmalConstants.entwurfUndFertigstellung] as? String ?? "",
+                                    literatur: element[DenkmalConstants.literatur] as? String ?? "",
+                                    ausfuehrungUndBauherr: element[DenkmalConstants.ausfuehrungUndBauherr] as? String ?? "",
+                                    planungsbeginn: element[DenkmalConstants.planungsbeginn] as? String ?? "",
+                                    entwurfUndDatierung: element[DenkmalConstants.entwurfUndDatierung] as? String ?? "",
+                                    planungUndAusfuehrung: element[DenkmalConstants.planungUndAusfuehrung] as? String ?? "",
+                                    entwurfUndBaubeginnUndFertigstellung: element[DenkmalConstants.entwurfUndBaubeginnUndFertigstellung] as? String ?? "",
+                                    entwurf: element[DenkmalConstants.entwurf] as? [String] ?? [],
+                                    bauherr: element[DenkmalConstants.bauherr] as? [String] ?? [],
+                                    text: element[DenkmalConstants.text] as? String ?? "",
+                                    wiederaufbau: element[DenkmalConstants.wiederaufbau] as? String ?? "",
+                                    umbau: element[DenkmalConstants.umbau] as? String ?? "",
+                                    entwurfUndBaubeginn: element[DenkmalConstants.entwurfUndBaubeginn] as? String ?? "",
+                                    image: element[DenkmalConstants.image] as? [String] ?? [],
+                                    strasse: element[DenkmalConstants.strasse] as? [String] ?? [],
+                                    planung: element[DenkmalConstants.planung] as? String ?? "",
+                                    entwurfUndBauherr: element[DenkmalConstants.entwurfUndBauherr] as? String ?? "",
+                                    eigentuemer: element[DenkmalConstants.eigentuemer] as? String ?? "",
+                                    datierung: element[DenkmalConstants.datierung] as? [String] ?? []))
+        }
+        return denkmale
     }
 }

@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 var assembler: Assembler! = nil
 
@@ -7,20 +8,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var router: AppRouter?
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+
+        // init
+        initialize()
+
+        switch userActivity.activityType {
+        case UserActivityType.ShowLocalDenkmal:
+            if let viewController = router?.childRouter[0] as? MapScreenView {
+                viewController.showLocalDenkmal()
+            }
+        default:
+            debugPrint("No user Activity")
+        }
+        return false
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
 
-        // dependency injection
-        if assembler == nil {
-            assembler = AppAssembler()
-        }
+        // init
+        initialize()
+
         // DB
-        loadMapsToRealm(mapUseCases: assembler.resolve())
-        // UI
-        window = UIWindow(frame: UIScreen.main.bounds)
+        loadMapsToRealmAndSyncFirebase(mapUseCases: assembler.resolve())
         // navigation
-        router = AppRouter(window: window!)
         router?.start()
 
         return true
@@ -48,8 +59,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    private func loadMapsToRealm(mapUseCases: MapUseCases) {
-        mapUseCases.loadMapsToRealm()
+    private func initialize() {
+        FirebaseApp.configure()
+        Database.database().isPersistenceEnabled = true
+
+        // dependency injection
+        if assembler == nil {
+            assembler = AppAssembler()
+        }
+
+        if let window = window {
+            self.window = window
+        } else {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+        }
+
+        if let router = router {
+            self.router = router
+        } else {
+            self.router = AppRouter(window: window!)
+        }
+    }
+
+    private func loadMapsToRealmAndSyncFirebase(mapUseCases: MapUseCases) {
+        if !mapUseCases.alreadyLoaded() {
+            mapUseCases.loadMapsToRealm()
+        }
+        mapUseCases.syncFirebaseToRealm()
     }
 
 }
