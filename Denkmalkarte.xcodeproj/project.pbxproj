@@ -1,947 +1,933 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 50;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF6DF421AD6E870055E0BB /* UserActivityType.swift */; };
-        1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */; };
-        810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
-        810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
-        810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
-        8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */ = {isa = PBXBuildFile; fileRef = 8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */; };
-        8173038021BE7FB40007A4A1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173037F21BE7FB40007A4A1 /* Parser.swift */; };
-        8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173038121BE81D50007A4A1 /* DenkmalConstants.swift */; };
-        81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
-        81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
-        8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
-        81737256216FC1B600000A05 /* DenkmalkarteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737255216FC1B600000A05 /* DenkmalkarteTests.swift */; };
-        81737262216FC29C00000A05 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737261216FC29C00000A05 /* AppRouter.swift */; };
-        81737264216FC87200000A05 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737263216FC87200000A05 /* Router.swift */; };
-        8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173726E216FD8EC00000A05 /* SearchTabRouter.swift */; };
-        81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737277216FDC5F00000A05 /* MapScreenContract.swift */; };
-        8173727B216FDCDB00000A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727A216FDCDB00000A05 /* View.swift */; };
-        8173727D216FDD3800000A05 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727C216FDD3800000A05 /* Presenter.swift */; };
-        81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737280216FDF5100000A05 /* MapScreenPresenter.swift */; };
-        81737285217000ED00000A05 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737284217000ED00000A05 /* MapScreenView.swift */; };
-        81737287217000FF00000A05 /* MapScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81737286217000FF00000A05 /* MapScreenView.xib */; };
-		817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E438F219E87A7007F125B /* InfoPinCell.swift */; };
-		817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817E4390219E87A7007F125B /* InfoPinCell.xib */; };
+		02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF6DF421AD6E870055E0BB /* UserActivityType.swift */; };
+		1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */; };
+		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
+		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
+		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
+		8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */ = {isa = PBXBuildFile; fileRef = 8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */; };
+		8173038021BE7FB40007A4A1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173037F21BE7FB40007A4A1 /* Parser.swift */; };
+		8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173038121BE81D50007A4A1 /* DenkmalConstants.swift */; };
+		81737241216FC1B400000A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737240216FC1B400000A05 /* AppDelegate.swift */; };
+		81737248216FC1B600000A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81737247216FC1B600000A05 /* Assets.xcassets */; };
+		8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81737249216FC1B600000A05 /* LaunchScreen.storyboard */; };
+		81737256216FC1B600000A05 /* DenkmalkarteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737255216FC1B600000A05 /* DenkmalkarteTests.swift */; };
+		81737262216FC29C00000A05 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737261216FC29C00000A05 /* AppRouter.swift */; };
+		81737264216FC87200000A05 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737263216FC87200000A05 /* Router.swift */; };
+		81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737277216FDC5F00000A05 /* MapScreenContract.swift */; };
+		8173727B216FDCDB00000A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727A216FDCDB00000A05 /* View.swift */; };
+		8173727D216FDD3800000A05 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173727C216FDD3800000A05 /* Presenter.swift */; };
+		81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737280216FDF5100000A05 /* MapScreenPresenter.swift */; };
+		81737285217000ED00000A05 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81737284217000ED00000A05 /* MapScreenView.swift */; };
+		81737287217000FF00000A05 /* MapScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81737286217000FF00000A05 /* MapScreenView.xib */; };
 		8175D56F21BDAC60003A553F /* short_denkmaeler2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8175D56E21BDAC60003A553F /* short_denkmaeler2.json */; };
 		817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817AC3AD217A2FF500670CCB /* DenkmalCell.swift */; };
 		817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817AC3AE217A2FF500670CCB /* DenkmalCell.xib */; };
-        81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750B2170C82A00207D5E /* SearchScreenContract.swift */; };
-        81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */; };
-        81A975102170C89900207D5E /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9750F2170C89900207D5E /* SearchScreenView.swift */; };
-        81A975122170C8E000207D5E /* SearchScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A975112170C8E000207D5E /* SearchScreenView.xib */; };
-        81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751421711AF500207D5E /* MapTabRouter.swift */; };
-        81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751621711D0D00207D5E /* DetailScreenContract.swift */; };
-        81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751821711D8800207D5E /* DetailScreenPresenter.swift */; };
-        81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751A21711F5700207D5E /* DetailScreenView.swift */; };
-        81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A9751C21711FB900207D5E /* DetailScreenView.xib */; };
-        81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975262171F53D00207D5E /* SharedDetailRouter.swift */; };
-        81A9752A2171FF1E00207D5E /* HistoryTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975292171FF1E00207D5E /* HistoryTabRouter.swift */; };
-        81A9752C2171FF3D00207D5E /* HistoryScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9752B2171FF3D00207D5E /* HistoryScreenContract.swift */; };
-        81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9752D2171FF4500207D5E /* HistoryScreenPresenter.swift */; };
-        81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9752F2171FF4E00207D5E /* HistoryScreenView.swift */; };
-        81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A975312171FF5A00207D5E /* HistoryScreenView.xib */; };
-        81A975362172027200207D5E /* InfoTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975352172027200207D5E /* InfoTabRouter.swift */; };
-        81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975392172031200207D5E /* InfoScreenContract.swift */; };
-        81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */; };
-        81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753D2172032500207D5E /* InfoScreenView.swift */; };
-        81A975402172033000207D5E /* InfoScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A9753F2172033000207D5E /* InfoScreenView.xib */; };
-        81A975432172064300207D5E /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975422172064300207D5E /* Assembler.swift */; };
-        81A97545217207A300207D5E /* MapUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97544217207A300207D5E /* MapUseCases.swift */; };
-        81A97547217207C600207D5E /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97546217207C600207D5E /* MapInteractor.swift */; };
-        81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975492172136E00207D5E /* DBHelperImpl.swift */; };
-        81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754B2172137700207D5E /* ApiHelperImpl.swift */; };
-        81A975502172140400207D5E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754F2172140400207D5E /* ApiHelper.swift */; };
-        81A975522172141000207D5E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975512172141000207D5E /* DBHelper.swift */; };
-        81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81F6DFE721BD482900BA957A /* GoogleService-Info.plist */; };
-        9C3A2E81BA3C596736B53427 /* Pods_Denkmalkarte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */; };
+		817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E438F219E87A7007F125B /* InfoPinCell.swift */; };
+		817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817E4390219E87A7007F125B /* InfoPinCell.xib */; };
+		81A9750C2170C82A00207D5E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		81A9750E2170C86700207D5E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751421711AF500207D5E /* MapTabRouter.swift */; };
+		81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751621711D0D00207D5E /* DetailScreenContract.swift */; };
+		81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751821711D8800207D5E /* DetailScreenPresenter.swift */; };
+		81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751A21711F5700207D5E /* DetailScreenView.swift */; };
+		81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A9751C21711FB900207D5E /* DetailScreenView.xib */; };
+		81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975262171F53D00207D5E /* SharedDetailRouter.swift */; };
+		81A9752A2171FF1E00207D5E /* HistoryTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975292171FF1E00207D5E /* HistoryTabRouter.swift */; };
+		81A9752C2171FF3D00207D5E /* HistoryScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9752B2171FF3D00207D5E /* HistoryScreenContract.swift */; };
+		81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9752D2171FF4500207D5E /* HistoryScreenPresenter.swift */; };
+		81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9752F2171FF4E00207D5E /* HistoryScreenView.swift */; };
+		81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A975312171FF5A00207D5E /* HistoryScreenView.xib */; };
+		81A975362172027200207D5E /* InfoTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975352172027200207D5E /* InfoTabRouter.swift */; };
+		81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975392172031200207D5E /* InfoScreenContract.swift */; };
+		81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */; };
+		81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9753D2172032500207D5E /* InfoScreenView.swift */; };
+		81A975402172033000207D5E /* InfoScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A9753F2172033000207D5E /* InfoScreenView.xib */; };
+		81A975432172064300207D5E /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975422172064300207D5E /* Assembler.swift */; };
+		81A97545217207A300207D5E /* MapUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97544217207A300207D5E /* MapUseCases.swift */; };
+		81A97547217207C600207D5E /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A97546217207C600207D5E /* MapInteractor.swift */; };
+		81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975492172136E00207D5E /* DBHelperImpl.swift */; };
+		81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754B2172137700207D5E /* ApiHelperImpl.swift */; };
+		81A975502172140400207D5E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754F2172140400207D5E /* ApiHelper.swift */; };
+		81A975522172141000207D5E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975512172141000207D5E /* DBHelper.swift */; };
+		81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81F6DFE721BD482900BA957A /* GoogleService-Info.plist */; };
+		9C3A2E81BA3C596736B53427 /* Pods_Denkmalkarte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        81737252216FC1B600000A05 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 81737235216FC1B400000A05 /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 8173723C216FC1B400000A05;
-            remoteInfo = Denkmalkarte;
-        };
+		81737252216FC1B600000A05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81737235216FC1B400000A05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8173723C216FC1B400000A05;
+			remoteInfo = Denkmalkarte;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-        02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Denkmalkarte.entitlements; sourceTree = "<group>"; };
-        02BF6DF421AD6E870055E0BB /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
-        45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.release.xcconfig"; sourceTree = "<group>"; };
-        64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.debug.xcconfig"; sourceTree = "<group>"; };
-        71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.release.xcconfig"; sourceTree = "<group>"; };
-        810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
-        810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
-        810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-        8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = long_denkmaeler.json; sourceTree = "<group>"; };
-        8173037F21BE7FB40007A4A1 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-        8173038121BE81D50007A4A1 /* DenkmalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalConstants.swift; sourceTree = "<group>"; };
-        8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        8173724A216FC1B600000A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        8173724C216FC1B600000A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DenkmalkarteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        81737255216FC1B600000A05 /* DenkmalkarteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalkarteTests.swift; sourceTree = "<group>"; };
-        81737257216FC1B600000A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        81737261216FC29C00000A05 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-        81737263216FC87200000A05 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-        8173726E216FD8EC00000A05 /* SearchTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabRouter.swift; sourceTree = "<group>"; };
-        81737277216FDC5F00000A05 /* MapScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenContract.swift; sourceTree = "<group>"; };
-        8173727A216FDCDB00000A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-        8173727C216FDD3800000A05 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-        81737280216FDF5100000A05 /* MapScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenPresenter.swift; sourceTree = "<group>"; };
-        81737284217000ED00000A05 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
-        81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
-		817E438F219E87A7007F125B /* InfoPinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPinCell.swift; sourceTree = "<group>"; };
-		817E4390219E87A7007F125B /* InfoPinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPinCell.xib; sourceTree = "<group>"; };
+		02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Denkmalkarte.entitlements; sourceTree = "<group>"; };
+		02BF6DF421AD6E870055E0BB /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
+		45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.release.xcconfig"; sourceTree = "<group>"; };
+		64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.debug.xcconfig"; sourceTree = "<group>"; };
+		71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.release.xcconfig"; sourceTree = "<group>"; };
+		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
+		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
+		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = long_denkmaeler.json; sourceTree = "<group>"; };
+		8173037F21BE7FB40007A4A1 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		8173038121BE81D50007A4A1 /* DenkmalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalConstants.swift; sourceTree = "<group>"; };
+		8173723D216FC1B400000A05 /* Denkmalkarte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denkmalkarte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81737240216FC1B400000A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81737247216FC1B600000A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8173724A216FC1B600000A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8173724C216FC1B600000A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DenkmalkarteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81737255216FC1B600000A05 /* DenkmalkarteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalkarteTests.swift; sourceTree = "<group>"; };
+		81737257216FC1B600000A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81737261216FC29C00000A05 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		81737263216FC87200000A05 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		81737277216FDC5F00000A05 /* MapScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenContract.swift; sourceTree = "<group>"; };
+		8173727A216FDCDB00000A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		8173727C216FDD3800000A05 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		81737280216FDF5100000A05 /* MapScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenPresenter.swift; sourceTree = "<group>"; };
+		81737284217000ED00000A05 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
+		81737286217000FF00000A05 /* MapScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapScreenView.xib; sourceTree = "<group>"; };
 		8175D56E21BDAC60003A553F /* short_denkmaeler2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = short_denkmaeler2.json; sourceTree = "<group>"; };
 		817AC3AD217A2FF500670CCB /* DenkmalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkmalCell.swift; sourceTree = "<group>"; };
 		817AC3AE217A2FF500670CCB /* DenkmalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DenkmalCell.xib; sourceTree = "<group>"; };
+		817E438F219E87A7007F125B /* InfoPinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPinCell.swift; sourceTree = "<group>"; };
+		817E4390219E87A7007F125B /* InfoPinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoPinCell.xib; sourceTree = "<group>"; };
 		819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenkmalkarteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        81A9750F2170C89900207D5E /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
-        81A975112170C8E000207D5E /* SearchScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchScreenView.xib; sourceTree = "<group>"; };
-        81A9751421711AF500207D5E /* MapTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTabRouter.swift; sourceTree = "<group>"; };
-        81A9751621711D0D00207D5E /* DetailScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenContract.swift; sourceTree = "<group>"; };
-        81A9751821711D8800207D5E /* DetailScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenPresenter.swift; sourceTree = "<group>"; };
-        81A9751A21711F5700207D5E /* DetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenView.swift; sourceTree = "<group>"; };
-        81A9751C21711FB900207D5E /* DetailScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenView.xib; sourceTree = "<group>"; };
-        81A975262171F53D00207D5E /* SharedDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDetailRouter.swift; sourceTree = "<group>"; };
-        81A975292171FF1E00207D5E /* HistoryTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTabRouter.swift; sourceTree = "<group>"; };
-        81A9752B2171FF3D00207D5E /* HistoryScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenContract.swift; sourceTree = "<group>"; };
-        81A9752D2171FF4500207D5E /* HistoryScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenPresenter.swift; sourceTree = "<group>"; };
-        81A9752F2171FF4E00207D5E /* HistoryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenView.swift; sourceTree = "<group>"; };
-        81A975312171FF5A00207D5E /* HistoryScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryScreenView.xib; sourceTree = "<group>"; };
-        81A975352172027200207D5E /* InfoTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTabRouter.swift; sourceTree = "<group>"; };
-        81A975392172031200207D5E /* InfoScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenContract.swift; sourceTree = "<group>"; };
-        81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenPresenter.swift; sourceTree = "<group>"; };
-        81A9753D2172032500207D5E /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
-        81A9753F2172033000207D5E /* InfoScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoScreenView.xib; sourceTree = "<group>"; };
-        81A975422172064300207D5E /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
-        81A97544217207A300207D5E /* MapUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCases.swift; sourceTree = "<group>"; };
-        81A97546217207C600207D5E /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
-        81A975492172136E00207D5E /* DBHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelperImpl.swift; sourceTree = "<group>"; };
-        81A9754B2172137700207D5E /* ApiHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelperImpl.swift; sourceTree = "<group>"; };
-        81A9754F2172140400207D5E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
-        81A975512172141000207D5E /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
-        81F6DFE721BD482900BA957A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-        D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.debug.xcconfig"; sourceTree = "<group>"; };
-        FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Denkmalkarte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A9751421711AF500207D5E /* MapTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTabRouter.swift; sourceTree = "<group>"; };
+		81A9751621711D0D00207D5E /* DetailScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenContract.swift; sourceTree = "<group>"; };
+		81A9751821711D8800207D5E /* DetailScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenPresenter.swift; sourceTree = "<group>"; };
+		81A9751A21711F5700207D5E /* DetailScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenView.swift; sourceTree = "<group>"; };
+		81A9751C21711FB900207D5E /* DetailScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailScreenView.xib; sourceTree = "<group>"; };
+		81A975262171F53D00207D5E /* SharedDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDetailRouter.swift; sourceTree = "<group>"; };
+		81A975292171FF1E00207D5E /* HistoryTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTabRouter.swift; sourceTree = "<group>"; };
+		81A9752B2171FF3D00207D5E /* HistoryScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenContract.swift; sourceTree = "<group>"; };
+		81A9752D2171FF4500207D5E /* HistoryScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenPresenter.swift; sourceTree = "<group>"; };
+		81A9752F2171FF4E00207D5E /* HistoryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenView.swift; sourceTree = "<group>"; };
+		81A975312171FF5A00207D5E /* HistoryScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryScreenView.xib; sourceTree = "<group>"; };
+		81A975352172027200207D5E /* InfoTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTabRouter.swift; sourceTree = "<group>"; };
+		81A975392172031200207D5E /* InfoScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenContract.swift; sourceTree = "<group>"; };
+		81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenPresenter.swift; sourceTree = "<group>"; };
+		81A9753D2172032500207D5E /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
+		81A9753F2172033000207D5E /* InfoScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoScreenView.xib; sourceTree = "<group>"; };
+		81A975422172064300207D5E /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		81A97544217207A300207D5E /* MapUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCases.swift; sourceTree = "<group>"; };
+		81A97546217207C600207D5E /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		81A975492172136E00207D5E /* DBHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelperImpl.swift; sourceTree = "<group>"; };
+		81A9754B2172137700207D5E /* ApiHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelperImpl.swift; sourceTree = "<group>"; };
+		81A9754F2172140400207D5E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		81A975512172141000207D5E /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		81F6DFE721BD482900BA957A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Denkmalkarte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        8173723A216FC1B400000A05 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                9C3A2E81BA3C596736B53427 /* Pods_Denkmalkarte.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        8173724E216FC1B600000A05 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		8173723A216FC1B400000A05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C3A2E81BA3C596736B53427 /* Pods_Denkmalkarte.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724E216FC1B600000A05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8D796AE7CDD50A287DCCEB /* Pods_DenkmalkarteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        4FD48662E8AEF17A73759F72 /* Frameworks */ = {
-            isa = PBXGroup;
-            children = (
-                FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */,
-                819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */,
-            );
-            name = Frameworks;
-            sourceTree = "<group>";
-        };
-        56512C7B13EA0251DDCFAFA7 /* Pods */ = {
-            isa = PBXGroup;
-            children = (
-                64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */,
-                71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */,
-                D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */,
-                45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */,
-            );
-            name = Pods;
-            sourceTree = "<group>";
-        };
-        810821E4219FC38E00BF2F07 /* Model */ = {
-            isa = PBXGroup;
-            children = (
-                810821E5219FC42600BF2F07 /* RealmDenkmal.swift */,
-            );
-            path = Model;
-            sourceTree = "<group>";
-        };
-        810821E9219FD7FB00BF2F07 /* Model */ = {
-            isa = PBXGroup;
-            children = (
-                810821E7219FD7F200BF2F07 /* Denkmal.swift */,
-            );
-            path = Model;
-            sourceTree = "<group>";
-        };
-        81737234216FC1B400000A05 = {
-            isa = PBXGroup;
-            children = (
-                8173723F216FC1B400000A05 /* Denkmalkarte */,
-                81737254216FC1B600000A05 /* DenkmalkarteTests */,
-                8173723E216FC1B400000A05 /* Products */,
-                56512C7B13EA0251DDCFAFA7 /* Pods */,
-                4FD48662E8AEF17A73759F72 /* Frameworks */,
-            );
-            sourceTree = "<group>";
-        };
-        8173723E216FC1B400000A05 /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                8173723D216FC1B400000A05 /* Denkmalkarte.app */,
-                81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        8173723F216FC1B400000A05 /* Denkmalkarte */ = {
-            isa = PBXGroup;
-            children = (
-                02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */,
-                81F6DFE721BD482900BA957A /* GoogleService-Info.plist */,
-                8173724C216FC1B600000A05 /* Info.plist */,
-                81737240216FC1B400000A05 /* AppDelegate.swift */,
-                81A975412172062400207D5E /* DI */,
-                81737268216FD3EF00000A05 /* Presentation */,
-                81737269216FD3F800000A05 /* Domain */,
-                8173726B216FD88C00000A05 /* Data */,
-                81737267216FD04F00000A05 /* Supporting Files */,
-            );
-            path = Denkmalkarte;
-            sourceTree = "<group>";
-        };
-        81737254216FC1B600000A05 /* DenkmalkarteTests */ = {
-            isa = PBXGroup;
-            children = (
-                81737255216FC1B600000A05 /* DenkmalkarteTests.swift */,
-                81737257216FC1B600000A05 /* Info.plist */,
-            );
-            path = DenkmalkarteTests;
-            sourceTree = "<group>";
-        };
-        81737267216FD04F00000A05 /* Supporting Files */ = {
-            isa = PBXGroup;
-            children = (
-                8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */,
-                8175D56E21BDAC60003A553F /* short_denkmaeler2.json */,
-                81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
-                81737247216FC1B600000A05 /* Assets.xcassets */,
-            );
-            path = "Supporting Files";
-            sourceTree = "<group>";
-        };
-        81737268216FD3EF00000A05 /* Presentation */ = {
-            isa = PBXGroup;
-            children = (
-                81737263216FC87200000A05 /* Router.swift */,
-                81737261216FC29C00000A05 /* AppRouter.swift */,
-                81737274216FDB4F00000A05 /* UI */,
-            );
-            path = Presentation;
-            sourceTree = "<group>";
-        };
-        81737269216FD3F800000A05 /* Domain */ = {
-            isa = PBXGroup;
-            children = (
-                81A97548217207CC00207D5E /* MapUseCases */,
-            );
-            path = Domain;
-            sourceTree = "<group>";
-        };
-        8173726B216FD88C00000A05 /* Data */ = {
-            isa = PBXGroup;
-            children = (
-                81A9754D217213B800207D5E /* DB */,
-                81A9754E217213C500207D5E /* Network */,
-                810821E4219FC38E00BF2F07 /* Model */,
-            );
-            path = Data;
-            sourceTree = "<group>";
-        };
-        81737274216FDB4F00000A05 /* UI */ = {
-            isa = PBXGroup;
-            children = (
-                81737279216FDCAF00000A05 /* Base */,
-                81737275216FDBA900000A05 /* MapTab */,
-                81737276216FDBC700000A05 /* SearchTab */,
-                81A975282171FEFB00207D5E /* HistoryTab */,
-                81A97534217201E100207D5E /* InfoTab */,
-                81A975332171FFFF00207D5E /* Shared */,
-            );
-            path = UI;
-            sourceTree = "<group>";
-        };
-        81737275216FDBA900000A05 /* MapTab */ = {
-            isa = PBXGroup;
-            children = (
-                81A9751421711AF500207D5E /* MapTabRouter.swift */,
-                81737277216FDC5F00000A05 /* MapScreenContract.swift */,
-                81737280216FDF5100000A05 /* MapScreenPresenter.swift */,
-                81737284217000ED00000A05 /* MapScreenView.swift */,
-                81737286217000FF00000A05 /* MapScreenView.xib */,
-            );
-            path = MapTab;
-            sourceTree = "<group>";
-        };
-        81737276216FDBC700000A05 /* SearchTab */ = {
-            isa = PBXGroup;
-            children = (
-                8173726E216FD8EC00000A05 /* SearchTabRouter.swift */,
-                81A9750B2170C82A00207D5E /* SearchScreenContract.swift */,
-                81A9750D2170C86700207D5E /* SearchScreenPresenter.swift */,
-                81A9750F2170C89900207D5E /* SearchScreenView.swift */,
-                81A975112170C8E000207D5E /* SearchScreenView.xib */,
-            );
-            path = SearchTab;
-            sourceTree = "<group>";
-        };
-        81737279216FDCAF00000A05 /* Base */ = {
-            isa = PBXGroup;
-            children = (
-                8173727A216FDCDB00000A05 /* View.swift */,
-                8173727C216FDD3800000A05 /* Presenter.swift */,
-            );
-            path = Base;
-            sourceTree = "<group>";
-        };
-        817AC3A8217A298000670CCB /* DenkmalCell */ = {
-            isa = PBXGroup;
-            children = (
-                817AC3AD217A2FF500670CCB /* DenkmalCell.swift */,
-                817AC3AE217A2FF500670CCB /* DenkmalCell.xib */,
-            );
-            path = DenkmalCell;
-            sourceTree = "<group>";
-        };
-        817E438B219E7C23007F125B /* MapUtils */ = {
-            isa = PBXGroup;
-            children = (
-                02BF6DF421AD6E870055E0BB /* UserActivityType.swift */,
-                8173037F21BE7FB40007A4A1 /* Parser.swift */,
-                8173038121BE81D50007A4A1 /* DenkmalConstants.swift */,
-            );
-            path = MapUtils;
-            sourceTree = "<group>";
-        };
-        817E438C219E8743007F125B /* InfoPinCell */ = {
-            isa = PBXGroup;
-            children = (
-                817E438F219E87A7007F125B /* InfoPinCell.swift */,
-                817E4390219E87A7007F125B /* InfoPinCell.xib */,
-            );
-            path = InfoPinCell;
-            sourceTree = "<group>";
-        };
-        81A975132171139C00207D5E /* DetailScreenView */ = {
-            isa = PBXGroup;
-            children = (
-                81A975262171F53D00207D5E /* SharedDetailRouter.swift */,
-                81A9751621711D0D00207D5E /* DetailScreenContract.swift */,
-                81A9751821711D8800207D5E /* DetailScreenPresenter.swift */,
-                81A9751A21711F5700207D5E /* DetailScreenView.swift */,
-                81A9751C21711FB900207D5E /* DetailScreenView.xib */,
-            );
-            path = DetailScreenView;
-            sourceTree = "<group>";
-        };
-        81A975282171FEFB00207D5E /* HistoryTab */ = {
-            isa = PBXGroup;
-            children = (
-                81A975292171FF1E00207D5E /* HistoryTabRouter.swift */,
-                81A9752B2171FF3D00207D5E /* HistoryScreenContract.swift */,
-                81A9752D2171FF4500207D5E /* HistoryScreenPresenter.swift */,
-                81A9752F2171FF4E00207D5E /* HistoryScreenView.swift */,
-                81A975312171FF5A00207D5E /* HistoryScreenView.xib */,
-            );
-            path = HistoryTab;
-            sourceTree = "<group>";
-        };
-        81A975332171FFFF00207D5E /* Shared */ = {
-            isa = PBXGroup;
-            children = (
-                817AC3A8217A298000670CCB /* DenkmalCell */,
-                81A975132171139C00207D5E /* DetailScreenView */,
-            );
-            path = Shared;
-            sourceTree = "<group>";
-        };
-        81A97534217201E100207D5E /* InfoTab */ = {
-            isa = PBXGroup;
-            children = (
-                817E438C219E8743007F125B /* InfoPinCell */,
-                81A975352172027200207D5E /* InfoTabRouter.swift */,
-                81A975392172031200207D5E /* InfoScreenContract.swift */,
-                81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */,
-                81A9753D2172032500207D5E /* InfoScreenView.swift */,
-                81A9753F2172033000207D5E /* InfoScreenView.xib */,
-            );
-            path = InfoTab;
-            sourceTree = "<group>";
-        };
-        81A975412172062400207D5E /* DI */ = {
-            isa = PBXGroup;
-            children = (
-                81A975422172064300207D5E /* Assembler.swift */,
-            );
-            path = DI;
-            sourceTree = "<group>";
-        };
-        81A97548217207CC00207D5E /* MapUseCases */ = {
-            isa = PBXGroup;
-            children = (
-                81A97544217207A300207D5E /* MapUseCases.swift */,
-                81A97546217207C600207D5E /* MapInteractor.swift */,
-                810821E9219FD7FB00BF2F07 /* Model */,
-                817E438B219E7C23007F125B /* MapUtils */,
-            );
-            path = MapUseCases;
-            sourceTree = "<group>";
-        };
-        81A9754D217213B800207D5E /* DB */ = {
-            isa = PBXGroup;
-            children = (
-                81A975512172141000207D5E /* DBHelper.swift */,
-                81A975492172136E00207D5E /* DBHelperImpl.swift */,
-                810821ED21A1294D00BF2F07 /* RealmHelper.swift */,
-            );
-            path = DB;
-            sourceTree = "<group>";
-        };
-        81A9754E217213C500207D5E /* Network */ = {
-            isa = PBXGroup;
-            children = (
-                81A9754F2172140400207D5E /* ApiHelper.swift */,
-                81A9754B2172137700207D5E /* ApiHelperImpl.swift */,
-            );
-            path = Network;
-            sourceTree = "<group>";
-        };
+		4FD48662E8AEF17A73759F72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA9087A6CD9C5D2FA9B81F41 /* Pods_Denkmalkarte.framework */,
+				819649B6AD68F31F7834D7FA /* Pods_DenkmalkarteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56512C7B13EA0251DDCFAFA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */,
+				71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */,
+				D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */,
+				45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		810821E4219FC38E00BF2F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				810821E5219FC42600BF2F07 /* RealmDenkmal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		810821E9219FD7FB00BF2F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				810821E7219FD7F200BF2F07 /* Denkmal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81737234216FC1B400000A05 = {
+			isa = PBXGroup;
+			children = (
+				8173723F216FC1B400000A05 /* Denkmalkarte */,
+				81737254216FC1B600000A05 /* DenkmalkarteTests */,
+				8173723E216FC1B400000A05 /* Products */,
+				56512C7B13EA0251DDCFAFA7 /* Pods */,
+				4FD48662E8AEF17A73759F72 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8173723E216FC1B400000A05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8173723D216FC1B400000A05 /* Denkmalkarte.app */,
+				81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8173723F216FC1B400000A05 /* Denkmalkarte */ = {
+			isa = PBXGroup;
+			children = (
+				02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */,
+				81F6DFE721BD482900BA957A /* GoogleService-Info.plist */,
+				8173724C216FC1B600000A05 /* Info.plist */,
+				81737240216FC1B400000A05 /* AppDelegate.swift */,
+				81A975412172062400207D5E /* DI */,
+				81737268216FD3EF00000A05 /* Presentation */,
+				81737269216FD3F800000A05 /* Domain */,
+				8173726B216FD88C00000A05 /* Data */,
+				81737267216FD04F00000A05 /* Supporting Files */,
+			);
+			path = Denkmalkarte;
+			sourceTree = "<group>";
+		};
+		81737254216FC1B600000A05 /* DenkmalkarteTests */ = {
+			isa = PBXGroup;
+			children = (
+				81737255216FC1B600000A05 /* DenkmalkarteTests.swift */,
+				81737257216FC1B600000A05 /* Info.plist */,
+			);
+			path = DenkmalkarteTests;
+			sourceTree = "<group>";
+		};
+		81737267216FD04F00000A05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */,
+				8175D56E21BDAC60003A553F /* short_denkmaeler2.json */,
+				81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
+				81737247216FC1B600000A05 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81737268216FD3EF00000A05 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				81737263216FC87200000A05 /* Router.swift */,
+				81737261216FC29C00000A05 /* AppRouter.swift */,
+				81737274216FDB4F00000A05 /* UI */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		81737269216FD3F800000A05 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				81A97548217207CC00207D5E /* MapUseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8173726B216FD88C00000A05 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				81A9754D217213B800207D5E /* DB */,
+				81A9754E217213C500207D5E /* Network */,
+				810821E4219FC38E00BF2F07 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		81737274216FDB4F00000A05 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				81737279216FDCAF00000A05 /* Base */,
+				81737275216FDBA900000A05 /* MapTab */,
+				81737276216FDBC700000A05 /* SearchTab */,
+				81A975282171FEFB00207D5E /* HistoryTab */,
+				81A97534217201E100207D5E /* InfoTab */,
+				81A975332171FFFF00207D5E /* Shared */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		81737275216FDBA900000A05 /* MapTab */ = {
+			isa = PBXGroup;
+			children = (
+				81A9751421711AF500207D5E /* MapTabRouter.swift */,
+				81737277216FDC5F00000A05 /* MapScreenContract.swift */,
+				81737280216FDF5100000A05 /* MapScreenPresenter.swift */,
+				81737284217000ED00000A05 /* MapScreenView.swift */,
+				81737286217000FF00000A05 /* MapScreenView.xib */,
+			);
+			path = MapTab;
+			sourceTree = "<group>";
+		};
+		81737276216FDBC700000A05 /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchTab;
+			sourceTree = "<group>";
+		};
+		81737279216FDCAF00000A05 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8173727A216FDCDB00000A05 /* View.swift */,
+				8173727C216FDD3800000A05 /* Presenter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		817AC3A8217A298000670CCB /* DenkmalCell */ = {
+			isa = PBXGroup;
+			children = (
+				817AC3AD217A2FF500670CCB /* DenkmalCell.swift */,
+				817AC3AE217A2FF500670CCB /* DenkmalCell.xib */,
+			);
+			path = DenkmalCell;
+			sourceTree = "<group>";
+		};
+		817E438B219E7C23007F125B /* MapUtils */ = {
+			isa = PBXGroup;
+			children = (
+				02BF6DF421AD6E870055E0BB /* UserActivityType.swift */,
+				8173037F21BE7FB40007A4A1 /* Parser.swift */,
+				8173038121BE81D50007A4A1 /* DenkmalConstants.swift */,
+			);
+			path = MapUtils;
+			sourceTree = "<group>";
+		};
+		817E438C219E8743007F125B /* InfoPinCell */ = {
+			isa = PBXGroup;
+			children = (
+				817E438F219E87A7007F125B /* InfoPinCell.swift */,
+				817E4390219E87A7007F125B /* InfoPinCell.xib */,
+			);
+			path = InfoPinCell;
+			sourceTree = "<group>";
+		};
+		81A975132171139C00207D5E /* DetailScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				81A975262171F53D00207D5E /* SharedDetailRouter.swift */,
+				81A9751621711D0D00207D5E /* DetailScreenContract.swift */,
+				81A9751821711D8800207D5E /* DetailScreenPresenter.swift */,
+				81A9751A21711F5700207D5E /* DetailScreenView.swift */,
+				81A9751C21711FB900207D5E /* DetailScreenView.xib */,
+			);
+			path = DetailScreenView;
+			sourceTree = "<group>";
+		};
+		81A975282171FEFB00207D5E /* HistoryTab */ = {
+			isa = PBXGroup;
+			children = (
+				81A975292171FF1E00207D5E /* HistoryTabRouter.swift */,
+				81A9752B2171FF3D00207D5E /* HistoryScreenContract.swift */,
+				81A9752D2171FF4500207D5E /* HistoryScreenPresenter.swift */,
+				81A9752F2171FF4E00207D5E /* HistoryScreenView.swift */,
+				81A975312171FF5A00207D5E /* HistoryScreenView.xib */,
+			);
+			path = HistoryTab;
+			sourceTree = "<group>";
+		};
+		81A975332171FFFF00207D5E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				817AC3A8217A298000670CCB /* DenkmalCell */,
+				81A975132171139C00207D5E /* DetailScreenView */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		81A97534217201E100207D5E /* InfoTab */ = {
+			isa = PBXGroup;
+			children = (
+				817E438C219E8743007F125B /* InfoPinCell */,
+				81A975352172027200207D5E /* InfoTabRouter.swift */,
+				81A975392172031200207D5E /* InfoScreenContract.swift */,
+				81A9753B2172031A00207D5E /* InfoScreenPresenter.swift */,
+				81A9753D2172032500207D5E /* InfoScreenView.swift */,
+				81A9753F2172033000207D5E /* InfoScreenView.xib */,
+			);
+			path = InfoTab;
+			sourceTree = "<group>";
+		};
+		81A975412172062400207D5E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				81A975422172064300207D5E /* Assembler.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		81A97548217207CC00207D5E /* MapUseCases */ = {
+			isa = PBXGroup;
+			children = (
+				81A97544217207A300207D5E /* MapUseCases.swift */,
+				81A97546217207C600207D5E /* MapInteractor.swift */,
+				810821E9219FD7FB00BF2F07 /* Model */,
+				817E438B219E7C23007F125B /* MapUtils */,
+			);
+			path = MapUseCases;
+			sourceTree = "<group>";
+		};
+		81A9754D217213B800207D5E /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				81A975512172141000207D5E /* DBHelper.swift */,
+				81A975492172136E00207D5E /* DBHelperImpl.swift */,
+				810821ED21A1294D00BF2F07 /* RealmHelper.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		81A9754E217213C500207D5E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				81A9754F2172140400207D5E /* ApiHelper.swift */,
+				81A9754B2172137700207D5E /* ApiHelperImpl.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        8173723C216FC1B400000A05 /* Denkmalkarte */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */;
-            buildPhases = (
-                02E6F3171A6B839A7A42EC80 /* [CP] Check Pods Manifest.lock */,
-                81737239216FC1B400000A05 /* Sources */,
-                8173723A216FC1B400000A05 /* Frameworks */,
-                8173723B216FC1B400000A05 /* Resources */,
-                6ACD7334A6D6FE5056C1B3E2 /* [CP] Embed Pods Frameworks */,
-                81CAF06621A6FABA00A84E3E /* ShellScript */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = Denkmalkarte;
-            productName = Denkmalkarte;
-            productReference = 8173723D216FC1B400000A05 /* Denkmalkarte.app */;
-            productType = "com.apple.product-type.application";
-        };
-        81737250216FC1B600000A05 /* DenkmalkarteTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */;
-            buildPhases = (
-                0E78C8CA8A2FD57C39FB1222 /* [CP] Check Pods Manifest.lock */,
-                8173724D216FC1B600000A05 /* Sources */,
-                8173724E216FC1B600000A05 /* Frameworks */,
-                8173724F216FC1B600000A05 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                81737253216FC1B600000A05 /* PBXTargetDependency */,
-            );
-            name = DenkmalkarteTests;
-            productName = DenkmalkarteTests;
-            productReference = 81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
+		8173723C216FC1B400000A05 /* Denkmalkarte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */;
+			buildPhases = (
+				02E6F3171A6B839A7A42EC80 /* [CP] Check Pods Manifest.lock */,
+				81737239216FC1B400000A05 /* Sources */,
+				8173723A216FC1B400000A05 /* Frameworks */,
+				8173723B216FC1B400000A05 /* Resources */,
+				6ACD7334A6D6FE5056C1B3E2 /* [CP] Embed Pods Frameworks */,
+				81CAF06621A6FABA00A84E3E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Denkmalkarte;
+			productName = Denkmalkarte;
+			productReference = 8173723D216FC1B400000A05 /* Denkmalkarte.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81737250216FC1B600000A05 /* DenkmalkarteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */;
+			buildPhases = (
+				0E78C8CA8A2FD57C39FB1222 /* [CP] Check Pods Manifest.lock */,
+				8173724D216FC1B600000A05 /* Sources */,
+				8173724E216FC1B600000A05 /* Frameworks */,
+				8173724F216FC1B600000A05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81737253216FC1B600000A05 /* PBXTargetDependency */,
+			);
+			name = DenkmalkarteTests;
+			productName = DenkmalkarteTests;
+			productReference = 81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        81737235216FC1B400000A05 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 1000;
-                LastUpgradeCheck = 1000;
-                ORGANIZATIONNAME = htw.berlin;
-                TargetAttributes = {
-                    8173723C216FC1B400000A05 = {
-                        CreatedOnToolsVersion = 10.0;
-                        SystemCapabilities = {
-                            com.apple.Siri = {
-                                enabled = 1;
-                            };
-                        };
-                    };
-                    81737250216FC1B600000A05 = {
-                        CreatedOnToolsVersion = 10.0;
-                        TestTargetID = 8173723C216FC1B400000A05;
-                    };
-                };
-            };
-            buildConfigurationList = 81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */;
-            compatibilityVersion = "Xcode 9.3";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 81737234216FC1B400000A05;
-            productRefGroup = 8173723E216FC1B400000A05 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                8173723C216FC1B400000A05 /* Denkmalkarte */,
-                81737250216FC1B600000A05 /* DenkmalkarteTests */,
-            );
-        };
+		81737235216FC1B400000A05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = htw.berlin;
+				TargetAttributes = {
+					8173723C216FC1B400000A05 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					81737250216FC1B600000A05 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 8173723C216FC1B400000A05;
+					};
+				};
+			};
+			buildConfigurationList = 81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81737234216FC1B400000A05;
+			productRefGroup = 8173723E216FC1B400000A05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8173723C216FC1B400000A05 /* Denkmalkarte */,
+				81737250216FC1B600000A05 /* DenkmalkarteTests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        8173723B216FC1B400000A05 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
-                8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */,
-                81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
-                817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */,
-                81A975122170C8E000207D5E /* SearchScreenView.xib in Resources */,
-                81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
-                8175D56F21BDAC60003A553F /* short_denkmaeler2.json in Resources */,
-                81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
-                81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
-                81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
-                81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
-                817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        8173724F216FC1B600000A05 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		8173723B216FC1B400000A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
+				8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */,
+				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
+				817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */,
+				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
+				8175D56F21BDAC60003A553F /* short_denkmaeler2.json in Resources */,
+				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
+				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
+				81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
+				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
+				817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724F216FC1B600000A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        02E6F3171A6B839A7A42EC80 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-Denkmalkarte-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        0E78C8CA8A2FD57C39FB1222 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-DenkmalkarteTests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        6ACD7334A6D6FE5056C1B3E2 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
-                "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-                "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-                "${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-                "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-                "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-                "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-                "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        81CAF06621A6FABA00A84E3E /* ShellScript */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
-        };
+		02E6F3171A6B839A7A42EC80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Denkmalkarte-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E78C8CA8A2FD57C39FB1222 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DenkmalkarteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ACD7334A6D6FE5056C1B3E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81CAF06621A6FABA00A84E3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        81737239216FC1B400000A05 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */,
-                8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
-                81A975432172064300207D5E /* Assembler.swift in Sources */,
-                810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */,
-                8173727B216FDCDB00000A05 /* View.swift in Sources */,
-                81A9750C2170C82A00207D5E /* SearchScreenContract.swift in Sources */,
-                8173726F216FD8EC00000A05 /* SearchTabRouter.swift in Sources */,
-                81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */,
-                8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */,
-                81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */,
-                81A975502172140400207D5E /* ApiHelper.swift in Sources */,
-                81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */,
-                02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */,
-                81A975362172027200207D5E /* InfoTabRouter.swift in Sources */,
-                81A9750E2170C86700207D5E /* SearchScreenPresenter.swift in Sources */,
-                81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
-                81A975102170C89900207D5E /* SearchScreenView.swift in Sources */,
-                81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */,
-                81A975522172141000207D5E /* DBHelper.swift in Sources */,
-                81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
-                817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */,
-                81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
-                81737264216FC87200000A05 /* Router.swift in Sources */,
-                81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */,
-                810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */,
-                81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */,
-                81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */,
-                81A97547217207C600207D5E /* MapInteractor.swift in Sources */,
-                81A9752A2171FF1E00207D5E /* HistoryTabRouter.swift in Sources */,
-                81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */,
-                81A97545217207A300207D5E /* MapUseCases.swift in Sources */,
-                81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */,
-                81A9752C2171FF3D00207D5E /* HistoryScreenContract.swift in Sources */,
-                81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */,
-                81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
-                8173038021BE7FB40007A4A1 /* Parser.swift in Sources */,
-                81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
-                817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */,
-                810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */,
-                81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        8173724D216FC1B600000A05 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                81737256216FC1B600000A05 /* DenkmalkarteTests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		81737239216FC1B400000A05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */,
+				8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
+				81A975432172064300207D5E /* Assembler.swift in Sources */,
+				810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */,
+				8173727B216FDCDB00000A05 /* View.swift in Sources */,
+				81A9750C2170C82A00207D5E /* (null) in Sources */,
+				81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */,
+				8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */,
+				81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */,
+				81A975502172140400207D5E /* ApiHelper.swift in Sources */,
+				81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */,
+				02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */,
+				81A975362172027200207D5E /* InfoTabRouter.swift in Sources */,
+				81A9750E2170C86700207D5E /* (null) in Sources */,
+				81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
+				81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */,
+				81A975522172141000207D5E /* DBHelper.swift in Sources */,
+				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
+				817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */,
+				81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
+				81737264216FC87200000A05 /* Router.swift in Sources */,
+				81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */,
+				810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */,
+				81A9753E2172032500207D5E /* InfoScreenView.swift in Sources */,
+				81A9753C2172031A00207D5E /* InfoScreenPresenter.swift in Sources */,
+				81A97547217207C600207D5E /* MapInteractor.swift in Sources */,
+				81A9752A2171FF1E00207D5E /* HistoryTabRouter.swift in Sources */,
+				81737278216FDC5F00000A05 /* MapScreenContract.swift in Sources */,
+				81A97545217207A300207D5E /* MapUseCases.swift in Sources */,
+				81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */,
+				81A9752C2171FF3D00207D5E /* HistoryScreenContract.swift in Sources */,
+				81A9753A2172031200207D5E /* InfoScreenContract.swift in Sources */,
+				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
+				8173038021BE7FB40007A4A1 /* Parser.swift in Sources */,
+				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
+				817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */,
+				810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */,
+				81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724D216FC1B600000A05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81737256216FC1B600000A05 /* DenkmalkarteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        81737253216FC1B600000A05 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 8173723C216FC1B400000A05 /* Denkmalkarte */;
-            targetProxy = 81737252216FC1B600000A05 /* PBXContainerItemProxy */;
-        };
+		81737253216FC1B600000A05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8173723C216FC1B400000A05 /* Denkmalkarte */;
+			targetProxy = 81737252216FC1B600000A05 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        81737249216FC1B600000A05 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                8173724A216FC1B600000A05 /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		81737249216FC1B600000A05 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8173724A216FC1B600000A05 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        81737258216FC1B600000A05 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-                MTL_FAST_MATH = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        81737259216FC1B600000A05 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                MTL_FAST_MATH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_COMPILATION_MODE = wholemodule;
-                SWIFT_OPTIMIZATION_LEVEL = "-O";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        8173725B216FC1B600000A05 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 393K5YD4YY;
-                INFOPLIST_FILE = Denkmalkarte/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = 1;
-            };
-            name = Debug;
-        };
-        8173725C216FC1B600000A05 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 393K5YD4YY;
-                INFOPLIST_FILE = Denkmalkarte/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = 1;
-            };
-            name = Release;
-        };
-        8173725E216FC1B600000A05 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = B3BDXWM97N;
-                INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
-            };
-            name = Debug;
-        };
-        8173725F216FC1B600000A05 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = B3BDXWM97N;
-                INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
-            };
-            name = Release;
-        };
+		81737258216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81737259216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8173725B216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64F2035CF1E61433834E86F7 /* Pods-Denkmalkarte.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 393K5YD4YY;
+				INFOPLIST_FILE = Denkmalkarte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8173725C216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71D812D19B8E77698E7134B6 /* Pods-Denkmalkarte.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 393K5YD4YY;
+				INFOPLIST_FILE = Denkmalkarte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8173725E216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6E7BD49CDE5DBBD0096997C /* Pods-DenkmalkarteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
+			};
+			name = Debug;
+		};
+		8173725F216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45B789F52C66A65D23F102B6 /* Pods-DenkmalkarteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                81737258216FC1B600000A05 /* Debug */,
-                81737259216FC1B600000A05 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                8173725B216FC1B600000A05 /* Debug */,
-                8173725C216FC1B600000A05 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                8173725E216FC1B600000A05 /* Debug */,
-                8173725F216FC1B600000A05 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81737258216FC1B600000A05 /* Debug */,
+				81737259216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173725B216FC1B600000A05 /* Debug */,
+				8173725C216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173725E216FC1B600000A05 /* Debug */,
+				8173725F216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-    };
-    rootObject = 81737235216FC1B400000A05 /* Project object */;
+	};
+	rootObject = 81737235216FC1B400000A05 /* Project object */;
 }
