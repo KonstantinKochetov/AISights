@@ -845,13 +845,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 393K5YD4YY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte.abc;
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -866,13 +866,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 393K5YD4YY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte.abc;
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

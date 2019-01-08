@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 var assembler: Assembler! = nil
 
@@ -9,9 +10,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var router: AppRouter?
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-
-        // init
-        //initialize()
 
         print(userActivity.activityType)
         switch userActivity.activityType {

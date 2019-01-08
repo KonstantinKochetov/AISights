@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchScreenView" customModule="Denkmalkarte" customModuleProvider="target">
             <connections>
                 <outlet property="container" destination="pDE-P4-PK4" id="tMX-DZ-PYp"/>
+                <outlet property="pickerView" destination="gka-iG-E9Z" id="mLH-h1-fYd"/>
                 <outlet property="resultsCountView" destination="M9l-GY-Noo" id="hd5-Fy-Plr"/>
                 <outlet property="searchBar" destination="J41-Db-RVh" id="Ape-nn-dlv"/>
                 <outlet property="tableView" destination="Jfe-bQ-kgh" id="i0r-cA-IRP"/>
@@ -56,6 +57,14 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gka-iG-E9Z">
+                                    <rect key="frame" x="100" y="-36" width="273" height="112"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="cW1-kY-L4q"/>
+                                        <outlet property="delegate" destination="-1" id="l3z-Hm-1eZ"/>
+                                    </connections>
+                                </pickerView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>

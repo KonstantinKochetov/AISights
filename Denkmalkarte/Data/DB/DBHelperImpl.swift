@@ -62,4 +62,31 @@ class DbHelperImpl: DbHelper {
     func setAlreadyLoaded() {
         UserDefaults.standard.set(true, forKey: "alreadyLoaded")
     }
+
+    func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
+
+        do {
+            var finalDenkmale: [Denkmal] = []
+            switch option {
+            case "strasse":
+                let denkmale1 = Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
+                let denkmale2 = denkmale1.filter { !$0.strasse.isEmpty }
+                finalDenkmale = denkmale2.filter { $0.strasse[0].contains(query) }
+            case "bauherr":
+                let denkmale1 = Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
+                let denkmale2 = denkmale1.filter { !$0.bauherr.isEmpty }
+                finalDenkmale = denkmale2.filter { $0.bauherr[0].contains(query) }
+            case "datierung":
+                let denkmale1 = Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
+                let denkmale2 = denkmale1.filter { !$0.datierung.isEmpty }
+                finalDenkmale = denkmale2.filter { $0.datierung[0].contains(query) }
+            default:
+                let predicate = NSPredicate(format: "\(option) CONTAINS '\(query)'")
+                finalDenkmale = Array(try self.realm().objects(RealmDenkmal.self).filter(predicate)).map({$0.toDenkmal()})
+            }
+               success(finalDenkmale)
+        } catch {
+            failure(NSError(domain: "no domain", code: 406, userInfo: nil))
+        }
+    }
 }

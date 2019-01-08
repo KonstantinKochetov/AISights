@@ -16,4 +16,6 @@ protocol DbHelper {
 
     func setAlreadyLoaded()
 
+    func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void)
+
 }

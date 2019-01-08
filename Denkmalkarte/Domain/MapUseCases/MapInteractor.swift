@@ -52,4 +52,8 @@ public class MapInteractor: MapUseCases {
                      failure: @escaping (Error) -> Void) {
         dbHelper.getDenkmale(success: success, failure: failure)
     }
+
+    func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
+        dbHelper.search(query: query, option: option, success: success, failure: failure)
+    }
 }
