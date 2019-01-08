@@ -19,9 +19,8 @@ public class MapTabRouter: SharedDetailRouter {
         let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
         let presenter = DetailScreenPresenter(view: view, router: self)
         view.presenter = presenter
-        if let tempDenkmale = denkmal {
-//            view.denkmale = tempDenkmale
-//            print(tempDenkmale)
+        if let denkmal = denkmal {
+            view.monument = denkmal
         }
         navigationController.pushViewController(view, animated: true)
     }

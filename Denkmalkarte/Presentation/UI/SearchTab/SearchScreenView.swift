@@ -69,9 +69,6 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
 
 }
 
-
-
-
 // MARK: UITableViewDelegate
 extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

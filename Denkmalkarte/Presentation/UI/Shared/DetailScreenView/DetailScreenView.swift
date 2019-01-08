@@ -14,7 +14,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     }
 
     var presenter: DetailScreenPresenterProtocol?
-    var monument: RealmDenkmal?
+    var monument: Denkmal?
 
     public override func viewDidLoad() {
         setup()
@@ -35,29 +35,40 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             titleLabel.text = monument.title
             streetLabel.text = monument.strasse[0]
             textLabel.text = monument.text
+
+            imageView.image = nil
+            do {
+                if !monument.image.isEmpty {
+                    let imageUrl = URL(string: monument.image[0])!
+                    imageView.af_setImage(withURL: imageUrl)
+                } else {
+                    imageView.image = UIImage(named: "sight")
+                }
+            }
         }
     }
 
-    private func openMonumentInMaps() {
-        if let monument = monument {
-            let coordinate = monument.toDenkmal().coordinate
-            let placemark = MKPlacemark(coordinate: coordinate)
-            let mapItem = MKMapItem(placemark: placemark)
-            mapItem.name = monument.title
-            mapItem.openInMaps(launchOptions: nil)
+        private func openMonumentInMaps() {
+            if let monument = monument {
+                let coordinate = monument.coordinate
+                let placemark = MKPlacemark(coordinate: coordinate)
+                let mapItem = MKMapItem(placemark: placemark)
+                mapItem.name = monument.title
+                mapItem.openInMaps(launchOptions: nil)
+            }
         }
     }
+
+    // MARK: - UIScrollViewDelegate
+
+    extension DetailScreenView: UIScrollViewDelegate {
+        public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            if scrollView == self.scrollView {
+                let yOffset = scrollView.contentOffset.y
+                let scale = 1 - yOffset / imageView.bounds.height
+                let transform = CGAffineTransform(translationX: 0, y: yOffset / 2).scaledBy(x: scale, y: scale)
+                if yOffset <= 0 { imageView.transform = transform }
+            }
+        }
 }
 
-// MARK: - UIScrollViewDelegate
-
-extension DetailScreenView: UIScrollViewDelegate {
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == self.scrollView {
-            let yOffset = scrollView.contentOffset.y
-            let scale = 1 - yOffset / imageView.bounds.height
-            let transform = CGAffineTransform(translationX: 0, y: yOffset / 2).scaledBy(x: scale, y: scale)
-            if yOffset <= 0 { imageView.transform = transform }
-        }
-    }
-}
