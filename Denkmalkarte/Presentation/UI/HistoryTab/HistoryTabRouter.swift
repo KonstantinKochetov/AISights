@@ -1,6 +1,6 @@
 import UIKit
 
-public class HistoryTabRouter: NavigationRouter {
+public class HistoryTabRouter: SharedDetailRouter {
 
     public var childRouter: [Router] = []
     public var navigationController: UINavigationController
@@ -11,9 +11,19 @@ public class HistoryTabRouter: NavigationRouter {
 
     public func start() {
         let view = HistoryScreenView.init(nibName: "HistoryScreenView", bundle: Bundle(for: HistoryTabRouter.self))
-        let presenter = HistoryScreenPresenter(view: view, router: self)
+        let presenter = HistoryScreenPresenter(view: view, router: self, mapUseCases: assembler.resolve())
         view.presenter = presenter
         navigationController.pushViewController(view, animated: false)
 }
 
+    func showDetailView(_ denkmal: Denkmal?) {
+        let view = DetailScreenView.init(nibName: "DetailScreenView", bundle: Bundle(for: MapTabRouter.self))
+        let presenter = DetailScreenPresenter(view: view, router: self)
+        view.presenter = presenter
+        navigationController.pushViewController(view, animated: true)
+    }
+
 }
+
+
+

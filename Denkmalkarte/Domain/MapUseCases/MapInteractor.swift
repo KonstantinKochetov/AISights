@@ -3,6 +3,9 @@ import RealmSwift
 
 public class MapInteractor: MapUseCases {
 
+
+
+
     let dbHelper: DbHelper
     let apiHelper: ApiHelper
     let parser: Parser
@@ -56,4 +59,11 @@ public class MapInteractor: MapUseCases {
     func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
         dbHelper.search(query: query, option: option, success: success, failure: failure)
     }
+
+    func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
+        dbHelper.search(query: query, option: option, success: success, failure: failure)
+    }
+
+
 }
+

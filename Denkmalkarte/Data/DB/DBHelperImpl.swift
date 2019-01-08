@@ -4,6 +4,8 @@ import RealmSwift
 
 class DbHelperImpl: DbHelper {
 
+
+
     private var realmConfig: Realm.Configuration
 
     public init(realmConfig: Realm.Configuration? = nil) {
@@ -61,6 +63,17 @@ class DbHelperImpl: DbHelper {
 
     func setAlreadyLoaded() {
         UserDefaults.standard.set(true, forKey: "alreadyLoaded")
+    }
+
+    func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
+
+        do {
+            var finalDenkmale = Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
+
+            success(finalDenkmale)
+        } catch {
+            failure(NSError(domain: "no domain", code: 406, userInfo: nil))
+        }
     }
 
     func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
