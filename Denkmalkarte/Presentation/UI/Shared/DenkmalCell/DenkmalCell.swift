@@ -20,7 +20,6 @@ class DenkmalCell: UITableViewCell {
             }
 
             denkmalNameLabel.text = denkmal.title
-            denkmalDescriptionLabel.text = denkmal.text
             streetLabel.text = denkmal.strasse[0]
         }
     }
