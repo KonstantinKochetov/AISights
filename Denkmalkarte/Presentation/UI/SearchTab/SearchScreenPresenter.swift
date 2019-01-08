@@ -21,7 +21,6 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
                 success: @escaping (([Denkmal]) -> Void),
                 failure: @escaping ((Error) -> Void)) {
         mapUseCases.search(query: query, option: option, success: success, failure: failure)
-
     }
 
 }

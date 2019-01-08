@@ -8,6 +8,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var streetLabel: UILabel!
     @IBOutlet private var textLabel: UILabel!
+    @IBOutlet weak var bookmark: UIButton!
 
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -28,7 +29,17 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBAction func directionsButtonTapped(_ sender: Any) {
         openMonumentInMaps()
     }
+    @IBAction func bookmark(_ sender: Any) {
+        if let monument = monument {
+            presenter?.bookmark(id: monument.id,
+                                success: {
+                                    // TODO alert
 
+            }, failure: { _ in
+            })
+        }
+    }
+    
     // MARK: - Helpers
     private func setup() {
         if let monument = monument {
