@@ -1,5 +1,6 @@
 import UIKit
 import AlamofireImage
+import Alamofire
 
 class DenkmalCell: UITableViewCell {
     @IBOutlet weak var denkmalImageView: UIImageView!
@@ -9,7 +10,7 @@ class DenkmalCell: UITableViewCell {
     public static let identifier = "DenkmalCell"
 
     public func set(denkmal: Denkmal) {
-//        let filter = AspectScaledToFillSizeFilter(size: denkmalImageView.frame.size)
+        denkmalImageView.image = nil
         do {
             if !denkmal.image.isEmpty {
                 debugPrint(denkmal.image)
@@ -20,10 +21,6 @@ class DenkmalCell: UITableViewCell {
             denkmalNameLabel.text = denkmal.title
             denkmalDescriptionLabel.text = denkmal.text
             streetLabel.text = denkmal.strasse[0]
-
-
-
         }
-
     }
 }
