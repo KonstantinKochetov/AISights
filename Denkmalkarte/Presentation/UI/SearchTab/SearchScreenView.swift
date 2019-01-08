@@ -1,15 +1,18 @@
 import UIKit
 
-public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScreenViewProtocol {
+public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UISearchBarDelegate, SearchScreenViewProtocol {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var resultsCountView: UILabel!
-
+    @IBOutlet weak var pickerView: UIPickerView!
+    
     var presenter: SearchScreenPresenterProtocol?
 
     private var results: [Denkmal] = []
+    let options = ["Name", "Beschreibung", "Bauherr", "Strasse", "Datierung", "Ort"]
+    var option: String?
 
     public override func viewDidLoad() {
         // init
@@ -45,7 +48,27 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
         self.resultsCountView.text = "\(result.count) results"
         self.tableView.reloadData()
     }
+
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return options[row]
+    }
+
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return options.count
+    }
+
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        option = options[row]
+    }
+
 }
+
+
+
 
 // MARK: UITableViewDelegate
 extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
