@@ -31,15 +31,15 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UIS
     // MARK: UISearchBarDelegate
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        
-        if let query = searchBar.text {
+
+        /*if let query = searchBar.text {
             presenter?.search(query: query,
                               option: option,
                               success: { result in
                                 self.showSearchResult(result)
             }, failure: { _ in
             })
-        }
+        }*/
     }
 
 
