@@ -303,11 +303,11 @@
 		81737276216FDBC700000A05 /* SearchTab */ = {
 			isa = PBXGroup;
 			children = (
+				8143A67A21E2885A00E2EB20 /* SearchTabRouter.swift */,
 				8143A67D21E2885B00E2EB20 /* SearchScreenContract.swift */,
 				8143A67921E2885A00E2EB20 /* SearchScreenPresenter.swift */,
 				8143A67C21E2885B00E2EB20 /* SearchScreenView.swift */,
 				8143A67B21E2885A00E2EB20 /* SearchScreenView.xib */,
-				8143A67A21E2885A00E2EB20 /* SearchTabRouter.swift */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";

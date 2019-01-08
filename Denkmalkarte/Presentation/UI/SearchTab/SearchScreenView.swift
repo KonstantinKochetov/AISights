@@ -22,6 +22,7 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 
     // MARK: UISearchBarDelegate
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         if let query = searchBar.text {
             presenter?.search(query: query,
             success: { result in
@@ -31,11 +32,9 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
                 self.tableView.reloadData()
 
             }, failure: { _ in
-
             })
         }
     }
-
 }
 
 // MARK: UITableViewDelegate
@@ -56,4 +55,10 @@ extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
         return 1
     }
 
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == self.tableView {
+            // show/hide Keyboard
+            searchBar.resignFirstResponder()
+        }
+    }
 }
