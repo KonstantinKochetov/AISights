@@ -18,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="441" height="227.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DENKMAL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rA-LV-yih">
-                        <rect key="frame" x="9" y="160" width="317" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DENKMAL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rA-LV-yih">
+                        <rect key="frame" x="9" y="160" width="82.5" height="20.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -33,12 +33,12 @@
                         </constraints>
                     </imageView>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-8R-XJ3">
-                        <rect key="frame" x="9" y="220" width="421" height="0.0"/>
+                        <rect key="frame" x="9" y="211" width="186.5" height="9"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="hPX-tR-Fkm"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Entfernt – 2km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-Bc-Yzo">
-                        <rect key="frame" x="9" y="197" width="77" height="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entfernt – 2km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyv-Bc-Yzo">
+                        <rect key="frame" x="9" y="197" width="138.5" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,23 +46,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="mP1-zc-ObJ" secondAttribute="trailing" id="3Ox-7P-C9V"/>
-                    <constraint firstItem="Cyv-Bc-Yzo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="3qc-3b-JCC"/>
                     <constraint firstAttribute="bottom" secondItem="Fcb-8R-XJ3" secondAttribute="bottom" constant="7.5" id="5C7-qa-Gbt"/>
-                    <constraint firstItem="Cyv-Bc-Yzo" firstAttribute="top" secondItem="9rA-LV-yih" secondAttribute="bottom" constant="16" id="9fB-dK-yIG"/>
-                    <constraint firstAttribute="trailing" secondItem="Cyv-Bc-Yzo" secondAttribute="trailing" constant="235" id="B9I-hU-xLE"/>
+                    <constraint firstAttribute="trailing" secondItem="Cyv-Bc-Yzo" secondAttribute="trailing" constant="59" id="5WB-Fi-Vot"/>
                     <constraint firstItem="Cyv-Bc-Yzo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="BJZ-NK-WiS"/>
                     <constraint firstAttribute="trailing" secondItem="Fcb-8R-XJ3" secondAttribute="trailing" constant="11" id="Dkh-RX-DnU"/>
-                    <constraint firstItem="Fcb-8R-XJ3" firstAttribute="top" secondItem="Cyv-Bc-Yzo" secondAttribute="bottom" constant="0.5" id="GfZ-tB-ULz"/>
                     <constraint firstItem="9rA-LV-yih" firstAttribute="top" secondItem="mP1-zc-ObJ" secondAttribute="bottom" constant="10" id="IeO-aN-Gfa"/>
-                    <constraint firstItem="Cyv-Bc-Yzo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="NKl-NL-KSp"/>
+                    <constraint firstItem="Fcb-8R-XJ3" firstAttribute="top" secondItem="Cyv-Bc-Yzo" secondAttribute="bottom" id="Kce-h0-ZFM"/>
+                    <constraint firstItem="Cyv-Bc-Yzo" firstAttribute="top" secondItem="9rA-LV-yih" secondAttribute="bottom" constant="16.5" id="OLb-Ca-ATJ"/>
+                    <constraint firstItem="Cyv-Bc-Yzo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="QDV-T6-EE2"/>
                     <constraint firstItem="mP1-zc-ObJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZCc-zw-1Z7"/>
-                    <constraint firstAttribute="trailing" secondItem="Cyv-Bc-Yzo" secondAttribute="trailing" constant="355" id="c3Y-kL-PRk"/>
-                    <constraint firstItem="Fcb-8R-XJ3" firstAttribute="top" secondItem="Cyv-Bc-Yzo" secondAttribute="bottom" constant="41" id="ckT-Oc-ms2"/>
                     <constraint firstItem="9rA-LV-yih" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="coP-zK-5C7"/>
                     <constraint firstItem="9rA-LV-yih" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="h4a-mf-LfJ"/>
                     <constraint firstItem="9rA-LV-yih" firstAttribute="top" secondItem="mP1-zc-ObJ" secondAttribute="bottom" constant="10" id="pMw-5w-d9l"/>
                     <constraint firstItem="mP1-zc-ObJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="pWL-kU-DNo"/>
-                    <constraint firstItem="Cyv-Bc-Yzo" firstAttribute="top" secondItem="9rA-LV-yih" secondAttribute="bottom" constant="16.5" id="pj7-Bv-qzh"/>
                     <constraint firstItem="Fcb-8R-XJ3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="rTa-JA-Xpt"/>
                     <constraint firstAttribute="trailing" secondItem="9rA-LV-yih" secondAttribute="trailing" constant="115" id="thR-ZE-hjW"/>
                 </constraints>
