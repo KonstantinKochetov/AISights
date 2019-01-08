@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !mapUseCases.alreadyLoaded() {
             mapUseCases.loadMapsToRealm()
         }
-        mapUseCases.syncFirebaseToRealm()
+//        mapUseCases.syncFirebaseToRealm()
     }
 
 }
