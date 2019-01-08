@@ -51,7 +51,6 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DenkmalCell.identifier, for: indexPath) as? DenkmalCell
-//        let cell = UITableViewCell(style: .default, reuseIdentifier: DenkmalCell.identifier) as? DenkmalCell
         let denkmal = results[indexPath.row]
 
         cell?.set(denkmal: denkmal)

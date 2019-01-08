@@ -13,9 +13,10 @@ class DenkmalCell: UITableViewCell {
         denkmalImageView.image = nil
         do {
             if !denkmal.image.isEmpty {
-                debugPrint(denkmal.image)
                 let imageUrl = URL(string: denkmal.image[0])!
                 denkmalImageView.af_setImage(withURL: imageUrl, placeholderImage: UIImage(named: "sight"))
+            } else {
+                denkmalImageView.image = UIImage(named: "sight")
             }
 
             denkmalNameLabel.text = denkmal.title
