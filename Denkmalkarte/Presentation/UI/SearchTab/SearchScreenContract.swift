@@ -11,6 +11,7 @@ protocol SearchScreenPresenterProtocol: Presenter {
     func showDetailView(_ denkmal: Denkmal?)
 
     func search(query: String,
+                option: String,
                 success: @escaping (([Denkmal]) -> Void),
                 failure: @escaping ((Error) -> Void))
 

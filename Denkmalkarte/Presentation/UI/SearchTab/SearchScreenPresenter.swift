@@ -17,9 +17,10 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
     }
 
     func search(query: String,
+                option: String,
                 success: @escaping (([Denkmal]) -> Void),
                 failure: @escaping ((Error) -> Void)) {
-        mapUseCases.getDenkmale(success: success, failure: failure)
+        mapUseCases.search(query: query, option: option, success: success, failure: failure)
 
     }
 

@@ -7,12 +7,12 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var resultsCountView: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
-    
+
     var presenter: SearchScreenPresenterProtocol?
 
     private var results: [Denkmal] = []
-    let options = ["Name", "Beschreibung", "Bauherr", "Strasse", "Datierung", "Ort"]
-    var option: String?
+    let options = ["Title", "Text", "Bauherr", "Strasse", "Datierung", "Ort"]
+    var option: String = "title"
 
     public override func viewDidLoad() {
         // init
@@ -23,7 +23,8 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
         tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
 
         // default query
-        presenter?.search(query: "",
+        presenter?.search(query: "Wohnanlage",
+                          option: "title",
                           success: { result in
                             self.showSearchResult(result)
         }, failure: { _ in
@@ -35,6 +36,7 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
         searchBar.resignFirstResponder()
         if let query = searchBar.text {
             presenter?.search(query: query,
+                              option: option,
                               success: { result in
                                 self.showSearchResult(result)
             }, failure: { _ in
@@ -62,7 +64,7 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
     }
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        option = options[row]
+        option = options[row].lowercased()
     }
 
 }

@@ -62,4 +62,14 @@ class DbHelperImpl: DbHelper {
     func setAlreadyLoaded() {
         UserDefaults.standard.set(true, forKey: "alreadyLoaded")
     }
+
+    func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
+        do {
+            let predicate = NSPredicate(format: "\(option) CONTAINS '\(query)'")
+            let denkmale = Array(try self.realm().objects(RealmDenkmal.self).filter(predicate)).map({$0.toDenkmal()})
+            success(denkmale)
+        } catch {
+            failure(NSError(domain: "no domain", code: 406, userInfo: nil))
+        }
+    }
 }
