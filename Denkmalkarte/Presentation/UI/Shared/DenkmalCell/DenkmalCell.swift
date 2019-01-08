@@ -14,7 +14,7 @@ class DenkmalCell: UITableViewCell {
         do {
             if !denkmal.image.isEmpty {
                 let imageUrl = URL(string: denkmal.image[0])!
-                denkmalImageView.af_setImage(withURL: imageUrl, placeholderImage: UIImage(named: "sight"))
+                denkmalImageView.af_setImage(withURL: imageUrl)
             } else {
                 denkmalImageView.image = UIImage(named: "sight")
             }
