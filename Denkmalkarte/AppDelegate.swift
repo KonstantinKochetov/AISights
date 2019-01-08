@@ -10,9 +10,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var router: AppRouter?
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
 
-        // init
-        //initialize()
-
         print(userActivity.activityType)
         switch userActivity.activityType {
         case UserActivityType.ShowLocalDenkmal:
