@@ -12,12 +12,19 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
     private var results: [Denkmal] = []
 
     public override func viewDidLoad() {
+        // init
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
 
+        // default query
+        presenter?.search(query: "",
+                          success: { result in
+                            self.showSearchResult(result)
+        }, failure: { _ in
+        })
     }
 
     // MARK: UISearchBarDelegate
@@ -25,15 +32,18 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
         searchBar.resignFirstResponder()
         if let query = searchBar.text {
             presenter?.search(query: query,
-            success: { result in
-                self.results = result
-                self.container.isHidden = false
-                self.resultsCountView.text = "\(result.count) results"
-                self.tableView.reloadData()
-
+                              success: { result in
+                                self.showSearchResult(result)
             }, failure: { _ in
             })
         }
+    }
+
+    private func showSearchResult(_ result: [Denkmal]) {
+        self.results = result
+        self.container.isHidden = false
+        self.resultsCountView.text = "\(result.count) results"
+        self.tableView.reloadData()
     }
 }
 

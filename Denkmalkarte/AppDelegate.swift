@@ -1,5 +1,8 @@
 import UIKit
 import Firebase
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 var assembler: Assembler! = nil
 
@@ -26,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+
 
         // init
         initialize()
@@ -61,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func initialize() {
+        MSAppCenter.start("1f0d7222-b576-47e0-928b-d2af0e94b7f1", withServices:[ MSAnalytics.self, MSCrashes.self ])
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
 

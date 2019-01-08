@@ -4,7 +4,7 @@ class Parser {
 
     func readJSON() -> [Denkmal] {
         do {
-            if let file = Bundle.main.url(forResource: "full_denkmaeler", withExtension: "json") {
+            if let file = Bundle.main.url(forResource: "long_denkmaeler", withExtension: "json") {
                 let data = try Data(contentsOf: file)
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let object = json as? [[String: AnyObject]] {
