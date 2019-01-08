@@ -62,4 +62,11 @@ public class MapInteractor: MapUseCases {
                   failure: @escaping ((Error) -> Void)) {
         dbHelper.bookmark(id: id, success: success, failure: failure)
     }
+
+    func like(id: String,
+              userId: String,
+              success: @escaping (() -> Void),
+              failure: @escaping ((Error) -> Void)) {
+        apiHelper.like(id: id, userId: userId, success: success, failure: failure)
+    }
 }

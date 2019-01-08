@@ -18,4 +18,11 @@ class DetailScreenPresenter: DetailScreenPresenterProtocol {
         mapUseCases.bookmark(id: id, success: success, failure: failure)
     }
 
+    func like(id: String,
+              userId: String,
+              success: @escaping (() -> Void),
+              failure: @escaping ((Error) -> Void)) {
+        mapUseCases.like(id: id, userId: userId, success: success, failure: failure)
+    }
+
 }

@@ -43,13 +43,13 @@
                                             </constraints>
                                         </imageView>
                                         <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAR-U7-d8s">
-                                            <rect key="frame" x="240" y="319" width="123" height="44"/>
+                                            <rect key="frame" x="328.66666666666669" y="318.66666666666669" width="34.333333333333314" height="44.333333333333314"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dRc-d3-uER">
-                                                <rect key="frame" x="0.0" y="0.0" width="123" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333314" height="44.333333333333314"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2km entfernt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jai-8T-P1f">
-                                                        <rect key="frame" x="12" y="11.999999999999998" width="98.666666666666671" height="20.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jai-8T-P1f">
+                                                        <rect key="frame" x="12" y="11.999999999999998" width="10.333333333333336" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -126,6 +126,9 @@
                                                             </constraints>
                                                             <color key="tintColor" red="1" green="0.0" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <state key="normal" image="heart"/>
+                                                            <connections>
+                                                                <action selector="like:" destination="-1" eventType="touchUpInside" id="orj-Uv-ZM8"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>

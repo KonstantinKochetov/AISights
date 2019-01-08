@@ -1,5 +1,6 @@
 import UIKit
 import MapKit
+import FirebaseDatabase
 
 public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var scrollView: UIScrollView!
@@ -33,16 +34,39 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         if let monument = monument {
             presenter?.bookmark(id: monument.id,
                                 success: {
-                                    // TODO alert
+                                    // TODO alert/UI
 
             }, failure: { _ in
+                // TODO alert/UI
             })
         }
     }
-    
+    @IBAction func like(_ sender: Any) {
+        if let monument = monument {
+            presenter?.like(id: monument.id,
+                            userId: "123",
+                            success: {
+//                          // do nothing
+            }, failure: { _ in
+                // TODO alert/UI
+            })
+        }
+    }
+
     // MARK: - Helpers
     private func setup() {
         if let monument = monument {
+
+            // set listener
+            let ref : DatabaseReference = assembler.resolve().child("denkmale").child(monument.id).child("likes")
+            ref.observe(DataEventType.value, with: { snapshot in
+                let value2 = snapshot.value ?? -9
+                let value = value2 as? NSNumber
+                if let value = value {
+                    self.distanceLabel.text = value.stringValue
+                }
+            })
+
             titleLabel.text = monument.title
             streetLabel.text = monument.strasse[0]
             textLabel.text = monument.text

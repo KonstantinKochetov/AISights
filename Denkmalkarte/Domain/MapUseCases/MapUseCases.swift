@@ -15,5 +15,10 @@ protocol MapUseCases {
 
     func bookmark(id: String,
                   success: @escaping (() -> Void),
-                  failure: @escaping ((Error) -> Void)) 
+                  failure: @escaping ((Error) -> Void))
+    
+    func like(id: String,
+              userId: String,
+              success: @escaping (() -> Void),
+              failure: @escaping ((Error) -> Void))
 }
