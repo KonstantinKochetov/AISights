@@ -71,4 +71,10 @@ extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
             searchBar.resignFirstResponder()
         }
     }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //code to execute on click
+        let denkmal = results[indexPath.row]
+        presenter?.showDetailView(denkmal)
+    }
 }

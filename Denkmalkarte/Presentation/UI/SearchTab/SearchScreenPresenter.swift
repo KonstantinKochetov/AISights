@@ -1,9 +1,7 @@
 import Foundation
 
 class SearchScreenPresenter: SearchScreenPresenterProtocol {
-    func showDetailView(_ denkmal: Denkmal?) {
-        router.showDetailView(denkmal)
-    }
+
     let router: SearchTabRouter
     let view: SearchScreenViewProtocol
      let mapUseCases: MapUseCases
@@ -12,6 +10,10 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
         self.view = view
         self.router = router
         self.mapUseCases = mapUseCases
+    }
+
+    func showDetailView(_ denkmal: Denkmal?) {
+        router.showDetailView(denkmal)
     }
 
     func search(query: String,
