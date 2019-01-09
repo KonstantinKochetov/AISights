@@ -44,7 +44,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBAction func like(_ sender: Any) {
         if let monument = monument {
             presenter?.like(id: monument.id,
-                            userId: "123",
+                            userId: "8972",
                             success: {
 //                          // do nothing
             }, failure: { _ in
