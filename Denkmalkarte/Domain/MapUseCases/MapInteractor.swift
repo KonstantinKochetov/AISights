@@ -40,6 +40,14 @@ public class MapInteractor: MapUseCases {
         })
     }
 
+    func getUserId() -> String {
+        return dbHelper.getUserId()
+    }
+
+    func createUserId() {
+        dbHelper.createUserId()
+    }
+
     func cleanMapsRealm() {
         do {
             try dbHelper.clean()

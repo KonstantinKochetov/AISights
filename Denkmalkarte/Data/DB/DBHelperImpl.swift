@@ -63,6 +63,14 @@ class DbHelperImpl: DbHelper {
         UserDefaults.standard.set(true, forKey: "alreadyLoaded")
     }
 
+    func getUserId() -> String {
+         return UserDefaults.standard.string(forKey: "userIdIsCreated") ?? ""
+    }
+
+    func createUserId() {
+        UserDefaults.standard.set(UUID().uuidString, forKey: "userIdIsCreated")
+    }
+
     func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
         do {
             var finalDenkmale: [Denkmal] = []

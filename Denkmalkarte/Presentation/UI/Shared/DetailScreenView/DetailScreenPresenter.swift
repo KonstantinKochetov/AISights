@@ -12,6 +12,10 @@ class DetailScreenPresenter: DetailScreenPresenterProtocol {
         self.mapUseCases = mapUseCases
     }
 
+    func getUserId() -> String {
+        return mapUseCases.getUserId()
+    }
+
     func bookmark(id: String,
                   success: @escaping (() -> Void),
                   failure: @escaping ((Error) -> Void)) {

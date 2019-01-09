@@ -17,6 +17,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
     var presenter: DetailScreenPresenterProtocol?
     var monument: Denkmal?
+    var userId: String?
 
     public override func viewDidLoad() {
         setup()
@@ -34,31 +35,31 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         if let monument = monument {
             presenter?.bookmark(id: monument.id,
                                 success: {
-                                    // TODO alert/UI
+                                    // TODO JULIAN alert/UI
 
             }, failure: { _ in
-                // TODO alert/UI
+                // TODO JULIAN alert/UI
             })
         }
     }
     @IBAction func like(_ sender: Any) {
-        if let monument = monument {
+        if let monument = monument, let userId = userId {
             presenter?.like(id: monument.id,
-                            userId: "8972",
+                            userId: userId,
                             success: {
 //                          // do nothing
             }, failure: { _ in
-                // TODO alert/UI
+                // TODO JULIAN alert/UI
             })
         }
     }
 
     // MARK: - Helpers
     private func setup() {
+        userId = presenter?.getUserId()
         if let monument = monument {
-
-            // set listener
-            let ref : DatabaseReference = assembler.resolve().child("denkmale").child(monument.id).child("likes")
+            // set listener to likes
+            let ref: DatabaseReference = assembler.resolve().child("denkmale").child(monument.id).child("likes")
             ref.observe(DataEventType.value, with: { snapshot in
                 let value2 = snapshot.value ?? -9
                 let value = value2 as? NSNumber
@@ -106,4 +107,3 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             }
         }
 }
-

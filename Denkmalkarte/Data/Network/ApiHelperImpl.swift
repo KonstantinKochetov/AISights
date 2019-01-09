@@ -26,7 +26,7 @@ class ApiHelperImpl: ApiHelper {
 
         ref.child("denkmale").child(id).child("userId").observeSingleEvent(of: .value, with: { (snapshot) in
             print(snapshot)
-            let dict = snapshot.value as? [String : AnyObject] ?? [:]
+            let dict = snapshot.value as? [String: AnyObject] ?? [:]
             if dict.isEmpty { // if denkmal does not exist yed
                 let newRef2 = self.ref.child("denkmale")
                 newRef2.child(id).setValue(["likes": 1, "userId": [userId: true]])
