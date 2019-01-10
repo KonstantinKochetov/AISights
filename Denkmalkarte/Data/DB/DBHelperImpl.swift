@@ -65,6 +65,12 @@ class DbHelperImpl: DbHelper {
         UserDefaults.standard.set(true, forKey: "alreadyLoaded")
     }
 
+    func getUserId() -> String {
+         return UserDefaults.standard.string(forKey: "userIdIsCreated") ?? ""
+    }
+    func createUserId() {
+        UserDefaults.standard.set(UUID().uuidString, forKey: "userIdIsCreated")
+    }
     func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
 
         do {
@@ -79,7 +85,6 @@ class DbHelperImpl: DbHelper {
     }
 
     func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
-
         do {
             var finalDenkmale: [Denkmal] = []
             switch option {
@@ -103,5 +108,26 @@ class DbHelperImpl: DbHelper {
         } catch {
             failure(NSError(domain: "no domain", code: 406, userInfo: nil))
         }
+    }
+
+    func bookmark(id: String,
+                  success: @escaping (() -> Void),
+                  failure: @escaping ((Error) -> Void)) {
+        do {
+            let predicate = NSPredicate(format: "id = '\(id)'")
+            let denkmal = try self.realm().objects(RealmDenkmal.self).filter(predicate).first
+            if let denkmal = denkmal {
+                try realm().write {
+                    if denkmal.markiert == false {
+                        denkmal.setValue(true, forKey: "markiert")
+                    } else {
+                        denkmal.setValue(false, forKey: "markiert")
+                    }
+                }
+            }
+        } catch {
+            failure(NSError(domain: "no domain", code: 406, userInfo: nil))
+        }
+
     }
 }

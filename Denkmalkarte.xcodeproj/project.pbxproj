@@ -11,6 +11,7 @@
 		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
 		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
 		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
+		810FE8A221E4D72F004D06ED /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 810FE8A121E4D72F004D06ED /* bookmark.png */; };
 		8143A67E21E2885B00E2EB20 /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8143A67921E2885A00E2EB20 /* SearchScreenPresenter.swift */; };
 		8143A67F21E2885B00E2EB20 /* SearchTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8143A67A21E2885A00E2EB20 /* SearchTabRouter.swift */; };
 		8143A68021E2885B00E2EB20 /* SearchScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8143A67B21E2885A00E2EB20 /* SearchScreenView.xib */; };
@@ -84,6 +85,7 @@
 		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
 		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
 		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		810FE8A121E4D72F004D06ED /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmark.png; path = Assets.xcassets/bookmark.png; sourceTree = "<group>"; };
 		8143A67921E2885A00E2EB20 /* SearchScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchScreenPresenter.swift; sourceTree = "<group>"; };
 		8143A67A21E2885A00E2EB20 /* SearchTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabRouter.swift; sourceTree = "<group>"; };
 		8143A67B21E2885A00E2EB20 /* SearchScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchScreenView.xib; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		81737267216FD04F00000A05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				810FE8A121E4D72F004D06ED /* bookmark.png */,
 				8143A68421E296E600E2EB20 /* full_denkmaeler.json */,
 				8143A68321E296E500E2EB20 /* short_denkmaeler.json */,
 				8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */,
@@ -539,6 +542,7 @@
 				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
 				817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */,
 				8143A68521E296E600E2EB20 /* short_denkmaeler.json in Resources */,
+				810FE8A221E4D72F004D06ED /* bookmark.png in Resources */,
 				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
 				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
 				8143A68621E296E600E2EB20 /* full_denkmaeler.json in Resources */,

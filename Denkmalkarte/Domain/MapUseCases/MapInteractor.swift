@@ -43,6 +43,14 @@ public class MapInteractor: MapUseCases {
         })
     }
 
+    func getUserId() -> String {
+        return dbHelper.getUserId()
+    }
+
+    func createUserId() {
+        dbHelper.createUserId()
+    }
+
     func cleanMapsRealm() {
         do {
             try dbHelper.clean()
@@ -60,6 +68,18 @@ public class MapInteractor: MapUseCases {
         dbHelper.search(query: query, option: option, success: success, failure: failure)
     }
 
+    func bookmark(id: String,
+                  success: @escaping (() -> Void),
+                  failure: @escaping ((Error) -> Void)) {
+        dbHelper.bookmark(id: id, success: success, failure: failure)
+    }
+
+    func like(id: String,
+              userId: String,
+              success: @escaping (() -> Void),
+              failure: @escaping ((Error) -> Void)) {
+        apiHelper.like(id: id, userId: userId, success: success, failure: failure)
+    }
     func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
         dbHelper.search(query: query, option: option, success: success, failure: failure)
     }

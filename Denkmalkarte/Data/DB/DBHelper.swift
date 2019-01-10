@@ -16,8 +16,15 @@ protocol DbHelper {
 
     func setAlreadyLoaded()
 
+    func getUserId() -> String
+
+    func createUserId()
+
     func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void)
 
+    func bookmark(id: String,
+                  success: @escaping (() -> Void),
+                  failure: @escaping ((Error) -> Void))
     func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void)
 
 
