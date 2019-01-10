@@ -32,14 +32,23 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UIS
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
 
-        /*if let query = searchBar.text {
-            presenter?.search(query: query,
+        if(searchBar.text == "") {
+            presenter?.search(query: true,
                               option: option,
                               success: { result in
                                 self.showSearchResult(result)
             }, failure: { _ in
             })
-        }*/
+        } else {
+            if let query = searchBar.text {
+                presenter?.search(query: query,
+                                  option: "title",
+                                  success: { result in
+                                    self.showSearchResult(result)
+                }, failure: { _ in
+                })
+            }
+        }
     }
 
 
