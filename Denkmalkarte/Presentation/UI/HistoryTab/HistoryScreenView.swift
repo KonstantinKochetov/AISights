@@ -27,6 +27,14 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UIS
         })
     }
 
+    public override func viewWillAppear(_ animated: Bool) {
+        presenter?.search(query: true,
+                          option: option,
+                          success: { result in
+                            self.showSearchResult(result)
+        }, failure: { _ in
+        })
+    }
 
     // MARK: UISearchBarDelegate
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
