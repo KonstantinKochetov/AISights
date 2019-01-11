@@ -1,6 +1,7 @@
 import Foundation
 import MapKit
 import RealmSwift
+import Contacts
 
 class Denkmal: NSObject, MKAnnotation {
 
@@ -104,6 +105,13 @@ class Denkmal: NSObject, MKAnnotation {
             self.coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
         }
         super.init()
+    }
+    func mapItem() -> MKMapItem {
+        let addressDict = [CNPostalAddressStreetKey: subtitle!]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        return mapItem
     }
 
     var subtitle: String? {

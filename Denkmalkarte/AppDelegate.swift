@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 var assembler: Assembler! = nil
 
@@ -10,9 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var router: AppRouter?
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
 
-        // init
-        initialize()
-
+        print(userActivity.activityType)
         switch userActivity.activityType {
         case UserActivityType.ShowLocalDenkmal:
             if let viewController = router?.childRouter[0] as? MapScreenView {
@@ -85,7 +84,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !mapUseCases.alreadyLoaded() {
             mapUseCases.loadMapsToRealm()
         }
-        mapUseCases.syncFirebaseToRealm()
+
+        if mapUseCases.getUserId().isEmpty {
+            mapUseCases.createUserId()
+        }
     }
 
 }

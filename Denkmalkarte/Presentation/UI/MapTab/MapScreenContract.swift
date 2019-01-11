@@ -8,7 +8,7 @@ protocol MapScreenPresenterProtocol: Presenter {
     var router: MapTabRouter { get }
     var view: MapScreenViewProtocol { get }
 
-    func showDetailView(_ withId: [Int])
+    func showDetailView(_ denkmal: Denkmal?)
 
     func getDenkmale(success: @escaping ([MKAnnotation]) -> Void, failure: @escaping (Error) -> Void)
 }
