@@ -31,9 +31,10 @@ class DetailScreenPresenter: DetailScreenPresenterProtocol {
     }
     
     func upload(_ image: UIImage,
+                withMonumentId monumentId: String,
                 success: @escaping (() -> Void),
                 failure: @escaping ((Error) -> Void)) {
-        mapUseCases.upload(image, success: success, failure: failure)
+        mapUseCases.upload(image, withMonumentId: monumentId, success: success, failure: failure)
     }
 
 }

@@ -35,7 +35,11 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     var presenter: DetailScreenPresenterProtocol?
     var monument: Denkmal?
     var userId: String?
-    var userPhotos = [UIImage]()
+    var userImageNames = [String]() {
+        didSet {
+            userPhotosCollectionView.reloadData()
+        }
+    }
 
     public override func viewDidLoad() {
         setup()
@@ -81,6 +85,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         setupImage()
         setupInfo()
         setupLikes()
+        setupUserImages()
     }
 
     private func setupCollectionView() {
@@ -135,6 +140,31 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         }
     }
 
+    private func setupUserImages() {
+        guard let monument = monument else {
+            return
+        }
+
+        let ref: DatabaseReference = assembler
+            .resolve()
+            .child("denkmale")
+            .child(monument.id)
+            .child("images")
+
+        ref.observe(.value) { snapshot in
+            let names = snapshot.children.compactMap { child -> String? in
+                guard let child = child as? DataSnapshot,
+                    let value = child.value as? String else {
+                    return nil
+                }
+
+                return value
+            }
+
+            self.userImageNames.append(contentsOf: names)
+        }
+    }
+
     private func openMonumentInMaps() {
         if let monument = monument {
             let coordinate = monument.coordinate
@@ -172,17 +202,18 @@ extension DetailScreenView: UIScrollViewDelegate {
 extension DetailScreenView: UICollectionViewDataSource {
 
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userPhotos.count + 1
+        return userImageNames.count + 1
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.identifier, for: indexPath) as? PhotoCell
 
-        if indexPath.row < userPhotos.count {
-            cell?.imageView.image = #imageLiteral(resourceName: "Camera")
+        if indexPath.row < userImageNames.count {
+            let name = userImageNames[indexPath.row]
+            cell?.setup(withImageId: name)
         } else {
-            cell?.imageView.image = #imageLiteral(resourceName: "Camera")
+            cell?.setupWithCameraIcon()
         }
 
         return cell!
@@ -195,11 +226,14 @@ extension DetailScreenView: UICollectionViewDataSource {
 extension DetailScreenView: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        let width = collectionView.bounds.width
+        let withWithoutSpacing = width - 2 * 8
+        let itemWidth = withWithoutSpacing / 3
+        return CGSize(width: itemWidth, height: itemWidth)
     }
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == userPhotos.count {
+        if indexPath.row == userImageNames.count {
             imagePickerManager.showCamera(in: self)
         }
     }
@@ -211,7 +245,7 @@ extension DetailScreenView: UICollectionViewDelegateFlowLayout {
 extension DetailScreenView: ImagePickerManagerDelegate {
 
     func manager(_ manager: ImagePickerManager, didPickImage image: UIImage) {
-        presenter?.upload(image, success: {
+        presenter?.upload(image, withMonumentId: monument!.id, success: {
 
         }, failure: { error in
 

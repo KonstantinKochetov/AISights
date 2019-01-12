@@ -64,7 +64,7 @@ class ApiHelperImpl: ApiHelper {
         })
     }
 
-    func upload(_ image: UIImage, success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
+    func upload(_ image: UIImage, withMonumentId monumentId: String, success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
         image.compress { data, width, height, error in
             if let error = error {
                 failure(error)
@@ -88,7 +88,7 @@ class ApiHelperImpl: ApiHelper {
 
                 if let storageMetadata = storageMetadata,
                     let name = storageMetadata.name {
-                    self.saveImageInDatabase(monumentId: "AAA", imageId: name)
+                    self.saveImageInDatabase(withMonumentId: monumentId, imageId: name)
                 }
             }
 
@@ -105,7 +105,7 @@ class ApiHelperImpl: ApiHelper {
         }
     }
 
-    private func saveImageInDatabase(monumentId: String, imageId: String) {
+    private func saveImageInDatabase(withMonumentId monumentId: String, imageId: String) {
         let ref = self.ref.child("denkmale").child(monumentId).child("images")
         ref.childByAutoId().setValue(imageId)
     }
