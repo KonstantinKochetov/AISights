@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF6DF421AD6E870055E0BB /* UserActivityType.swift */; };
+		80BB364521E8F51500DFA43E /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364421E8F51500DFA43E /* UIView+Shadow.swift */; };
+		80BB364721E9048E00DFA43E /* PickerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364621E9048E00DFA43E /* PickerViewManager.swift */; };
+		80BB364D21E90F8600DFA43E /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364B21E90F8600DFA43E /* PhotoCell.swift */; };
+		80BB364E21E90F8600DFA43E /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BB364C21E90F8600DFA43E /* PhotoCell.xib */; };
+		80BB365021E9109300DFA43E /* UIImage+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364F21E9109300DFA43E /* UIImage+Compression.swift */; };
+		80BB365221E910DD00DFA43E /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB365121E910DD00DFA43E /* ImagePickerManager.swift */; };
 		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
 		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
 		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
@@ -82,6 +88,12 @@
 		02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Denkmalkarte.entitlements; sourceTree = "<group>"; };
 		02BF6DF421AD6E870055E0BB /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
 		6CB2DC791D178C00C684EBA5 /* Pods-DenkmalkarteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		80BB364421E8F51500DFA43E /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		80BB364621E9048E00DFA43E /* PickerViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewManager.swift; sourceTree = "<group>"; };
+		80BB364B21E90F8600DFA43E /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		80BB364C21E90F8600DFA43E /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		80BB364F21E9109300DFA43E /* UIImage+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Compression.swift"; sourceTree = "<group>"; };
+		80BB365121E910DD00DFA43E /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
 		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
 		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
@@ -176,6 +188,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		80BB364A21E90F6400DFA43E /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				80BB364B21E90F8600DFA43E /* PhotoCell.swift */,
+				80BB364C21E90F8600DFA43E /* PhotoCell.xib */,
+			);
+			path = PhotoCell;
+			sourceTree = "<group>";
+		};
 		810821E4219FC38E00BF2F07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +267,10 @@
 				8173037D21BE3C3E0007A4A1 /* long_denkmaeler.json */,
 				81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
 				81737247216FC1B600000A05 /* Assets.xcassets */,
+				80BB364421E8F51500DFA43E /* UIView+Shadow.swift */,
+				80BB364621E9048E00DFA43E /* PickerViewManager.swift */,
+				80BB364F21E9109300DFA43E /* UIImage+Compression.swift */,
+				80BB365121E910DD00DFA43E /* ImagePickerManager.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -360,6 +385,7 @@
 				81A9751821711D8800207D5E /* DetailScreenPresenter.swift */,
 				81A9751A21711F5700207D5E /* DetailScreenView.swift */,
 				81A9751C21711FB900207D5E /* DetailScreenView.xib */,
+				80BB364A21E90F6400DFA43E /* PhotoCell */,
 			);
 			path = DetailScreenView;
 			sourceTree = "<group>";
@@ -546,6 +572,7 @@
 				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
 				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
 				8143A68621E296E600E2EB20 /* full_denkmaeler.json in Resources */,
+				80BB364E21E90F8600DFA43E /* PhotoCell.xib in Resources */,
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
 				81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
 				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
@@ -606,7 +633,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -627,7 +654,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		81CAF06621A6FABA00A84E3E /* ShellScript */ = {
@@ -651,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A975302171FF4E00207D5E /* HistoryScreenView.swift in Sources */,
+				80BB364D21E90F8600DFA43E /* PhotoCell.swift in Sources */,
 				8173727D216FDD3800000A05 /* Presenter.swift in Sources */,
 				81A975432172064300207D5E /* Assembler.swift in Sources */,
 				8143A68221E2885B00E2EB20 /* SearchScreenContract.swift in Sources */,
@@ -659,10 +687,13 @@
 				81A9750C2170C82A00207D5E /* (null) in Sources */,
 				81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */,
 				8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */,
+				80BB365021E9109300DFA43E /* UIImage+Compression.swift in Sources */,
 				81A9752E2171FF4500207D5E /* HistoryScreenPresenter.swift in Sources */,
 				81A975502172140400207D5E /* ApiHelper.swift in Sources */,
+				80BB364521E8F51500DFA43E /* UIView+Shadow.swift in Sources */,
 				81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */,
 				02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */,
+				80BB364721E9048E00DFA43E /* PickerViewManager.swift in Sources */,
 				81A975362172027200207D5E /* InfoTabRouter.swift in Sources */,
 				81A9750E2170C86700207D5E /* (null) in Sources */,
 				81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
@@ -670,6 +701,7 @@
 				81A975522172141000207D5E /* DBHelper.swift in Sources */,
 				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
 				817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */,
+				80BB365221E910DD00DFA43E /* ImagePickerManager.swift in Sources */,
 				8143A68121E2885B00E2EB20 /* SearchScreenView.swift in Sources */,
 				81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
 				81737264216FC87200000A05 /* Router.swift in Sources */,
@@ -849,13 +881,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5N65KHNFDU;
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -870,13 +902,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5N65KHNFDU;
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte;
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
