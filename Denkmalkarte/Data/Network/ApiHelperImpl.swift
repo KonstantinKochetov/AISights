@@ -1,5 +1,6 @@
 import Foundation
 import FirebaseDatabase
+import FirebaseStorage
 
 class ApiHelperImpl: ApiHelper {
 
@@ -61,5 +62,51 @@ class ApiHelperImpl: ApiHelper {
                 }
             }
         })
+    }
+
+    func upload(_ image: UIImage, success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
+        image.compress { data, width, height, error in
+            if let error = error {
+                failure(error)
+                return
+            }
+
+            let uuid = UUID.init().uuidString
+
+            let storageReference = Storage
+                .storage()
+                .reference(withPath: "user-uploads")
+                .child(uuid)
+
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+
+            let uploadTask = storageReference.putData(data!, metadata: metadata) { storageMetadata, error in
+                if let error = error {
+                    print(error)
+                }
+
+                if let storageMetadata = storageMetadata,
+                    let name = storageMetadata.name {
+                    self.saveImageInDatabase(monumentId: "AAA", imageId: name)
+                }
+            }
+
+            uploadTask.observe(.progress) { storageTaskSnapshot in
+                if let progress = storageTaskSnapshot.progress {
+
+                    let completedUnitCount = Float(progress.completedUnitCount)
+                    let totalUnitCount = Float(progress.totalUnitCount)
+                    let progress = completedUnitCount / totalUnitCount
+
+                    print(progress)
+                }
+            }
+        }
+    }
+
+    private func saveImageInDatabase(monumentId: String, imageId: String) {
+        let ref = self.ref.child("denkmale").child(monumentId).child("images")
+        ref.childByAutoId().setValue(imageId)
     }
 }

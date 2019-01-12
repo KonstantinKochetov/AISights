@@ -12,6 +12,7 @@ target 'Denkmalkarte' do
   pod 'AlamofireImage'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
   target 'DenkmalkarteTests' do
     inherit! :search_paths

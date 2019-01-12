@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 protocol ApiHelper {
 
@@ -7,6 +8,10 @@ protocol ApiHelper {
 
     func like(id: String,
               userId: String,
+              success: @escaping (() -> Void),
+              failure: @escaping ((Error) -> Void))
+    
+    func upload(_ image: UIImage,
               success: @escaping (() -> Void),
               failure: @escaping ((Error) -> Void))
 }

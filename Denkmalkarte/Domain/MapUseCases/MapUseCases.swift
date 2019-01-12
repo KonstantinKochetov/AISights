@@ -25,4 +25,8 @@ protocol MapUseCases {
               userId: String,
               success: @escaping (() -> Void),
               failure: @escaping ((Error) -> Void))
+    
+    func upload(_ image: UIImage,
+                success: @escaping (() -> Void),
+                failure: @escaping ((Error) -> Void))
 }

@@ -17,7 +17,7 @@ enum PickerOption: Int, CustomStringConvertible, CaseIterable {
     case strasse
     case datierung
     case ort
-    
+
     var description: String {
         switch self {
         case .title: return "Title"
