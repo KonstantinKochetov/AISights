@@ -78,11 +78,12 @@ extension MapScreenView: MKMapViewDelegate {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-            /*let btnNavi = UIButton(frame: CGRect(origin: CGPoint.zero,
+            let rightButton = UIButton(type: .detailDisclosure)
+            view.rightCalloutAccessoryView = rightButton
+            let btnNavi = UIButton(frame: CGRect(origin: CGPoint.zero,
                                                     size: CGSize(width: 30, height: 30)))
-            btnNavi.setBackgroundImage(UIImage(named: "Maps-icon"), for: UIControl.State())*/
-            view.leftCalloutAccessoryView = UIButton(type: .infoDark)
+            btnNavi.setBackgroundImage(UIImage(named: "car"), for: UIControl.State())
+            view.leftCalloutAccessoryView = btnNavi
             view.clusteringIdentifier = identifier
 
         }
