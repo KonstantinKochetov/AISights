@@ -66,13 +66,14 @@ extension MapScreenView: MKMapViewDelegate {
             return nil
         }
 
-        let identifier = "marker"
+        let identifier = "denkmal"
         var view: MKMarkerAnnotationView
 
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKMarkerAnnotationView {
             dequeuedView.annotation = annotation
             view = dequeuedView
+            view.clusteringIdentifier = identifier
         } else {
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
@@ -82,7 +83,7 @@ extension MapScreenView: MKMapViewDelegate {
                                                     size: CGSize(width: 30, height: 30)))
             btnNavi.setBackgroundImage(UIImage(named: "Maps-icon"), for: UIControl.State())*/
             view.leftCalloutAccessoryView = UIButton(type: .infoDark)
-            view.clusteringIdentifier = "denkmal"
+            view.clusteringIdentifier = identifier
 
         }
         return view
