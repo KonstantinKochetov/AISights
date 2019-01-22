@@ -22,6 +22,6 @@ public class SearchTabRouter: SharedDetailRouter {
         if let denkmal = denkmal {
             view.monument = denkmal
         }
-        navigationController.pushViewController(view, animated: true)
+        navigationController.present(view, animated: true, completion: nil)
     }
 }

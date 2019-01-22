@@ -1,18 +1,33 @@
 import UIKit
 
-public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UISearchBarDelegate, SearchScreenViewProtocol {
+public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScreenViewProtocol {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var container: UIView!
     @IBOutlet weak var resultsCountView: UILabel!
-    @IBOutlet weak var pickerView: UIPickerView!
 
     var presenter: SearchScreenPresenterProtocol?
 
     private var results: [Denkmal] = []
-    let options = ["Title", "Text", "Bauherr", "Strasse", "Datierung", "Ort"]
-    var option: String = "title"
+    
+    lazy var pickerManager: PickerManager = {
+        let pickerManager = PickerManager(option: .title)
+        dummyTextField.inputView = pickerManager.optionPicker
+        dummyTextField.inputAccessoryView = pickerManager.toolbar
+        return pickerManager
+    }()
+    
+    let dummyTextField = UITextField()
+
+    var option: PickerOption = .title {
+        didSet {
+            navigationItem.rightBarButtonItem?.title = itemTitle
+        }
+    }
+
+    var itemTitle: String {
+        return "by \(option.description)"
+    }
 
     public override func viewDidLoad() {
         // init
@@ -21,14 +36,26 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
-
+        view.addSubview(dummyTextField)
+        pickerManager.delegate = self
+        setupNavigationBar()
         // default query
         presenter?.search(query: "Wohnanlage",
-                          option: "title",
+                          option: option.description.lowercased(),
                           success: { result in
                             self.showSearchResult(result)
         }, failure: { _ in
         })
+    }
+
+    private func setupNavigationBar() {
+        title = "Search"
+        let filterBarButtonItem = UIBarButtonItem(title: itemTitle, style: .done, target: self, action: #selector(showOptions))
+        navigationItem.rightBarButtonItem = filterBarButtonItem
+    }
+    
+    @objc private func showOptions() {
+        dummyTextField.becomeFirstResponder()
     }
 
     // MARK: UISearchBarDelegate
@@ -36,7 +63,7 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
         searchBar.resignFirstResponder()
         if let query = searchBar.text {
             presenter?.search(query: query,
-                              option: option,
+                              option: option.description.lowercased(),
                               success: { result in
                                 self.showSearchResult(result)
             }, failure: { _ in
@@ -46,25 +73,8 @@ public class SearchScreenView: UIViewController, UIPickerViewDataSource, UIPicke
 
     private func showSearchResult(_ result: [Denkmal]) {
         self.results = result
-        self.container.isHidden = false
         self.resultsCountView.text = "\(result.count) results"
         self.tableView.reloadData()
-    }
-
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return options[row]
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return options.count
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        option = options[row].lowercased()
     }
 
 }
@@ -99,4 +109,13 @@ extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
         let denkmal = results[indexPath.row]
         presenter?.showDetailView(denkmal)
     }
+}
+
+extension SearchScreenView: PickerManagerDelegate {
+
+    func manager(_ manager: PickerManager, didPickOption option: PickerOption) {
+        self.option = option
+        dummyTextField.resignFirstResponder()
+    }
+
 }
