@@ -36,7 +36,7 @@
                                         <rect key="frame" x="12" y="0.0" width="351" height="100"/>
                                         <subviews>
                                             <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="J41-Db-RVh">
-                                                <rect key="frame" x="0.0" y="0.0" width="351" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="80.666666666666671"/>
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <scopeButtonTitles>
@@ -46,8 +46,8 @@
                                                     <string>Ort</string>
                                                 </scopeButtonTitles>
                                             </searchBar>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 results " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9l-GY-Noo">
-                                                <rect key="frame" x="0.0" y="0.0" width="351" height="0.0"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 results " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9l-GY-Noo">
+                                                <rect key="frame" x="0.0" y="80.666666666666671" width="351" height="19.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
