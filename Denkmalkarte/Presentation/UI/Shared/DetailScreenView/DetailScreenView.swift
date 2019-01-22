@@ -151,18 +151,24 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             .child(monument.id)
             .child("images")
 
-        ref.observe(.value) { snapshot in
-            let names = snapshot.children.compactMap { child -> String? in
-                guard let child = child as? DataSnapshot,
-                    let value = child.value as? String else {
-                    return nil
-                }
+        ref.observeSingleEvent(of: .value) { snapshot in
+            let names = snapshot.children.compactMap(self.mapChildToValue)
+            self.userImageNames = names
+        }
 
-                return value
-            }
-
+        ref.observe(.childAdded) { snapshot in
+            let names = snapshot.children.compactMap(self.mapChildToValue)
             self.userImageNames.append(contentsOf: names)
         }
+    }
+
+    private func mapChildToValue(_ child: Any) -> String? {
+        guard let child = child as? DataSnapshot,
+            let value = child.value as? String else {
+                return nil
+        }
+
+        return value
     }
 
     private func openMonumentInMaps() {
@@ -246,7 +252,7 @@ extension DetailScreenView: ImagePickerManagerDelegate {
 
     func manager(_ manager: ImagePickerManager, didPickImage image: UIImage) {
         presenter?.upload(image, withMonumentId: monument!.id, success: {
-
+            
         }, failure: { error in
 
         })
