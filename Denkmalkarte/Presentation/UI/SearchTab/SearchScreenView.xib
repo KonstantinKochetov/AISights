@@ -32,34 +32,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IES-Up-Kpz">
-                                        <rect key="frame" x="12" y="0.0" width="351" height="100"/>
-                                        <subviews>
-                                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="J41-Db-RVh">
-                                                <rect key="frame" x="0.0" y="0.0" width="351" height="80.666666666666671"/>
-                                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <scopeButtonTitles>
-                                                    <string>Title</string>
-                                                    <string>Text</string>
-                                                    <string>Bauherr</string>
-                                                    <string>Ort</string>
-                                                </scopeButtonTitles>
-                                            </searchBar>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 results " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9l-GY-Noo">
-                                                <rect key="frame" x="0.0" y="80.666666666666671" width="351" height="19.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" text="" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J41-Db-RVh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Text</string>
+                                            <string>Bauherr</string>
+                                            <string>Ort</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="IES-Up-Kpz" secondAttribute="trailing" constant="12" id="r0g-98-sen"/>
-                                    <constraint firstAttribute="bottom" secondItem="IES-Up-Kpz" secondAttribute="bottom" id="xqs-RY-gzW"/>
-                                    <constraint firstItem="IES-Up-Kpz" firstAttribute="leading" secondItem="5tz-OF-aQG" secondAttribute="leading" constant="12" id="y5P-Ex-EK8"/>
-                                    <constraint firstItem="IES-Up-Kpz" firstAttribute="top" secondItem="5tz-OF-aQG" secondAttribute="top" id="yqi-xY-TGn"/>
+                                    <constraint firstAttribute="trailing" secondItem="J41-Db-RVh" secondAttribute="trailing" id="24j-Qn-86a"/>
+                                    <constraint firstItem="J41-Db-RVh" firstAttribute="leading" secondItem="5tz-OF-aQG" secondAttribute="leading" id="3Nv-7J-cZC"/>
+                                    <constraint firstItem="J41-Db-RVh" firstAttribute="top" secondItem="5tz-OF-aQG" secondAttribute="top" id="VW7-hp-W78"/>
+                                    <constraint firstAttribute="bottom" secondItem="J41-Db-RVh" secondAttribute="bottom" id="yJu-5K-oAJ"/>
                                 </constraints>
                             </view>
                             <blurEffect style="light"/>
@@ -71,12 +60,49 @@
                         </tableView>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLe-GG-GiY">
+                    <rect key="frame" x="123.66666666666669" y="706" width="128" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 results " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9l-GY-Noo">
+                            <rect key="frame" x="25.666666666666664" y="14.333333333333369" width="76.666666666666686" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="Udj-d2-mBG"/>
+                        <constraint firstAttribute="height" constant="48" id="V2Z-AI-OxX"/>
+                        <constraint firstItem="M9l-GY-Noo" firstAttribute="centerY" secondItem="wLe-GG-GiY" secondAttribute="centerY" id="ypm-3p-uJj"/>
+                        <constraint firstItem="M9l-GY-Noo" firstAttribute="centerX" secondItem="wLe-GG-GiY" secondAttribute="centerX" id="zyC-bt-Ah4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="wLe-GG-GiY" firstAttribute="centerX" secondItem="O3M-xw-NQg" secondAttribute="centerX" id="EZO-uI-Ggm"/>
                 <constraint firstItem="lFd-Xe-HX8" firstAttribute="trailing" secondItem="O3M-xw-NQg" secondAttribute="trailing" id="HBY-2V-Pwa"/>
                 <constraint firstItem="lFd-Xe-HX8" firstAttribute="bottom" secondItem="O3M-xw-NQg" secondAttribute="bottom" id="YMB-UZ-aTw"/>
                 <constraint firstItem="O3M-xw-NQg" firstAttribute="top" secondItem="lFd-Xe-HX8" secondAttribute="top" id="dNZ-dM-YwE"/>
+                <constraint firstItem="lFd-Xe-HX8" firstAttribute="bottom" secondItem="wLe-GG-GiY" secondAttribute="bottom" constant="24" id="kKo-rn-fYN"/>
                 <constraint firstItem="O3M-xw-NQg" firstAttribute="leading" secondItem="lFd-Xe-HX8" secondAttribute="leading" id="s76-Rq-nQU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="lFd-Xe-HX8"/>

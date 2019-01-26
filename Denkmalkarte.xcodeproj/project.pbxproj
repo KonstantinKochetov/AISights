@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF6DF421AD6E870055E0BB /* UserActivityType.swift */; };
 		80496B4421EA44A2001600D2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80496B4321EA44A2001600D2 /* GradientView.swift */; };
+		80854DFC21FCBBB700B411B2 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80854DFB21FCBBB700B411B2 /* ImagePickerManager.swift */; };
 		80BB364521E8F51500DFA43E /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364421E8F51500DFA43E /* UIView+Shadow.swift */; };
-		80BB364721E9048E00DFA43E /* PickerViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364621E9048E00DFA43E /* PickerViewManager.swift */; };
 		80BB364D21E90F8600DFA43E /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364B21E90F8600DFA43E /* PhotoCell.swift */; };
 		80BB364E21E90F8600DFA43E /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BB364C21E90F8600DFA43E /* PhotoCell.xib */; };
 		80BB365021E9109300DFA43E /* UIImage+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB364F21E9109300DFA43E /* UIImage+Compression.swift */; };
-		80BB365221E910DD00DFA43E /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BB365121E910DD00DFA43E /* ImagePickerManager.swift */; };
 		810821E6219FC42600BF2F07 /* RealmDenkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E5219FC42600BF2F07 /* RealmDenkmal.swift */; };
 		810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821E7219FD7F200BF2F07 /* Denkmal.swift */; };
 		810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810821ED21A1294D00BF2F07 /* RealmHelper.swift */; };
@@ -45,8 +44,8 @@
 		817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817AC3AE217A2FF500670CCB /* DenkmalCell.xib */; };
 		817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E438F219E87A7007F125B /* InfoPinCell.swift */; };
 		817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817E4390219E87A7007F125B /* InfoPinCell.xib */; };
-		81A9750C2170C82A00207D5E /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		81A9750E2170C86700207D5E /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		81A9750C2170C82A00207D5E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		81A9750E2170C86700207D5E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		81A9751521711AF500207D5E /* MapTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751421711AF500207D5E /* MapTabRouter.swift */; };
 		81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751621711D0D00207D5E /* DetailScreenContract.swift */; };
 		81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9751821711D8800207D5E /* DetailScreenPresenter.swift */; };
@@ -90,12 +89,11 @@
 		02BF6DF421AD6E870055E0BB /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
 		6CB2DC791D178C00C684EBA5 /* Pods-DenkmalkarteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		80496B4321EA44A2001600D2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		80854DFB21FCBBB700B411B2 /* ImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		80BB364421E8F51500DFA43E /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
-		80BB364621E9048E00DFA43E /* PickerViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewManager.swift; sourceTree = "<group>"; };
 		80BB364B21E90F8600DFA43E /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		80BB364C21E90F8600DFA43E /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		80BB364F21E9109300DFA43E /* UIImage+Compression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Compression.swift"; sourceTree = "<group>"; };
-		80BB365121E910DD00DFA43E /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		810821E5219FC42600BF2F07 /* RealmDenkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDenkmal.swift; sourceTree = "<group>"; };
 		810821E7219FD7F200BF2F07 /* Denkmal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Denkmal.swift; sourceTree = "<group>"; };
 		810821ED21A1294D00BF2F07 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
@@ -270,9 +268,8 @@
 				81737249216FC1B600000A05 /* LaunchScreen.storyboard */,
 				81737247216FC1B600000A05 /* Assets.xcassets */,
 				80BB364421E8F51500DFA43E /* UIView+Shadow.swift */,
-				80BB364621E9048E00DFA43E /* PickerViewManager.swift */,
 				80BB364F21E9109300DFA43E /* UIImage+Compression.swift */,
-				80BB365121E910DD00DFA43E /* ImagePickerManager.swift */,
+				80854DFB21FCBBB700B411B2 /* ImagePickerManager.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -689,7 +686,7 @@
 				8143A68221E2885B00E2EB20 /* SearchScreenContract.swift in Sources */,
 				810821E8219FD7F200BF2F07 /* Denkmal.swift in Sources */,
 				8173727B216FDCDB00000A05 /* View.swift in Sources */,
-				81A9750C2170C82A00207D5E /* BuildFile in Sources */,
+				81A9750C2170C82A00207D5E /* (null) in Sources */,
 				81A975272171F53D00207D5E /* SharedDetailRouter.swift in Sources */,
 				8173038221BE81D50007A4A1 /* DenkmalConstants.swift in Sources */,
 				80BB365021E9109300DFA43E /* UIImage+Compression.swift in Sources */,
@@ -698,15 +695,13 @@
 				80BB364521E8F51500DFA43E /* UIView+Shadow.swift in Sources */,
 				81A9751B21711F5700207D5E /* DetailScreenView.swift in Sources */,
 				02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */,
-				80BB364721E9048E00DFA43E /* PickerViewManager.swift in Sources */,
 				81A975362172027200207D5E /* InfoTabRouter.swift in Sources */,
-				81A9750E2170C86700207D5E /* BuildFile in Sources */,
+				81A9750E2170C86700207D5E /* (null) in Sources */,
 				81737281216FDF5100000A05 /* MapScreenPresenter.swift in Sources */,
 				81A9751721711D0D00207D5E /* DetailScreenContract.swift in Sources */,
 				81A975522172141000207D5E /* DBHelper.swift in Sources */,
 				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
 				817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */,
-				80BB365221E910DD00DFA43E /* ImagePickerManager.swift in Sources */,
 				8143A68121E2885B00E2EB20 /* SearchScreenView.swift in Sources */,
 				81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
 				81737264216FC87200000A05 /* Router.swift in Sources */,
@@ -730,6 +725,7 @@
 				8143A67E21E2885B00E2EB20 /* SearchScreenPresenter.swift in Sources */,
 				810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */,
 				81A9751921711D8800207D5E /* DetailScreenPresenter.swift in Sources */,
+				80854DFC21FCBBB700B411B2 /* ImagePickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
