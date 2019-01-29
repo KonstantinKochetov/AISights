@@ -28,6 +28,7 @@ protocol MapUseCases {
     
     func upload(_ image: UIImage,
                 withMonumentId monumentId: String,
+                progressHandler: @escaping ((Float) -> Void),
                 success: @escaping (() -> Void),
                 failure: @escaping ((Error) -> Void))
 }

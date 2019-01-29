@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,6 +29,9 @@
                 <outlet property="scrollView" destination="WrX-rY-7cd" id="o4M-Ks-M2a"/>
                 <outlet property="subtitleLabel" destination="o3n-M9-Bue" id="VPw-pA-4K2"/>
                 <outlet property="titleLabel" destination="RoZ-J2-Mtx" id="yv7-7Z-VVf"/>
+                <outlet property="uploadProgressLabel" destination="2Fr-cx-kcV" id="uU7-zu-2Kl"/>
+                <outlet property="uploadView" destination="Bgn-Mc-ycd" id="Feh-WB-2r2"/>
+                <outlet property="uploadViewBottomConstraint" destination="yIz-jS-krS" id="kjS-zi-9rs"/>
                 <outlet property="userPhotosCollectionView" destination="zEu-hO-BlA" id="gCx-TX-WPJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nXl-nD-gFK"/>
                 <outlet property="yearLabel" destination="aUc-Sp-aRF" id="Wvx-bn-1Yu"/>
@@ -69,9 +73,9 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZL-dS-ayv">
-                                            <rect key="frame" x="16" y="316" width="80" height="43"/>
+                                            <rect key="frame" x="16" y="315.66666666666669" width="79.666666666666671" height="43.333333333333314"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uFC-fe-NLJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="43.333333333333314"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-ym-x3D">
@@ -110,9 +114,9 @@
                                             </userDefinedRuntimeAttributes>
                                         </visualEffectView>
                                         <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTk-UO-v1L">
-                                            <rect key="frame" x="234" y="316" width="125" height="43"/>
+                                            <rect key="frame" x="233.66666666666666" y="315.66666666666669" width="125.33333333333334" height="43.333333333333314"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Br-L0-NWK">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="43.333333333333314"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2km entfernt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jai-8T-P1f">
@@ -543,15 +547,65 @@ sed do eiusmod tempor incididunt ut labore </string>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgn-Mc-ycd">
+                    <rect key="frame" x="32" y="2168" width="311" height="72"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9QP-E8-roN">
+                            <rect key="frame" x="24" y="24" width="263" height="24"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Uploading…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlI-im-X8Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="238.66666666666666" height="24"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fr-cx-kcV">
+                                    <rect key="frame" x="238.66666666666669" y="0.0" width="24.333333333333314" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="9QP-E8-roN" firstAttribute="top" secondItem="Bgn-Mc-ycd" secondAttribute="top" constant="24" id="136-OP-T8y"/>
+                        <constraint firstAttribute="trailing" secondItem="9QP-E8-roN" secondAttribute="trailing" constant="24" id="IkY-xa-uug"/>
+                        <constraint firstItem="9QP-E8-roN" firstAttribute="leading" secondItem="Bgn-Mc-ycd" secondAttribute="leading" constant="24" id="SiY-29-4cJ"/>
+                        <constraint firstAttribute="bottom" secondItem="9QP-E8-roN" secondAttribute="bottom" constant="24" id="nRk-f2-mzG"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Kg9-gp-0T9"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.29999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WrX-rY-7cd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2s1-6l-q43"/>
+                <constraint firstItem="Bgn-Mc-ycd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="KSs-4G-O58"/>
                 <constraint firstItem="WrX-rY-7cd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WwY-oW-ORg"/>
                 <constraint firstItem="Qcq-SR-N7j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="X9b-np-7QP"/>
                 <constraint firstAttribute="trailing" secondItem="WrX-rY-7cd" secondAttribute="trailing" id="Y2y-nF-t7t"/>
                 <constraint firstAttribute="bottom" secondItem="WrX-rY-7cd" secondAttribute="bottom" id="n39-Te-Lym"/>
                 <constraint firstAttribute="trailing" secondItem="Qcq-SR-N7j" secondAttribute="trailing" constant="24" id="pDt-yg-l8P"/>
+                <constraint firstAttribute="trailing" secondItem="Bgn-Mc-ycd" secondAttribute="trailing" constant="32" id="sz7-jm-knO"/>
+                <constraint firstAttribute="bottom" secondItem="Bgn-Mc-ycd" secondAttribute="bottom" constant="-150" identifier="Bottom" id="yIz-jS-krS"/>
             </constraints>
             <point key="canvasLocation" x="111.2" y="512.06896551724139"/>
         </view>

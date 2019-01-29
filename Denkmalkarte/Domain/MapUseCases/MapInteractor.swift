@@ -78,7 +78,7 @@ public class MapInteractor: MapUseCases {
         apiHelper.like(id: id, userId: userId, success: success, failure: failure)
     }
     
-    func upload(_ image: UIImage, withMonumentId monumentId: String, success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
-        apiHelper.upload(image, withMonumentId: monumentId, success: success, failure: failure)
+    func upload(_ image: UIImage, withMonumentId monumentId: String, progressHandler: @escaping ((Float) -> Void), success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
+        apiHelper.upload(image, withMonumentId: monumentId, progressHandler: progressHandler, success: success, failure: failure)
     }
 }

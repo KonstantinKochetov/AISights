@@ -33,7 +33,10 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var literatureStackView: UIStackView!
     @IBOutlet private var literatureLabel: UILabel!
     @IBOutlet private var userPhotosCollectionView: UICollectionView!
-
+    @IBOutlet private var uploadView: UIView!
+    @IBOutlet private var uploadViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var uploadProgressLabel: UILabel!
+    
     lazy var imagePickerManager: ImagePickerManager = {
         let imagePickerManager = ImagePickerManager()
         imagePickerManager.delegate = self
@@ -75,9 +78,9 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             }, failure: { _ in
             })
         }
-        
+
         let isPressed = bookmarkButton.backgroundColor == UIColor.black
-        
+
         bookmarkButton.backgroundColor = isPressed ? UIColor.white : UIColor.black
         bookmarkButton.tintColor = isPressed ? UIColor.black : UIColor.white
     }
@@ -196,7 +199,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
         for (index, string) in stringArray.enumerated() {
             multilineString.append(string)
-      
+
             if index < stringArray.count - 1 {
                 multilineString.append("\n")
             }
@@ -305,6 +308,34 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         present(activityViewController, animated: true, completion: nil)
     }
 
+    private func upload(image: UIImage) {
+        toggleUploadView()
+
+        presenter?.upload(image, withMonumentId: monument!.id, progressHandler: { progress in
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = NumberFormatter.Style.percent
+            numberFormatter.maximumFractionDigits = 2
+            numberFormatter.multiplier = 100
+
+            let formattedNumber = numberFormatter.string(from: NSNumber(value: progress))
+            self.uploadProgressLabel.text = formattedNumber
+        }, success: {
+            self.toggleUploadView()
+        }, failure: { _ in
+            self.toggleUploadView()
+        })
+    }
+
+    private func toggleUploadView() {
+        let isVisible = uploadViewBottomConstraint.constant > (0 as CGFloat)
+
+        uploadViewBottomConstraint.constant = isVisible ? -150 : 32
+
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            self.uploadView.layoutIfNeeded()
+        }, completion: nil)
+    }
+
 }
 
 // MARK: - UIScrollViewDelegate
@@ -375,11 +406,7 @@ extension DetailScreenView: UICollectionViewDelegateFlowLayout {
 extension DetailScreenView: ImagePickerManagerDelegate {
 
     func manager(_ manager: ImagePickerManager, didPickImage image: UIImage) {
-        presenter?.upload(image, withMonumentId: monument!.id, success: {
-            
-        }, failure: { error in
-
-        })
+        upload(image: image)
     }
 
 }
