@@ -32,8 +32,29 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
         })
 
         super.viewDidLoad()
-
+        setupNavigationBar()
     }
+
+    private func setupNavigationBar() {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "Logo"))
+        imageView.contentMode = .scaleAspectFit
+        let contentView = UIView()
+        contentView.addSubview(imageView)
+
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        let layoutConstraints = [
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
+        ]
+
+        NSLayoutConstraint.activate(layoutConstraints)
+
+        navigationItem.titleView = contentView
+    }
+
     func showLocalDenkmal() {
         print("in showLocationDenkmal")
         let testLocatin = locationManager.location

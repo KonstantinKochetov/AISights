@@ -20,10 +20,16 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var distanceLabel: UILabel!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var subtitleLabel: UILabel!
+    @IBOutlet private var addressStackView: UIStackView!
     @IBOutlet private var addressLabel: UILabel!
+    @IBOutlet private var descriptionStackView: UIStackView!
     @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var yearStackView: UIStackView!
     @IBOutlet private var yearLabel: UILabel!
-    @IBOutlet private var architectLabel: UILabel!
+    @IBOutlet private var builderStackView: UIStackView!
+    @IBOutlet private var builderLabel: UILabel!
+    @IBOutlet private var literatureStackView: UIStackView!
+    @IBOutlet private var literatureLabel: UILabel!
     @IBOutlet private var userPhotosCollectionView: UICollectionView!
 
     lazy var imagePickerManager: ImagePickerManager = {
@@ -38,6 +44,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     var userImageNames = [String]() {
         didSet {
             userPhotosCollectionView.reloadData()
+            updateCollectionViewHeightConstraint()
         }
     }
 
@@ -101,7 +108,87 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         }
 
         titleLabel.text = monument.title
-        addressLabel.text = monument.strasse[0]
+
+        if !monument.strasse.isEmpty {
+            let addresses = createMultilineString(monument.strasse)
+            addressLabel.text = addresses
+            addressStackView.isHidden = false
+        }
+
+        if !monument.text.isEmpty {
+            let description = monument.text
+            descriptionLabel.text = description
+            descriptionStackView.isHidden = false
+        }
+
+        if !monument.bauherr.isEmpty {
+            let builder = createMultilineString(monument.bauherr)
+            builderLabel.text = builder
+            builderStackView.isHidden = false
+        }
+
+        if let years = createYears() {
+            yearLabel.text = years
+            yearStackView.isHidden = false
+        }
+
+        if !monument.literatur.isEmpty {
+            literatureLabel.text = monument.literatur
+            literatureStackView.isHidden = false
+        }
+    }
+
+    private func createYears() -> String? {
+        guard let monument = monument else {
+            return nil
+        }
+
+        var years: [String] = []
+
+        if !monument.planung.isEmpty {
+            years.append("Planung: \(monument.planung)")
+        }
+
+        if !monument.baubeginn.isEmpty {
+            years.append("Baubeginn: \(monument.baubeginn)")
+        }
+
+        if !monument.baubeginn.isEmpty {
+            years.append("Baubeginn: \(monument.baubeginn)")
+        }
+
+        if !monument.fertigstellung.isEmpty {
+            years.append("Fertigstellung: \(monument.fertigstellung)")
+        }
+
+        if !monument.datierung.isEmpty {
+            years.append("Datierung: \(monument.datierung.first!)")
+        }
+
+        if !monument.umbau.isEmpty {
+            years.append("Umbau: \(monument.umbau)")
+        }
+
+        if !monument.wiederaufbau.isEmpty {
+            years.append("Datierung: \(monument.wiederaufbau.first!)")
+        }
+
+        let multilineString = createMultilineString(years)
+        return !multilineString.isEmpty ? multilineString : nil
+    }
+
+    private func createMultilineString(_ stringArray: [String]) -> String {
+        var multilineString = String()
+
+        for (index, string) in stringArray.enumerated() {
+            multilineString.append(string)
+            
+            if index < stringArray.count - 1 {
+                multilineString.append("\n")
+            }
+        }
+
+        return multilineString
     }
 
     private func setupImage() {
@@ -169,6 +256,16 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         }
 
         return value
+    }
+
+    private func updateCollectionViewHeightConstraint() {
+        let heightConstraint = userPhotosCollectionView.constraints.first {
+            $0.firstAttribute == .height
+        }
+
+        heightConstraint?.constant = 100
+        userPhotosCollectionView.setNeedsUpdateConstraints()
+        userPhotosCollectionView.layoutIfNeeded()
     }
 
     private func openMonumentInMaps() {
