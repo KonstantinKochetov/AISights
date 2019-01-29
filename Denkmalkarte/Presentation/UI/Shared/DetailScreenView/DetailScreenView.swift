@@ -19,6 +19,8 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var likesLabel: UILabel!
     @IBOutlet private var distanceLabel: UILabel!
     @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var likeButton: UIButton!
+    @IBOutlet private var bookmarkButton: UIButton!
     @IBOutlet private var subtitleLabel: UILabel!
     @IBOutlet private var addressStackView: UIStackView!
     @IBOutlet private var addressLabel: UILabel!
@@ -62,6 +64,10 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         openMonumentInMaps()
     }
 
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        openShare()
+    }
+
     @IBAction func bookmark(_ sender: Any) {
         if let monument = monument {
             presenter?.bookmark(id: monument.id, success: {
@@ -69,6 +75,11 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             }, failure: { _ in
             })
         }
+        
+        let isPressed = bookmarkButton.backgroundColor == UIColor.black
+        
+        bookmarkButton.backgroundColor = isPressed ? UIColor.white : UIColor.black
+        bookmarkButton.tintColor = isPressed ? UIColor.black : UIColor.white
     }
 
     @IBAction func like(_ sender: Any) {
@@ -81,7 +92,10 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         }, failure: { _ in
         })
 
-        self.likesVisualEffectView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        let isPressed = likeButton.backgroundColor == UIColor.black
+
+        likeButton.backgroundColor = isPressed ? UIColor.white : UIColor.black
+        likeButton.tintColor = isPressed ? UIColor.black : UIColor.white
     }
 
     // MARK: - Helpers
@@ -182,7 +196,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
         for (index, string) in stringArray.enumerated() {
             multilineString.append(string)
-            
+      
             if index < stringArray.count - 1 {
                 multilineString.append("\n")
             }
@@ -276,6 +290,19 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             mapItem.name = monument.title
             mapItem.openInMaps(launchOptions: nil)
         }
+    }
+
+    private func openShare() {
+        guard let monument = monument,
+            let title = monument.title ,
+            let street = monument.strasse.first else {
+            return
+        }
+
+        let text = "Check out \(title) at \(street)."
+        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = view
+        present(activityViewController, animated: true, completion: nil)
     }
 
 }
