@@ -53,7 +53,6 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             updateCollectionViewHeightConstraint()
         }
     }
-    var photoCellFrame: CGRect? = nil
 
     public override func viewDidLoad() {
         setup()
@@ -330,6 +329,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         uploadViewBottomConstraint.constant = isVisible ? -150 : 32
 
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            self.uploadView.layoutSubviews()
             self.uploadView.layoutIfNeeded()
         }, completion: nil)
     }
