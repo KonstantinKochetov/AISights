@@ -32,6 +32,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var builderLabel: UILabel!
     @IBOutlet private var literatureStackView: UIStackView!
     @IBOutlet private var literatureLabel: UILabel!
+    @IBOutlet private var userPhotosStackView: UIStackView!
     @IBOutlet private var userPhotosCollectionView: UICollectionView!
     @IBOutlet private var userPhotosCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var uploadView: UIView!
@@ -118,6 +119,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         userPhotosCollectionView.delegate = self
         let nib = UINib(nibName: PhotoCell.identifier, bundle: Bundle.main)
         userPhotosCollectionView.register(nib, forCellWithReuseIdentifier: PhotoCell.identifier)
+        userPhotosStackView.bringSubviewToFront(userPhotosCollectionView)
     }
 
     private func setupInfo() {
@@ -281,7 +283,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     }
 
     private func updateCollectionViewHeightConstraint() {
-        let height = userPhotosCollectionView.contentSize.height + 32
+        let height = userPhotosCollectionView.contentSize.height
         userPhotosCollectionViewHeightConstraint.constant = height
         userPhotosCollectionView.layoutIfNeeded()
     }
