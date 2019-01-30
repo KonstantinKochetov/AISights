@@ -44,16 +44,10 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         imagePickerManager.delegate = self
         return imagePickerManager
     }()
-    
-    let locationManager = CLLocationManager()
 
     var presenter: DetailScreenPresenterProtocol?
     var monument: Denkmal?
-    var currentLocation: CLLocation? {
-        didSet {
-            setupDistance()
-        }
-    }
+    var currentLocation = LocationManager.shared.location
     var userId: String?
     var userImageNames = [String]() {
         didSet {
@@ -114,11 +108,11 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
     private func setup() {
         userId = presenter?.getUserId()
-        setupLocation()
         setupCollectionView()
         setupImage()
         setupInfo()
         setupLikes()
+        setupDistance()
         setupUserImages()
     }
 
@@ -257,12 +251,6 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
             self.likesLabel.text = value.stringValue
         }
-    }
-
-    private func setupLocation() {
-        locationManager.delegate = self
-        locationManager.requestLocation()
-        setupDistance()
     }
 
     private func setupDistance() {
@@ -483,20 +471,6 @@ extension DetailScreenView: ImagePickerManagerDelegate {
 
     func manager(_ manager: ImagePickerManager, didPickImage image: UIImage) {
         upload(image: image)
-    }
-
-}
-
-// MARK: - CLLocationManagerDelegate
-
-extension DetailScreenView: CLLocationManagerDelegate {
-
-    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        currentLocation = locations.first
-    }
-
-    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
     }
 
 }
