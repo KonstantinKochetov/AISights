@@ -44,9 +44,16 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         imagePickerManager.delegate = self
         return imagePickerManager
     }()
+    
+    let locationManager = CLLocationManager()
 
     var presenter: DetailScreenPresenterProtocol?
     var monument: Denkmal?
+    var currentLocation: CLLocation? {
+        didSet {
+            setupDistance()
+        }
+    }
     var userId: String?
     var userImageNames = [String]() {
         didSet {
@@ -107,6 +114,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
     private func setup() {
         userId = presenter?.getUserId()
+        setupLocation()
         setupCollectionView()
         setupImage()
         setupInfo()
@@ -249,6 +257,27 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
             self.likesLabel.text = value.stringValue
         }
+    }
+
+    private func setupLocation() {
+        locationManager.delegate = self
+        locationManager.requestLocation()
+        setupDistance()
+    }
+
+    private func setupDistance() {
+        guard let monument = monument, let currentLocation = currentLocation else {
+            distanceLabel.text = "∞ away"
+            return
+        }
+
+        let monumentLocation = CLLocation(latitude: monument.coordinate.latitude, longitude: monument.coordinate.longitude)
+        let distance = monumentLocation.distance(from: currentLocation)
+
+        let distanceFormatter = MKDistanceFormatter()
+        let formattedDistance = distanceFormatter.string(fromDistance: distance)
+
+        distanceLabel.text = "\(formattedDistance) away"
     }
 
     private func setupUserImages() {
@@ -454,6 +483,20 @@ extension DetailScreenView: ImagePickerManagerDelegate {
 
     func manager(_ manager: ImagePickerManager, didPickImage image: UIImage) {
         upload(image: image)
+    }
+
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension DetailScreenView: CLLocationManagerDelegate {
+
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations.first
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 
 }
