@@ -25,7 +25,6 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
     @IBOutlet weak var resultsCountView: UILabel!
 
     var presenter: SearchScreenPresenterProtocol?
-    
     private var results: [Denkmal] = []
 
     var scope: SearchScope = .title {
@@ -78,7 +77,6 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 }
 
 // MARK: UITableViewDelegate
-
 extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

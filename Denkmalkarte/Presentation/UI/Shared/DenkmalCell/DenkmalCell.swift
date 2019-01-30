@@ -13,7 +13,11 @@ class DenkmalCell: UITableViewCell {
         denkmalImageView.image = nil
         do {
             if !denkmal.image.isEmpty {
-                let imageUrl = URL(string: denkmal.image[0])!
+                var http = denkmal.image[0]
+                if http.contains("http://") {
+                    http = denkmal.image[0].replacingOccurrences(of: "http://", with: "https://")
+                }
+                let imageUrl = URL(string: http)!
                 denkmalImageView.af_setImage(withURL: imageUrl)
             } else {
                 denkmalImageView.image = UIImage(named: "sight")
