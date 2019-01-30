@@ -64,7 +64,7 @@ class ApiHelperImpl: ApiHelper {
         })
     }
 
-    func upload(_ image: UIImage, withMonumentId monumentId: String, success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
+    func upload(_ image: UIImage, withMonumentId monumentId: String, progressHandler: @escaping ((Float) -> Void), success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
         image.compress { data, width, height, error in
             if let error = error {
                 failure(error)
@@ -84,11 +84,13 @@ class ApiHelperImpl: ApiHelper {
             let uploadTask = storageReference.putData(data!, metadata: metadata) { storageMetadata, error in
                 if let error = error {
                     print(error)
+                    failure(error)
                 }
 
                 if let storageMetadata = storageMetadata,
                     let name = storageMetadata.name {
                     self.saveImageInDatabase(withMonumentId: monumentId, imageId: name)
+                    success()
                 }
             }
 
@@ -97,9 +99,9 @@ class ApiHelperImpl: ApiHelper {
 
                     let completedUnitCount = Float(progress.completedUnitCount)
                     let totalUnitCount = Float(progress.totalUnitCount)
-                    let progress = completedUnitCount / totalUnitCount
-
-                    print(progress)
+                    let progressValue = completedUnitCount / totalUnitCount
+                    
+                    progressHandler(progressValue)
                 }
             }
         }
