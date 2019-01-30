@@ -3,9 +3,6 @@ import RealmSwift
 
 public class MapInteractor: MapUseCases {
 
-
-
-
     let dbHelper: DbHelper
     let apiHelper: ApiHelper
     let parser: Parser
@@ -80,13 +77,13 @@ public class MapInteractor: MapUseCases {
               failure: @escaping ((Error) -> Void)) {
         apiHelper.like(id: id, userId: userId, success: success, failure: failure)
     }
+
     func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
         dbHelper.search(query: query, option: option, success: success, failure: failure)
-    
+
+    }
+
     func upload(_ image: UIImage, withMonumentId monumentId: String, success: @escaping (() -> Void), failure: @escaping ((Error) -> Void)) {
         apiHelper.upload(image, withMonumentId: monumentId, success: success, failure: failure)
     }
-
-
 }
-
