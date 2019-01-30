@@ -17,14 +17,6 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UIS
         tableView.dataSource = self
         tableView.tableFooterView = UIView();
         tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
-
-
-        presenter?.search(query: true,
-                          option: option,
-                          success: { result in
-                            self.showSearchResult(result)
-        }, failure: { _ in
-        })
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -38,25 +30,6 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UIS
 
     // MARK: UISearchBarDelegate
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-
-        if(searchBar.text == "") {
-            presenter?.search(query: true,
-                              option: option,
-                              success: { result in
-                                self.showSearchResult(result)
-            }, failure: { _ in
-            })
-        } else {
-            if let query = searchBar.text {
-                presenter?.search(query: query,
-                                  option: "title",
-                                  success: { result in
-                                    self.showSearchResult(result)
-                }, failure: { _ in
-                })
-            }
-        }
     }
 
 
