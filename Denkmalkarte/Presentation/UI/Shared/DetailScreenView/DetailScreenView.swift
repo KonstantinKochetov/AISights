@@ -53,6 +53,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             updateCollectionViewHeightConstraint()
         }
     }
+    var photoCellFrame: CGRect? = nil
 
     public override func viewDidLoad() {
         setup()
@@ -333,6 +334,34 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         }, completion: nil)
     }
 
+    private func expandUserPhoto(of cell: PhotoCell) {
+        let desiredWidthAndHeight = view.bounds.width - 32
+        let scale = desiredWidthAndHeight / cell.bounds.width
+
+        let offsetX = (view.bounds.width - cell.bounds.width) / 2
+        let translationX = (offsetX - (cell.frame.origin.x + 32)) / scale
+
+        let offsetY = (view.bounds.height - cell.bounds.height) / 2
+        let relativeFrame = userPhotosCollectionView.convert(cell.frame, to: view)
+        let translationY = (offsetY - relativeFrame.origin.y) / scale
+
+        let translationTransform = CGAffineTransform(translationX: translationX, y: translationY)
+        let scaleTransform = CGAffineTransform(scaleX: scale, y: scale)
+        let transform = translationTransform.concatenating(scaleTransform)
+
+        userPhotosCollectionView.bringSubviewToFront(cell)
+
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            cell.transform = transform
+        }, completion: nil)
+    }
+
+    private func collapseUserPhoto(of cell: PhotoCell) {
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+            cell.transform = CGAffineTransform.identity
+        }, completion: nil)
+    }
+
 }
 
 // MARK: - UIScrollViewDelegate
@@ -370,6 +399,7 @@ extension DetailScreenView: UICollectionViewDataSource {
         if indexPath.row < userImageNames.count {
             let name = userImageNames[indexPath.row]
             cell?.setup(withImageId: name)
+            cell?.delegate = self
         } else {
             cell?.setupWithCameraIcon()
         }
@@ -394,6 +424,20 @@ extension DetailScreenView: UICollectionViewDelegateFlowLayout {
         if indexPath.row == userImageNames.count {
             imagePickerManager.showCamera(in: self)
         }
+    }
+
+}
+
+// MARK: - PhotoCellDelegate
+
+extension DetailScreenView: PhotoCellDelegate {
+
+    func cellDidStartLongPress(_ cell: PhotoCell) {
+        expandUserPhoto(of: cell)
+    }
+
+    func cellDidEndLongPress(_ cell: PhotoCell) {
+        collapseUserPhoto(of: cell)
     }
 
 }
