@@ -34,9 +34,9 @@ class AppRouter: TabBarRouter {
         let mapTab = setUpMapTab()
         let searchTab = setUpSearchTab()
         let historyTab = setUpHistoryTab()
-        let infoTab = setUpInfoTab()
+//        let infoTab = setUpInfoTab()
 
-        tabBarController.viewControllers = [mapTab, searchTab, historyTab, infoTab]
+        tabBarController.viewControllers = [mapTab, searchTab, historyTab]
         childRouter.forEach { $0.start() }
     }
 
