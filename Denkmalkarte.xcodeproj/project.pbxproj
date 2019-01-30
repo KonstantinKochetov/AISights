@@ -72,6 +72,8 @@
 		81A975522172141000207D5E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975512172141000207D5E /* DBHelper.swift */; };
 		81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81F6DFE721BD482900BA957A /* GoogleService-Info.plist */; };
 		B59C55DE220235C700D6E499 /* berlin.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C55DD220235C700D6E499 /* berlin.png */; };
+		B59C55E02202471400D6E499 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B59C55DF2202471400D6E499 /* ImageClassifier.mlmodel */; };
+		B59C55E422024B9A00D6E499 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C55E322024B9A00D6E499 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		E69C3CF101EB8A806CE77CB5 /* Pods_DenkmalkarteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EC58C3FA488B2BC11D984C /* Pods_DenkmalkarteTests.framework */; };
 		EF841FB643A33FFFFDE20ED6 /* Pods_Denkmalkarte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7E88C09638F5B1E2EE52C6 /* Pods_Denkmalkarte.framework */; };
 /* End PBXBuildFile section */
@@ -158,6 +160,8 @@
 		9A7E88C09638F5B1E2EE52C6 /* Pods_Denkmalkarte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Denkmalkarte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EC58C3FA488B2BC11D984C /* Pods_DenkmalkarteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenkmalkarteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59C55DD220235C700D6E499 /* berlin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = berlin.png; path = Assets.xcassets/berlin.png; sourceTree = "<group>"; };
+		B59C55DF2202471400D6E499 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		B59C55E322024B9A00D6E499 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		CC6EE4FA30FF4698C082B468 /* Pods-Denkmalkarte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.debug.xcconfig"; sourceTree = "<group>"; };
 		E77EDAEBFD819F834309E9AB /* Pods-DenkmalkarteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE0191BF70FE7236A492DEDB /* Pods-Denkmalkarte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Denkmalkarte.release.xcconfig"; path = "Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte.release.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 		8173723F216FC1B400000A05 /* Denkmalkarte */ = {
 			isa = PBXGroup;
 			children = (
+				B59C55DF2202471400D6E499 /* ImageClassifier.mlmodel */,
 				02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */,
 				81F6DFE721BD482900BA957A /* GoogleService-Info.plist */,
 				8173724C216FC1B600000A05 /* Info.plist */,
@@ -385,6 +390,7 @@
 		81A975132171139C00207D5E /* DetailScreenView */ = {
 			isa = PBXGroup;
 			children = (
+				B59C55E322024B9A00D6E499 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				81A975262171F53D00207D5E /* SharedDetailRouter.swift */,
 				81A9751621711D0D00207D5E /* DetailScreenContract.swift */,
 				81A9751821711D8800207D5E /* DetailScreenPresenter.swift */,
@@ -710,6 +716,7 @@
 				81A975522172141000207D5E /* DBHelper.swift in Sources */,
 				81737285217000ED00000A05 /* MapScreenView.swift in Sources */,
 				817E4391219E87A7007F125B /* InfoPinCell.swift in Sources */,
+				B59C55E422024B9A00D6E499 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				8143A68121E2885B00E2EB20 /* SearchScreenView.swift in Sources */,
 				81A9754A2172136E00207D5E /* DBHelperImpl.swift in Sources */,
 				81737264216FC87200000A05 /* Router.swift in Sources */,
@@ -729,6 +736,7 @@
 				81737241216FC1B400000A05 /* AppDelegate.swift in Sources */,
 				8173038021BE7FB40007A4A1 /* Parser.swift in Sources */,
 				81737262216FC29C00000A05 /* AppRouter.swift in Sources */,
+				B59C55E02202471400D6E499 /* ImageClassifier.mlmodel in Sources */,
 				817AC3AF217A2FF500670CCB /* DenkmalCell.swift in Sources */,
 				8143A67E21E2885B00E2EB20 /* SearchScreenPresenter.swift in Sources */,
 				810821EE21A1294D00BF2F07 /* RealmHelper.swift in Sources */,
@@ -891,8 +899,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3BDXWM97N;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9P444U4Y39;
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -900,7 +908,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Denkmalkarte;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -914,8 +922,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3BDXWM97N;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
