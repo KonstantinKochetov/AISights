@@ -23,4 +23,5 @@ class SearchScreenPresenter: SearchScreenPresenterProtocol {
         mapUseCases.search(query: query, option: option, success: success, failure: failure)
     }
 
+
 }

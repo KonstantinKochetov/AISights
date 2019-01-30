@@ -4,6 +4,8 @@ import RealmSwift
 
 class DbHelperImpl: DbHelper {
 
+
+
     private var realmConfig: Realm.Configuration
 
     public init(realmConfig: Realm.Configuration? = nil) {
@@ -66,9 +68,20 @@ class DbHelperImpl: DbHelper {
     func getUserId() -> String {
          return UserDefaults.standard.string(forKey: "userIdIsCreated") ?? ""
     }
-
     func createUserId() {
         UserDefaults.standard.set(UUID().uuidString, forKey: "userIdIsCreated")
+    }
+    func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
+
+        do {
+            var finalDenkmale: [Denkmal] = [];
+            let denkmale1 = Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
+            let denkmale2 = denkmale1.filter{$0.markiert == query}
+            finalDenkmale = denkmale2;
+            success(finalDenkmale)
+        } catch {
+            failure(NSError(domain: "no domain", code: 406, userInfo: nil))
+        }
     }
 
     func search(query: String, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
