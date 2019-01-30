@@ -33,6 +33,7 @@
                 <outlet property="uploadView" destination="Bgn-Mc-ycd" id="Feh-WB-2r2"/>
                 <outlet property="uploadViewBottomConstraint" destination="yIz-jS-krS" id="kjS-zi-9rs"/>
                 <outlet property="userPhotosCollectionView" destination="zEu-hO-BlA" id="gCx-TX-WPJ"/>
+                <outlet property="userPhotosCollectionViewHeightConstraint" destination="kaX-rV-grr" id="d3w-5X-9kX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nXl-nD-gFK"/>
                 <outlet property="yearLabel" destination="aUc-Sp-aRF" id="Wvx-bn-1Yu"/>
                 <outlet property="yearStackView" destination="Xb2-1a-ata" id="OVo-lf-BX1"/>
@@ -372,7 +373,7 @@ sed do eiusmod tempor incididunt ut labore </string>
                                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-hO-BlA">
+                                                                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zEu-hO-BlA">
                                                                     <rect key="frame" x="0.0" y="29" width="311" height="128"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="jW8-jA-AiJ">
@@ -452,7 +453,7 @@ sed do eiusmod tempor incididunt ut labore </string>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title="Share" image="Share">
+                                                    <state key="normal" title=" Share" image="Share">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>

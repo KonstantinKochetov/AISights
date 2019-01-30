@@ -33,10 +33,11 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var literatureStackView: UIStackView!
     @IBOutlet private var literatureLabel: UILabel!
     @IBOutlet private var userPhotosCollectionView: UICollectionView!
+    @IBOutlet private var userPhotosCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var uploadView: UIView!
     @IBOutlet private var uploadViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet private var uploadProgressLabel: UILabel!
-    
+
     lazy var imagePickerManager: ImagePickerManager = {
         let imagePickerManager = ImagePickerManager()
         imagePickerManager.delegate = self
@@ -276,12 +277,8 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     }
 
     private func updateCollectionViewHeightConstraint() {
-        let heightConstraint = userPhotosCollectionView.constraints.first {
-            $0.firstAttribute == .height
-        }
-
-        heightConstraint?.constant = 100
-        userPhotosCollectionView.setNeedsUpdateConstraints()
+        let height = userPhotosCollectionView.contentSize.height + 32
+        userPhotosCollectionViewHeightConstraint.constant = height
         userPhotosCollectionView.layoutIfNeeded()
     }
 
