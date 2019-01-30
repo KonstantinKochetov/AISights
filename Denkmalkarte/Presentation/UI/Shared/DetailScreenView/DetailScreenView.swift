@@ -217,7 +217,11 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         imageView.image = nil
         do {
             if !monument.image.isEmpty {
-                let imageUrl = URL(string: monument.image[0])!
+                var http = monument.image[0]
+                if http.contains("http://") {
+                    http = monument.image[0].replacingOccurrences(of: "http://", with: "https://")
+                }
+                let imageUrl = URL(string: http)!
                 imageView.af_setImage(withURL: imageUrl)
             } else {
                 imageView.image = UIImage(named: "sight")
