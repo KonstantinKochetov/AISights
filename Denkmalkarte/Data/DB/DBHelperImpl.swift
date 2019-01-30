@@ -72,12 +72,8 @@ class DbHelperImpl: DbHelper {
         UserDefaults.standard.set(UUID().uuidString, forKey: "userIdIsCreated")
     }
     func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void) {
-
         do {
-            var finalDenkmale: [Denkmal] = [];
-            let denkmale1 = Array(try self.realm().objects(RealmDenkmal.self)).map({$0.toDenkmal()})
-            let denkmale2 = denkmale1.filter{$0.markiert == query}
-            finalDenkmale = denkmale2;
+            let finalDenkmale = Array(try self.realm().objects(RealmDenkmal.self).filter("markiert = \(true)").map({$0.toDenkmal()}))
             success(finalDenkmale)
         } catch {
             failure(NSError(domain: "no domain", code: 406, userInfo: nil))
