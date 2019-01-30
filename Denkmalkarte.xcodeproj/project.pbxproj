@@ -1,10 +1,10 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 50;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
 
 /* Begin PBXBuildFile section */
 		02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF6DF421AD6E870055E0BB /* UserActivityType.swift */; };
@@ -160,22 +160,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        8173723A216FC1B400000A05 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                EF841FB643A33FFFFDE20ED6 /* Pods_Denkmalkarte.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        8173724E216FC1B600000A05 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                E69C3CF101EB8A806CE77CB5 /* Pods_DenkmalkarteTests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		8173723A216FC1B400000A05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF841FB643A33FFFFDE20ED6 /* Pods_Denkmalkarte.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724E216FC1B600000A05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E69C3CF101EB8A806CE77CB5 /* Pods_DenkmalkarteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -476,202 +476,202 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        8173723C216FC1B400000A05 /* Denkmalkarte */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */;
-            buildPhases = (
-                1BA0717B40C88A386000F5C4 /* [CP] Check Pods Manifest.lock */,
-                81737239216FC1B400000A05 /* Sources */,
-                8173723A216FC1B400000A05 /* Frameworks */,
-                8173723B216FC1B400000A05 /* Resources */,
-                81CAF06621A6FABA00A84E3E /* ShellScript */,
-                4DB786F6C4D2FAE10F6F2CAC /* [CP] Embed Pods Frameworks */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = Denkmalkarte;
-            productName = Denkmalkarte;
-            productReference = 8173723D216FC1B400000A05 /* Denkmalkarte.app */;
-            productType = "com.apple.product-type.application";
-        };
-        81737250216FC1B600000A05 /* DenkmalkarteTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */;
-            buildPhases = (
-                3890A572B652355AF59560B4 /* [CP] Check Pods Manifest.lock */,
-                8173724D216FC1B600000A05 /* Sources */,
-                8173724E216FC1B600000A05 /* Frameworks */,
-                8173724F216FC1B600000A05 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                81737253216FC1B600000A05 /* PBXTargetDependency */,
-            );
-            name = DenkmalkarteTests;
-            productName = DenkmalkarteTests;
-            productReference = 81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
+		8173723C216FC1B400000A05 /* Denkmalkarte */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */;
+			buildPhases = (
+				1BA0717B40C88A386000F5C4 /* [CP] Check Pods Manifest.lock */,
+				81737239216FC1B400000A05 /* Sources */,
+				8173723A216FC1B400000A05 /* Frameworks */,
+				8173723B216FC1B400000A05 /* Resources */,
+				81CAF06621A6FABA00A84E3E /* ShellScript */,
+				4DB786F6C4D2FAE10F6F2CAC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Denkmalkarte;
+			productName = Denkmalkarte;
+			productReference = 8173723D216FC1B400000A05 /* Denkmalkarte.app */;
+			productType = "com.apple.product-type.application";
+		};
+		81737250216FC1B600000A05 /* DenkmalkarteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */;
+			buildPhases = (
+				3890A572B652355AF59560B4 /* [CP] Check Pods Manifest.lock */,
+				8173724D216FC1B600000A05 /* Sources */,
+				8173724E216FC1B600000A05 /* Frameworks */,
+				8173724F216FC1B600000A05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81737253216FC1B600000A05 /* PBXTargetDependency */,
+			);
+			name = DenkmalkarteTests;
+			productName = DenkmalkarteTests;
+			productReference = 81737251216FC1B600000A05 /* DenkmalkarteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        81737235216FC1B400000A05 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 1000;
-                LastUpgradeCheck = 1000;
-                ORGANIZATIONNAME = htw.berlin;
-                TargetAttributes = {
-                    8173723C216FC1B400000A05 = {
-                        CreatedOnToolsVersion = 10.0;
-                        SystemCapabilities = {
-                            com.apple.Siri = {
-                                enabled = 1;
-                            };
-                        };
-                    };
-                    81737250216FC1B600000A05 = {
-                        CreatedOnToolsVersion = 10.0;
-                        TestTargetID = 8173723C216FC1B400000A05;
-                    };
-                };
-            };
-            buildConfigurationList = 81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */;
-            compatibilityVersion = "Xcode 9.3";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 81737234216FC1B400000A05;
-            productRefGroup = 8173723E216FC1B400000A05 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                8173723C216FC1B400000A05 /* Denkmalkarte */,
-                81737250216FC1B600000A05 /* DenkmalkarteTests */,
-            );
-        };
+		81737235216FC1B400000A05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = htw.berlin;
+				TargetAttributes = {
+					8173723C216FC1B400000A05 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					81737250216FC1B600000A05 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 8173723C216FC1B400000A05;
+					};
+				};
+			};
+			buildConfigurationList = 81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81737234216FC1B400000A05;
+			productRefGroup = 8173723E216FC1B400000A05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8173723C216FC1B400000A05 /* Denkmalkarte */,
+				81737250216FC1B600000A05 /* DenkmalkarteTests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        8173723B216FC1B400000A05 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
-                8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */,
-                81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
-                817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */,
-                8143A68521E296E600E2EB20 /* short_denkmaeler.json in Resources */,
-                810FE8A221E4D72F004D06ED /* bookmark.png in Resources */,
-                81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
-                81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
-                8143A68621E296E600E2EB20 /* full_denkmaeler.json in Resources */,
-                80BB364E21E90F8600DFA43E /* PhotoCell.xib in Resources */,
-                81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
-                81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
-                81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
-                8143A68021E2885B00E2EB20 /* SearchScreenView.xib in Resources */,
-                817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        8173724F216FC1B600000A05 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		8173723B216FC1B400000A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8173724B216FC1B600000A05 /* LaunchScreen.storyboard in Resources */,
+				8173037E21BE3C3E0007A4A1 /* long_denkmaeler.json in Resources */,
+				81737287217000FF00000A05 /* MapScreenView.xib in Resources */,
+				817AC3B0217A2FF500670CCB /* DenkmalCell.xib in Resources */,
+				8143A68521E296E600E2EB20 /* short_denkmaeler.json in Resources */,
+				810FE8A221E4D72F004D06ED /* bookmark.png in Resources */,
+				81A9751D21711FB900207D5E /* DetailScreenView.xib in Resources */,
+				81A975402172033000207D5E /* InfoScreenView.xib in Resources */,
+				8143A68621E296E600E2EB20 /* full_denkmaeler.json in Resources */,
+				80BB364E21E90F8600DFA43E /* PhotoCell.xib in Resources */,
+				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
+				81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
+				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
+				8143A68021E2885B00E2EB20 /* SearchScreenView.xib in Resources */,
+				817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173724F216FC1B600000A05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        1BA0717B40C88A386000F5C4 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-Denkmalkarte-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        3890A572B652355AF59560B4 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-DenkmalkarteTests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        4DB786F6C4D2FAE10F6F2CAC /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
-                "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-                "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-                "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-                "${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-                "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-                "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-                "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-                "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        81CAF06621A6FABA00A84E3E /* ShellScript */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
-        };
+		1BA0717B40C88A386000F5C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Denkmalkarte-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3890A572B652355AF59560B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DenkmalkarteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DB786F6C4D2FAE10F6F2CAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Denkmalkarte/Pods-Denkmalkarte-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81CAF06621A6FABA00A84E3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -740,258 +740,258 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        81737253216FC1B600000A05 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 8173723C216FC1B400000A05 /* Denkmalkarte */;
-            targetProxy = 81737252216FC1B600000A05 /* PBXContainerItemProxy */;
-        };
+		81737253216FC1B600000A05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8173723C216FC1B400000A05 /* Denkmalkarte */;
+			targetProxy = 81737252216FC1B600000A05 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        81737249216FC1B600000A05 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                8173724A216FC1B600000A05 /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		81737249216FC1B600000A05 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8173724A216FC1B600000A05 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        81737258216FC1B600000A05 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-                MTL_FAST_MATH = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        81737259216FC1B600000A05 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                MTL_FAST_MATH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_COMPILATION_MODE = wholemodule;
-                SWIFT_OPTIMIZATION_LEVEL = "-O";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        8173725B216FC1B600000A05 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = CC6EE4FA30FF4698C082B468 /* Pods-Denkmalkarte.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-                CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 5N65KHNFDU;
-                INFOPLIST_FILE = Denkmalkarte/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte1;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = 1;
-            };
-            name = Debug;
-        };
-        8173725C216FC1B600000A05 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = EE0191BF70FE7236A492DEDB /* Pods-Denkmalkarte.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-                CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 5N65KHNFDU;
-                INFOPLIST_FILE = Denkmalkarte/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte1;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = 1;
-            };
-            name = Release;
-        };
-        8173725E216FC1B600000A05 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 6CB2DC791D178C00C684EBA5 /* Pods-DenkmalkarteTests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = B3BDXWM97N;
-                INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
-            };
-            name = Debug;
-        };
-        8173725F216FC1B600000A05 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = E77EDAEBFD819F834309E9AB /* Pods-DenkmalkarteTests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = B3BDXWM97N;
-                INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@loader_path/Frameworks",
-                );
-                PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.2;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
-            };
-            name = Release;
-        };
+		81737258216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81737259216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8173725B216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC6EE4FA30FF4698C082B468 /* Pods-Denkmalkarte.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5N65KHNFDU;
+				INFOPLIST_FILE = Denkmalkarte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8173725C216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0191BF70FE7236A492DEDB /* Pods-Denkmalkarte.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5N65KHNFDU;
+				INFOPLIST_FILE = Denkmalkarte/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.Denkmalkarte1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8173725E216FC1B600000A05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB2DC791D178C00C684EBA5 /* Pods-DenkmalkarteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
+			};
+			name = Debug;
+		};
+		8173725F216FC1B600000A05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E77EDAEBFD819F834309E9AB /* Pods-DenkmalkarteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B3BDXWM97N;
+				INFOPLIST_FILE = DenkmalkarteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.htw.berlin.DenkmalkarteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Denkmalkarte.app/Denkmalkarte";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                81737258216FC1B600000A05 /* Debug */,
-                81737259216FC1B600000A05 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                8173725B216FC1B600000A05 /* Debug */,
-                8173725C216FC1B600000A05 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                8173725E216FC1B600000A05 /* Debug */,
-                8173725F216FC1B600000A05 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		81737238216FC1B400000A05 /* Build configuration list for PBXProject "Denkmalkarte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81737258216FC1B600000A05 /* Debug */,
+				81737259216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8173725A216FC1B600000A05 /* Build configuration list for PBXNativeTarget "Denkmalkarte" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173725B216FC1B600000A05 /* Debug */,
+				8173725C216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8173725D216FC1B600000A05 /* Build configuration list for PBXNativeTarget "DenkmalkarteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8173725E216FC1B600000A05 /* Debug */,
+				8173725F216FC1B600000A05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-    };
-    rootObject = 81737235216FC1B400000A05 /* Project object */;
+	};
+	rootObject = 81737235216FC1B400000A05 /* Project object */;
 }

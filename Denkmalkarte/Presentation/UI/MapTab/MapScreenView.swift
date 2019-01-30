@@ -36,7 +36,7 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
     }
 
     private func setupNavigationBar() {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "Logo"))
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "MapLogo"))
         imageView.contentMode = .scaleAspectFit
         let contentView = UIView()
         contentView.addSubview(imageView)
@@ -44,10 +44,10 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         let layoutConstraints = [
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 6),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 6),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -6),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -6)
         ]
 
         NSLayoutConstraint.activate(layoutConstraints)
@@ -103,7 +103,7 @@ extension MapScreenView: MKMapViewDelegate {
             view.rightCalloutAccessoryView = rightButton
             let btnNavi = UIButton(frame: CGRect(origin: CGPoint.zero,
                                                     size: CGSize(width: 30, height: 30)))
-            btnNavi.setBackgroundImage(UIImage(named: "car"), for: UIControl.State())
+            btnNavi.setBackgroundImage(UIImage(named: "Navigate"), for: UIControl.State())
             view.leftCalloutAccessoryView = btnNavi
             view.clusteringIdentifier = identifier
 
