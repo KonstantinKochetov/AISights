@@ -78,6 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             self.router = AppRouter(window: window!)
         }
+
+        print(LocationManager.shared.location.debugDescription)
     }
 
     private func loadMapsToRealmAndSyncFirebase(mapUseCases: MapUseCases) {

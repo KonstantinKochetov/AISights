@@ -47,6 +47,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
     var presenter: DetailScreenPresenterProtocol?
     var monument: Denkmal?
+    var currentLocation = LocationManager.shared.location
     var userId: String?
     var userImageNames = [String]() {
         didSet {
@@ -111,6 +112,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         setupImage()
         setupInfo()
         setupLikes()
+        setupDistance()
         setupUserImages()
     }
 
@@ -249,6 +251,21 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
             self.likesLabel.text = value.stringValue
         }
+    }
+
+    private func setupDistance() {
+        guard let monument = monument, let currentLocation = currentLocation else {
+            distanceLabel.text = "∞ away"
+            return
+        }
+
+        let monumentLocation = CLLocation(latitude: monument.coordinate.latitude, longitude: monument.coordinate.longitude)
+        let distance = monumentLocation.distance(from: currentLocation)
+
+        let distanceFormatter = MKDistanceFormatter()
+        let formattedDistance = distanceFormatter.string(fromDistance: distance)
+
+        distanceLabel.text = "\(formattedDistance) away"
     }
 
     private func setupUserImages() {
