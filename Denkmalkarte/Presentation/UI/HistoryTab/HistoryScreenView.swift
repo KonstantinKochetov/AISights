@@ -1,9 +1,7 @@
 import UIKit
 
-public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UISearchBarDelegate {
+public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol {
 
-    @IBOutlet weak var container: UIView!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: HistoryScreenPresenterProtocol?
@@ -12,7 +10,6 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UIS
     var option: String = "markiert"
 
     public override func viewDidLoad() {
-        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView();
@@ -36,33 +33,8 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol, UIS
         })
     }
 
-    // MARK: UISearchBarDelegate
-    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-
-        if(searchBar.text == "") {
-            presenter?.search(query: true,
-                              option: option,
-                              success: { result in
-                                self.showSearchResult(result)
-            }, failure: { _ in
-            })
-        } else {
-            if let query = searchBar.text {
-                presenter?.search(query: query,
-                                  option: "title",
-                                  success: { result in
-                                    self.showSearchResult(result)
-                }, failure: { _ in
-                })
-            }
-        }
-    }
-
-
     private func showSearchResult(_ result: [Denkmal]) {
         self.results = result
-        self.container.isHidden = false
         self.tableView.reloadData()
     }
 }
@@ -84,13 +56,6 @@ extension HistoryScreenView: UITableViewDelegate, UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-    }
-
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == self.tableView {
-            // show/hide Keyboard
-            searchBar.resignFirstResponder()
-        }
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
