@@ -1,5 +1,23 @@
 import UIKit
 
+enum SearchScope: Int, CustomStringConvertible, CaseIterable {
+
+    case title = 0
+    case text
+    case bauherr
+    case ort
+
+    var description: String {
+        switch self {
+        case .title: return "Title"
+        case .text: return "Text"
+        case .bauherr: return "Bauherr"
+        case .ort: return "Ort"
+        }
+    }
+
+}
+
 public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScreenViewProtocol {
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -7,63 +25,43 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
     @IBOutlet weak var resultsCountView: UILabel!
 
     var presenter: SearchScreenPresenterProtocol?
-
+    
     private var results: [Denkmal] = []
-    
-    lazy var pickerManager: PickerManager = {
-        let pickerManager = PickerManager(option: .title)
-        dummyTextField.inputView = pickerManager.optionPicker
-        dummyTextField.inputAccessoryView = pickerManager.toolbar
-        return pickerManager
-    }()
-    
-    let dummyTextField = UITextField()
 
-    var option: PickerOption = .title {
+    var scope: SearchScope = .title {
         didSet {
-            navigationItem.rightBarButtonItem?.title = itemTitle
+            performQuery()
         }
     }
 
-    var itemTitle: String {
-        return "by \(option.description)"
-    }
-
     public override func viewDidLoad() {
-        // init
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
-        view.addSubview(dummyTextField)
-        pickerManager.delegate = self
         setupNavigationBar()
-        // default query
-        presenter?.search(query: "Wohnanlage",
-                          option: option.description.lowercased(),
-                          success: { result in
-                            self.showSearchResult(result)
-        }, failure: { _ in
-        })
+        setupScopes()
     }
 
     private func setupNavigationBar() {
         title = "Search"
-        let filterBarButtonItem = UIBarButtonItem(title: itemTitle, style: .done, target: self, action: #selector(showOptions))
-        navigationItem.rightBarButtonItem = filterBarButtonItem
-    }
-    
-    @objc private func showOptions() {
-        dummyTextField.becomeFirstResponder()
     }
 
-    // MARK: UISearchBarDelegate
+    private func setupScopes() {
+        let titles = SearchScope.allCases.map { $0.description }
+        searchBar.scopeButtonTitles = titles
+    }
+
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        performQuery()
+    }
+
+    private func performQuery() {
         if let query = searchBar.text {
             presenter?.search(query: query,
-                              option: option.description.lowercased(),
+                              option: scope.description.lowercased(),
                               success: { result in
                                 self.showSearchResult(result)
             }, failure: { _ in
@@ -80,7 +78,9 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
 }
 
 // MARK: UITableViewDelegate
+
 extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DenkmalCell.identifier, for: indexPath) as? DenkmalCell
         let denkmal = results[indexPath.row]
@@ -109,13 +109,9 @@ extension SearchScreenView: UITableViewDelegate, UITableViewDataSource {
         let denkmal = results[indexPath.row]
         presenter?.showDetailView(denkmal)
     }
-}
 
-extension SearchScreenView: PickerManagerDelegate {
-
-    func manager(_ manager: PickerManager, didPickOption option: PickerOption) {
-        self.option = option
-        dummyTextField.resignFirstResponder()
+    public func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        scope = SearchScope(rawValue: selectedScope) ?? SearchScope.title
     }
 
 }

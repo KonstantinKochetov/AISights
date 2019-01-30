@@ -20,7 +20,9 @@ class DenkmalCell: UITableViewCell {
             }
 
             denkmalNameLabel.text = denkmal.title
-            streetLabel.text = denkmal.strasse[0]
+            if !denkmal.strasse.isEmpty {
+                streetLabel.text = denkmal.strasse[0]
+            }
         }
     }
 }
