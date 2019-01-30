@@ -14,14 +14,6 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol {
         tableView.dataSource = self
         tableView.tableFooterView = UIView();
         tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
-
-
-        presenter?.search(query: true,
-                          option: option,
-                          success: { result in
-                            self.showSearchResult(result)
-        }, failure: { _ in
-        })
     }
 
     public override func viewWillAppear(_ animated: Bool) {
