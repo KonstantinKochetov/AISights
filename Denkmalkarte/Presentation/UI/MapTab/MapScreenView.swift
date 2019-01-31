@@ -68,7 +68,7 @@ public class MapScreenView: UIViewController, MapScreenViewProtocol, CLLocationM
     func creatUserActivity() {
         print("crateUserActivity")
         let activity = NSUserActivity(activityType: UserActivityType.ShowLocalDenkmal)
-        activity.title = NSLocalizedString("Zeige Denkmäler", comment: "")
+        activity.title = "Zeige Denkmäler"
         activity.isEligibleForPrediction = true
         activity.isEligibleForSearch = true
         self.userActivity = activity
