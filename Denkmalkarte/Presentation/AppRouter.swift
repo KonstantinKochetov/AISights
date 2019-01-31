@@ -43,7 +43,7 @@ class AppRouter: TabBarRouter {
     private func setUpMapTab() -> UIViewController {
         let mapTabNavigationController = UINavigationController()
 
-        mapTabNavigationController.tabBarItem = UITabBarItem(title: "Map", image: UIImage(named: "Map"), tag: TabTag.map.rawValue)
+        mapTabNavigationController.tabBarItem = UITabBarItem(title: NSLocalizedString("Map", comment: ""), image: UIImage(named: "Map"), tag: TabTag.map.rawValue)
         let mapTabRouter = MapTabRouter(navigationController: mapTabNavigationController)
         childRouter.append(mapTabRouter)
 
