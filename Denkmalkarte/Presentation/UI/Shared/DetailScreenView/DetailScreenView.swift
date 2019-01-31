@@ -5,6 +5,10 @@ import MobileCoreServices
 import RealmSwift
 import FirebaseDatabase
 import Firebase
+import CoreML
+import Vision
+import ImageIO
+
 
 public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
@@ -39,10 +43,32 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBOutlet private var uploadViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet private var uploadProgressLabel: UILabel!
 
+    var currentImage: UIImage = UIImage()
+
     lazy var imagePickerManager: ImagePickerManager = {
         let imagePickerManager = ImagePickerManager()
         imagePickerManager.delegate = self
         return imagePickerManager
+    }()
+
+    /// - Tag: MLModelSetup
+    lazy var classificationRequest: VNCoreMLRequest = {
+        do {
+            /*
+             Use the Swift class `MobileNet` Core ML generates from the model.
+             To use a different Core ML classifier model, add it to the project
+             and replace `MobileNet` with that model's generated Swift class.
+             */
+            let model = try VNCoreMLModel(for: ImageClassifier().model)
+
+            let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
+                self?.processClassifications(for: request, error: error)
+            })
+            request.imageCropAndScaleOption = .centerCrop
+            return request
+        } catch {
+            fatalError("Failed to load Vision ML model: \(error)")
+        }
     }()
 
     var presenter: DetailScreenPresenterProtocol?
@@ -105,6 +131,70 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     }
 
     // MARK: - Helpers
+
+    /// - Tag: PerformRequests
+    func updateClassifications(for image: UIImage) {
+        print("Classifying...")
+
+        currentImage = image
+
+        let orientation = CGImagePropertyOrientation(image.imageOrientation)
+        guard let ciImage = CIImage(image: image) else { fatalError("Unable to create \(CIImage.self) from \(image).") }
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
+            do {
+                try handler.perform([self.classificationRequest])
+            } catch {
+                /*
+                 This handler catches general image processing errors. The `classificationRequest`'s
+                 completion handler `processClassifications(_:error:)` catches errors specific
+                 to processing that request.
+                 */
+                print("Failed to perform classification.\n\(error.localizedDescription)")
+            }
+        }
+    }
+
+    /// Updates the UI with the results of the classification.
+    /// - Tag: ProcessClassifications
+    func processClassifications(for request: VNRequest, error: Error?) {
+        DispatchQueue.main.async {
+            guard let results = request.results else {
+                print("Unable to classify image.\n\(error!.localizedDescription)")
+                return
+            }
+            // The `results` will always be `VNClassificationObservation`s, as specified by the Core ML model in this project.
+            let classifications = results as? [VNClassificationObservation]
+
+            if let classifications = classifications {
+                if classifications.isEmpty {
+                    print("Nothing recognized.")
+                } else {
+                    // Display top classifications ranked by confidence in the UI.
+                    let topClassifications = classifications.prefix(2)
+                    let descriptions = topClassifications.map { classification in
+                        // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
+                        return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+                    }
+                    print("Classification:\n" + descriptions.joined(separator: "\n"))
+
+                    let classification = descriptions.filter({$0.contains("notbuilding")})
+                    let value = Double(classification[0].substring(3, end: 6))
+                    if let value = value {
+                        if value > 0.40 {
+                            let alert = UIAlertController(title: "Oops!", message: "It seems like this photo is not really a building! Please try again", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        } else {
+                            self.upload(image: self.currentImage)
+                        }
+
+                    }
+                }
+            }
+        }
+    }
 
     private func setup() {
         userId = presenter?.getUserId()
@@ -255,7 +345,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
     private func setupDistance() {
         guard let monument = monument, let currentLocation = currentLocation else {
-            distanceLabel.text = "∞ away"
+            distanceLabel.text = NSLocalizedString("∞ away", comment: "")
             return
         }
 
@@ -265,7 +355,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         let distanceFormatter = MKDistanceFormatter()
         let formattedDistance = distanceFormatter.string(fromDistance: distance)
 
-        distanceLabel.text = "\(formattedDistance) away"
+        distanceLabel.text = formattedDistance + NSLocalizedString(" away", comment: "")
     }
 
     private func setupUserImages() {
@@ -319,13 +409,17 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         guard let monument = monument,
             let title = monument.title ,
             let street = monument.strasse.first else {
-            return
+                return
         }
 
         let text = "Check out \(title) at \(street)."
         let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = view
         present(activityViewController, animated: true, completion: nil)
+    }
+
+    private func checkImageAndUpload(image: UIImage) {
+        updateClassifications(for: image)
     }
 
     private func upload(image: UIImage) {
@@ -470,7 +564,15 @@ extension DetailScreenView: PhotoCellDelegate {
 extension DetailScreenView: ImagePickerManagerDelegate {
 
     func manager(_ manager: ImagePickerManager, didPickImage image: UIImage) {
-        upload(image: image)
+        checkImageAndUpload(image: image)
     }
 
+}
+
+extension String {
+    func substring(_ start: Int, end: Int) -> String {
+        let startIndex = self.index(self.startIndex, offsetBy: start)
+        let endIndex = self.index(self.startIndex, offsetBy: end)
+        return String(self[startIndex...endIndex])
+    }
 }

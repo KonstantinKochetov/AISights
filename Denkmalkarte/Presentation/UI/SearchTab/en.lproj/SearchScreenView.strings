@@ -1,0 +1,15 @@
+
+/* Class = "UISearchBar"; J41-Db-RVh.scopeButtonTitles[0] = "Title"; ObjectID = "J41-Db-RVh"; */
+"J41-Db-RVh.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; J41-Db-RVh.scopeButtonTitles[1] = "Text"; ObjectID = "J41-Db-RVh"; */
+"J41-Db-RVh.scopeButtonTitles[1]" = "Text";
+
+/* Class = "UISearchBar"; J41-Db-RVh.scopeButtonTitles[2] = "Bauherr"; ObjectID = "J41-Db-RVh"; */
+"J41-Db-RVh.scopeButtonTitles[2]" = "Builder";
+
+/* Class = "UISearchBar"; J41-Db-RVh.scopeButtonTitles[3] = "Ort"; ObjectID = "J41-Db-RVh"; */
+"J41-Db-RVh.scopeButtonTitles[3]" = "Location";
+
+/* Class = "UILabel"; text = "0 results "; ObjectID = "M9l-GY-Noo"; */
+"M9l-GY-Noo.text" = "0 results ";

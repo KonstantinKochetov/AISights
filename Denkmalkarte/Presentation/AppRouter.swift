@@ -43,7 +43,7 @@ class AppRouter: TabBarRouter {
     private func setUpMapTab() -> UIViewController {
         let mapTabNavigationController = UINavigationController()
 
-        mapTabNavigationController.tabBarItem = UITabBarItem(title: "Map", image: #imageLiteral(resourceName: "Map"), tag: TabTag.map.rawValue)
+        mapTabNavigationController.tabBarItem = UITabBarItem(title: NSLocalizedString("Map", comment: ""), image: #imageLiteral(resourceName: "Map"), tag: TabTag.map.rawValue)
         let mapTabRouter = MapTabRouter(navigationController: mapTabNavigationController)
         childRouter.append(mapTabRouter)
 
@@ -63,7 +63,7 @@ class AppRouter: TabBarRouter {
     private func setUpHistoryTab() -> UIViewController {
 
         let historyTabNavigationController = UINavigationController()
-        historyTabNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: TabTag.history.rawValue)
+        historyTabNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: TabTag.history.rawValue)
 
         let historyTabRouter = HistoryTabRouter(navigationController: historyTabNavigationController)
         childRouter.append(historyTabRouter)

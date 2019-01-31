@@ -2,8 +2,6 @@ import Foundation
 
 class HistoryScreenPresenter: HistoryScreenPresenterProtocol {
 
-
-
     let router: HistoryTabRouter
     let view: HistoryScreenViewProtocol
     let mapUseCases: MapUseCases
@@ -16,7 +14,7 @@ class HistoryScreenPresenter: HistoryScreenPresenterProtocol {
     }
 
     func showDetailView(_ denkmal: Denkmal?) {
-        router.showDetailView(denkmal);
+        router.showDetailView(denkmal)
     }
 
     func search(query: Bool,

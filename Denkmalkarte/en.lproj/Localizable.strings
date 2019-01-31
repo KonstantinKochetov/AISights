@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Denkmalkarte
+
+  Created by Tom Ross on 31.01.19.
+  Copyright © 2019 htw.berlin. All rights reserved.
+*/
+
+"Map" = "Map";
+
+/* Detail View */
+"∞ away" = "∞ away";
+" away" = " away";
+
+/* Search View */
+"Title" = "Title";
+"Text" = "Description";
+"Bauherr" = "Builder";
+"Ort" = "Location";
+"Search" = "Search";
