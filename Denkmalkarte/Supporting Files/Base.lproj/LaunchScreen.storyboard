@@ -17,18 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapLogo" translatesAutoresizingMaskIntoConstraints="NO" id="tQH-7i-L5I">
-                                <rect key="frame" x="123.5" y="279.5" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="92c-aa-3IL"/>
-                                    <constraint firstAttribute="width" constant="128" id="F5e-t4-1hQ"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="berlin.png" translatesAutoresizingMaskIntoConstraints="NO" id="dNO-Le-iEU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tQH-7i-L5I" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Q22-0y-Pa9"/>
-                            <constraint firstItem="tQH-7i-L5I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nL9-Hb-cFe"/>
+                            <constraint firstItem="dNO-Le-iEU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AUY-wf-Nz5"/>
+                            <constraint firstItem="dNO-Le-iEU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MVG-12-ogv"/>
+                            <constraint firstItem="dNO-Le-iEU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="UmB-bC-nBv"/>
+                            <constraint firstItem="dNO-Le-iEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lzA-Bx-PO7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MapLogo" width="512" height="512"/>
+        <image name="berlin.png" width="608" height="904"/>
     </resources>
 </document>

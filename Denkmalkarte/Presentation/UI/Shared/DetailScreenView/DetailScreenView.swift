@@ -390,7 +390,10 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     }
 
     private func updateCollectionViewHeightConstraint() {
-        let height = userPhotosCollectionView.contentSize.height
+        var height = userPhotosCollectionView.contentSize.height
+        if height == 0 {
+            height = 100
+        }
         userPhotosCollectionViewHeightConstraint.constant = height
         userPhotosCollectionView.layoutIfNeeded()
     }
@@ -435,6 +438,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             self.uploadProgressLabel.text = formattedNumber
         }, success: {
             self.toggleUploadView()
+            self.setup()
         }, failure: { _ in
             self.toggleUploadView()
         })

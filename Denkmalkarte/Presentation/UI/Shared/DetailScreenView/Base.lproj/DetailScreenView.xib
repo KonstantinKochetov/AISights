@@ -75,9 +75,9 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZL-dS-ayv">
-                                            <rect key="frame" x="16" y="316" width="62" height="43"/>
+                                            <rect key="frame" x="16" y="315.66666666666669" width="62" height="43.333333333333314"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uFC-fe-NLJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="43.333333333333314"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-ym-x3D">
@@ -116,9 +116,9 @@
                                             </userDefinedRuntimeAttributes>
                                         </visualEffectView>
                                         <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTk-UO-v1L">
-                                            <rect key="frame" x="234" y="316" width="125" height="43"/>
+                                            <rect key="frame" x="233.66666666666666" y="315.66666666666669" width="125.33333333333334" height="43.333333333333314"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Br-L0-NWK">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125.33333333333334" height="43.333333333333314"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2km entfernt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jai-8T-P1f">
