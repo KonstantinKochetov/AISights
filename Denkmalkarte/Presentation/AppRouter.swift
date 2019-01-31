@@ -63,7 +63,7 @@ class AppRouter: TabBarRouter {
     private func setUpHistoryTab() -> UIViewController {
 
         let historyTabNavigationController = UINavigationController()
-        historyTabNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: TabTag.history.rawValue)
+        historyTabNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: TabTag.history.rawValue)
 
         let historyTabRouter = HistoryTabRouter(navigationController: historyTabNavigationController)
         childRouter.append(historyTabRouter)

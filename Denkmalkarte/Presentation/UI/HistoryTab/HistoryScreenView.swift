@@ -14,6 +14,7 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol {
         tableView.dataSource = self
         tableView.tableFooterView = UIView();
         tableView.register(UINib(nibName: DenkmalCell.identifier, bundle: Bundle(for: DenkmalCell.self)), forCellReuseIdentifier: DenkmalCell.identifier)
+        setupNavigationBar()
     }
 
     public override func viewWillAppear(_ animated: Bool) {
@@ -23,6 +24,10 @@ public class HistoryScreenView: UIViewController, HistoryScreenViewProtocol {
                             self.showSearchResult(result)
         }, failure: { _ in
         })
+    }
+    
+    private func setupNavigationBar() {
+        title = "Bookmarks"
     }
 
     private func showSearchResult(_ result: [Denkmal]) {
