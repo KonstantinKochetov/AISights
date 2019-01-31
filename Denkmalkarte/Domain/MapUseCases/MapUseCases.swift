@@ -34,4 +34,8 @@ protocol MapUseCases {
                 progressHandler: @escaping ((Float) -> Void),
                 success: @escaping (() -> Void),
                 failure: @escaping ((Error) -> Void))
+
+    func getDenkmalById(id: String,
+                        success: @escaping ((Denkmal) -> Void),
+                        failure: @escaping ((Error) -> Void))
 }

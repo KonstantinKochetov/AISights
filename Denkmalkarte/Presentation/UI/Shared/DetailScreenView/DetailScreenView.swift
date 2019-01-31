@@ -103,15 +103,11 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     @IBAction func bookmark(_ sender: Any) {
         if let monument = monument {
             presenter?.bookmark(id: monument.id, success: {
-
+                self.setup()
             }, failure: { _ in
+                self.setup()
             })
         }
-
-        let isPressed = bookmarkButton.backgroundColor == UIColor.black
-
-        bookmarkButton.backgroundColor = isPressed ? UIColor.white : UIColor.black
-        bookmarkButton.tintColor = isPressed ? UIColor.black : UIColor.white
     }
 
     @IBAction func like(_ sender: Any) {
@@ -197,13 +193,23 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
     }
 
     private func setup() {
-        userId = presenter?.getUserId()
-        setupCollectionView()
-        setupImage()
-        setupInfo()
-        setupLikes()
-        setupDistance()
-        setupUserImages()
+        if let monument = monument {
+            presenter?.getDenkmalById(id: monument.id,
+                                      success: { result in
+                                        self.monument = result
+                                        self.userId = self.presenter?.getUserId()
+                                        self.setupCollectionView()
+                                        self.setupImage()
+                                        self.setupInfo()
+                                        self.setupLikes()
+                                        self.setupDistance()
+                                        self.setupUserImages()
+                                        let isPressed = result.markiert
+                                        self.bookmarkButton.backgroundColor = !isPressed ? UIColor.white : UIColor.black
+                                        self.bookmarkButton.tintColor = !isPressed ? UIColor.black : UIColor.white
+            }, failure: { _ in
+            })
+        }
     }
 
     private func setupCollectionView() {
@@ -338,7 +344,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             guard let value = (snapshot.value ?? -9) as? NSNumber else {
                 return
             }
-
+            
             self.likesLabel.text = value.stringValue
         }
     }

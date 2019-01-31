@@ -120,10 +120,27 @@ class DbHelperImpl: DbHelper {
                         denkmal.setValue(false, forKey: "markiert")
                     }
                 }
+                success()
             }
         } catch {
             failure(NSError(domain: "no domain", code: 406, userInfo: nil))
         }
+    }
 
+    func getDenkmalById(id: String,
+                        success: @escaping ((Denkmal) -> Void),
+                        failure: @escaping ((Error) -> Void)) {
+        do {
+            let predicate = NSPredicate(format: "id = '\(id)'")
+            let denkmal = try self.realm().objects(RealmDenkmal.self).filter(predicate).first
+            if let denkmal = denkmal {
+                success(denkmal.toDenkmal())
+            } else {
+                failure(NSError(domain: "no domain", code: 406, userInfo: nil))
+            }
+
+        } catch {
+            failure(NSError(domain: "no domain", code: 406, userInfo: nil))
+        }
     }
 }

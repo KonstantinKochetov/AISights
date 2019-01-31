@@ -27,4 +27,8 @@ protocol DetailScreenPresenterProtocol: Presenter {
                 success: @escaping (() -> Void),
                 failure: @escaping ((Error) -> Void))
 
+    func getDenkmalById(id: String,
+                        success: @escaping ((Denkmal) -> Void),
+                        failure: @escaping ((Error) -> Void))
+
 }

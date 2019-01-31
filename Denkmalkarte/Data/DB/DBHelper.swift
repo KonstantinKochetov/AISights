@@ -27,5 +27,8 @@ protocol DbHelper {
                   failure: @escaping ((Error) -> Void))
     func search(query: Bool, option: String, success: @escaping ([Denkmal]) -> Void, failure: @escaping (Error) -> Void)
 
+    func getDenkmalById(id: String,
+                        success: @escaping ((Denkmal) -> Void),
+                        failure: @escaping ((Error) -> Void))
 
 }

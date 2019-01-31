@@ -38,4 +38,10 @@ class DetailScreenPresenter: DetailScreenPresenterProtocol {
         mapUseCases.upload(image, withMonumentId: monumentId, progressHandler: progressHandler, success: success, failure: failure)
     }
 
+    func getDenkmalById(id: String,
+                        success: @escaping ((Denkmal) -> Void),
+                        failure: @escaping ((Error) -> Void)) {
+        mapUseCases.getDenkmalById(id: id, success: success, failure: failure)
+    }
+
 }
