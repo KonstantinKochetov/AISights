@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Denkmalkarte
+
+  Created by Tom Ross on 31.01.19.
+  Copyright © 2019 htw.berlin. All rights reserved.
+*/
+
+/* Detail View */
+"∞ away" = "∞ away";
+" away" = " away";

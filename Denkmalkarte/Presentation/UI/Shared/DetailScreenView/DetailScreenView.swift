@@ -345,7 +345,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
 
     private func setupDistance() {
         guard let monument = monument, let currentLocation = currentLocation else {
-            distanceLabel.text = "∞ away"
+            distanceLabel.text = NSLocalizedString("∞ away", comment: "")
             return
         }
 
@@ -355,7 +355,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         let distanceFormatter = MKDistanceFormatter()
         let formattedDistance = distanceFormatter.string(fromDistance: distance)
 
-        distanceLabel.text = "\(formattedDistance) away"
+        distanceLabel.text = formattedDistance + NSLocalizedString(" away", comment: "")
     }
 
     private func setupUserImages() {
