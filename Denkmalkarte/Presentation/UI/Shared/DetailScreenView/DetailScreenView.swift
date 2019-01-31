@@ -120,10 +120,10 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
         }, failure: { _ in
         })
 
-        let isPressed = likeButton.backgroundColor == UIColor.black
-
-        likeButton.backgroundColor = isPressed ? UIColor.white : UIColor.black
-        likeButton.tintColor = isPressed ? UIColor.black : UIColor.white
+//        let isPressed = likeButton.backgroundColor == UIColor.black
+//
+//        likeButton.backgroundColor = isPressed ? UIColor.white : UIColor.black
+//        likeButton.tintColor = isPressed ? UIColor.black : UIColor.white
     }
 
     // MARK: - Helpers
@@ -344,7 +344,7 @@ public class DetailScreenView: UIViewController, DetailScreenViewProtocol {
             guard let value = (snapshot.value ?? -9) as? NSNumber else {
                 return
             }
-            
+
             self.likesLabel.text = value.stringValue
         }
     }
