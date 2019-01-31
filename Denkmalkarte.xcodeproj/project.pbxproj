@@ -943,7 +943,7 @@
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 393K5YD4YY;
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -966,7 +966,7 @@
 				CODE_SIGN_ENTITLEMENTS = Denkmalkarte/Denkmalkarte.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 393K5YD4YY;
 				INFOPLIST_FILE = Denkmalkarte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
