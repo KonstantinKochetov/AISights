@@ -10,6 +10,7 @@
 		02BF6DF521AD6E870055E0BB /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF6DF421AD6E870055E0BB /* UserActivityType.swift */; };
 		2AD0914B22030C91002CE240 /* DetailScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0914D22030C91002CE240 /* DetailScreenView.xib */; };
 		2AD0915422030EBD002CE240 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0915622030EBD002CE240 /* Localizable.strings */; };
+		2AD0915822031366002CE240 /* SearchScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0915A22031366002CE240 /* SearchScreenView.xib */; };
 		8046048C220223C7001ACE9E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8046048B220223C7001ACE9E /* LocationManager.swift */; };
 		80496B4421EA44A2001600D2 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80496B4321EA44A2001600D2 /* GradientView.swift */; };
 		80854DFC21FCBBB700B411B2 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80854DFB21FCBBB700B411B2 /* ImagePickerManager.swift */; };
@@ -23,7 +24,6 @@
 		810FE8A221E4D72F004D06ED /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 810FE8A121E4D72F004D06ED /* bookmark.png */; };
 		8143A67E21E2885B00E2EB20 /* SearchScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8143A67921E2885A00E2EB20 /* SearchScreenPresenter.swift */; };
 		8143A67F21E2885B00E2EB20 /* SearchTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8143A67A21E2885A00E2EB20 /* SearchTabRouter.swift */; };
-		8143A68021E2885B00E2EB20 /* SearchScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8143A67B21E2885A00E2EB20 /* SearchScreenView.xib */; };
 		8143A68121E2885B00E2EB20 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8143A67C21E2885B00E2EB20 /* SearchScreenView.swift */; };
 		8143A68221E2885B00E2EB20 /* SearchScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8143A67D21E2885B00E2EB20 /* SearchScreenContract.swift */; };
 		8143A68521E296E600E2EB20 /* short_denkmaeler.json in Resources */ = {isa = PBXBuildFile; fileRef = 8143A68321E296E500E2EB20 /* short_denkmaeler.json */; };
@@ -98,6 +98,9 @@
 		2AD0915122030CA3002CE240 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		2AD0915522030EBD002CE240 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2AD0915722030EC2002CE240 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2AD0915922031366002CE240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchScreenView.xib; sourceTree = "<group>"; };
+		2AD0915C2203136E002CE240 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchScreenView.strings; sourceTree = "<group>"; };
+		2AD0915E2203136F002CE240 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SearchScreenView.strings; sourceTree = "<group>"; };
 		6CB2DC791D178C00C684EBA5 /* Pods-DenkmalkarteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DenkmalkarteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DenkmalkarteTests/Pods-DenkmalkarteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8046048B220223C7001ACE9E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		80496B4321EA44A2001600D2 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -112,7 +115,6 @@
 		810FE8A121E4D72F004D06ED /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bookmark.png; path = Assets.xcassets/bookmark.png; sourceTree = "<group>"; };
 		8143A67921E2885A00E2EB20 /* SearchScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchScreenPresenter.swift; sourceTree = "<group>"; };
 		8143A67A21E2885A00E2EB20 /* SearchTabRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTabRouter.swift; sourceTree = "<group>"; };
-		8143A67B21E2885A00E2EB20 /* SearchScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchScreenView.xib; sourceTree = "<group>"; };
 		8143A67C21E2885B00E2EB20 /* SearchScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 		8143A67D21E2885B00E2EB20 /* SearchScreenContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchScreenContract.swift; sourceTree = "<group>"; };
 		8143A68321E296E500E2EB20 /* short_denkmaeler.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = short_denkmaeler.json; sourceTree = "<group>"; };
@@ -352,7 +354,7 @@
 				8143A67D21E2885B00E2EB20 /* SearchScreenContract.swift */,
 				8143A67921E2885A00E2EB20 /* SearchScreenPresenter.swift */,
 				8143A67C21E2885B00E2EB20 /* SearchScreenView.swift */,
-				8143A67B21E2885A00E2EB20 /* SearchScreenView.xib */,
+				2AD0915A22031366002CE240 /* SearchScreenView.xib */,
 			);
 			path = SearchTab;
 			sourceTree = "<group>";
@@ -598,7 +600,7 @@
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
 				81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
 				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
-				8143A68021E2885B00E2EB20 /* SearchScreenView.xib in Resources */,
+				2AD0915822031366002CE240 /* SearchScreenView.xib in Resources */,
 				817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +792,16 @@
 				2AD0915722030EC2002CE240 /* de */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		2AD0915A22031366002CE240 /* SearchScreenView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AD0915922031366002CE240 /* Base */,
+				2AD0915C2203136E002CE240 /* en */,
+				2AD0915E2203136F002CE240 /* de */,
+			);
+			name = SearchScreenView.xib;
 			sourceTree = "<group>";
 		};
 		81737249216FC1B600000A05 /* LaunchScreen.storyboard */ = {

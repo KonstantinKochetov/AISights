@@ -44,11 +44,11 @@ public class SearchScreenView: UIViewController, UISearchBarDelegate, SearchScre
     }
 
     private func setupNavigationBar() {
-        title = "Search"
+        title = NSLocalizedString("Search", comment: "")
     }
 
     private func setupScopes() {
-        let titles = SearchScope.allCases.map { $0.description }
+        let titles = SearchScope.allCases.map { NSLocalizedString($0.description, comment: "") }
         searchBar.scopeButtonTitles = titles
     }
 

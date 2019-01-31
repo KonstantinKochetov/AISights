@@ -9,3 +9,10 @@
 /* Detail View */
 "∞ away" = "∞ away";
 " away" = " away";
+
+/* Search View */
+"Title" = "Title";
+"Text" = "Description";
+"Bauherr" = "Builder";
+"Ort" = "Location";
+"Search" = "Search";
