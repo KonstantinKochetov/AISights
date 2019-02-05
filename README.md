@@ -21,3 +21,6 @@ Like <br>
 ![alt text](Detail.png) <br>
 ![alt text](Detail2.png) <br>
 ![alt text](Search.png) <br>
+
+## Video
+[Commercial-like video that was done by one of the team members](https://drive.google.com/file/d/18roVulxg_mbYrNvtO9K6zZxyW0IA0VNp/view?usp=drivesdk)
