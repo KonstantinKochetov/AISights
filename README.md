@@ -17,15 +17,15 @@ Like <br>
 Upload photos (embedded filter with neural network, see above AI Component) <br>
 You can show memorials by voice command (Siri shortcut)
 
+## SwiftLint
+SwiftLint is a code static analyzer which enforces best practice code style for Swift. It is included as a pod in the project.
+
 ## Screenshots
 ![alt text](Map.png) <br>
 ![alt text](Search.png) <br>
 ![alt text](Detail.png) <br>
 ![alt text](Detail2.png) <br>
 ![alt text](Search.png) <br>
-
-## SwiftLint
-SwiftLint is a code static analyzer which enforces best practice code style for Swift. It is included as a pod in the project.
 
 ## Video
 [Commercial-like video that was done by one of the team members](https://drive.google.com/file/d/18roVulxg_mbYrNvtO9K6zZxyW0IA0VNp/view?usp=drivesdk)
