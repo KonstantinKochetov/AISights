@@ -14,8 +14,6 @@ Directions to the memorial <br>
 Search <br>
 Bookmark <br>
 Like <br>
-
-## Other
 You can show memorials by voice command (Siri shortcut)
 
 ## Screenshots
