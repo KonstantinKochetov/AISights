@@ -71,7 +71,6 @@
 		81A9754C2172137700207D5E /* ApiHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754B2172137700207D5E /* ApiHelperImpl.swift */; };
 		81A975502172140400207D5E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A9754F2172140400207D5E /* ApiHelper.swift */; };
 		81A975522172141000207D5E /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A975512172141000207D5E /* DBHelper.swift */; };
-		81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81F6DFE721BD482900BA957A /* GoogleService-Info.plist */; };
 		B59C55DE220235C700D6E499 /* berlin.png in Resources */ = {isa = PBXBuildFile; fileRef = B59C55DD220235C700D6E499 /* berlin.png */; };
 		B59C55E02202471400D6E499 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B59C55DF2202471400D6E499 /* ImageClassifier.mlmodel */; };
 		B59C55E422024B9A00D6E499 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C55E322024B9A00D6E499 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
@@ -164,7 +163,6 @@
 		81A9754B2172137700207D5E /* ApiHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelperImpl.swift; sourceTree = "<group>"; };
 		81A9754F2172140400207D5E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		81A975512172141000207D5E /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
-		81F6DFE721BD482900BA957A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9A7E88C09638F5B1E2EE52C6 /* Pods_Denkmalkarte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Denkmalkarte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EC58C3FA488B2BC11D984C /* Pods_DenkmalkarteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DenkmalkarteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59C55DD220235C700D6E499 /* berlin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = berlin.png; path = Assets.xcassets/berlin.png; sourceTree = "<group>"; };
@@ -254,7 +252,6 @@
 			children = (
 				B59C55DF2202471400D6E499 /* ImageClassifier.mlmodel */,
 				02BF6DF321AD6C780055E0BB /* Denkmalkarte.entitlements */,
-				81F6DFE721BD482900BA957A /* GoogleService-Info.plist */,
 				8173724C216FC1B600000A05 /* Info.plist */,
 				2AD0915622030EBD002CE240 /* Localizable.strings */,
 				81737240216FC1B400000A05 /* AppDelegate.swift */,
@@ -598,7 +595,6 @@
 				B59C55DE220235C700D6E499 /* berlin.png in Resources */,
 				80BB364E21E90F8600DFA43E /* PhotoCell.xib in Resources */,
 				81737248216FC1B600000A05 /* Assets.xcassets in Resources */,
-				81F6DFE821BD482900BA957A /* GoogleService-Info.plist in Resources */,
 				81A975322171FF5A00207D5E /* HistoryScreenView.xib in Resources */,
 				2AD0915822031366002CE240 /* SearchScreenView.xib in Resources */,
 				817E4392219E87A7007F125B /* InfoPinCell.xib in Resources */,

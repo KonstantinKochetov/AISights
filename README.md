@@ -15,6 +15,9 @@ Search <br>
 Bookmark <br>
 Like <br>
 
+## Other
+You can show memorials by voice command (Siri shortcut)
+
 ## Screenshots
 ![alt text](Map.png) <br>
 ![alt text](Search.png) <br>
